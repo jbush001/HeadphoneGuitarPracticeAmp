@@ -1,0 +1,23 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AP3419
+D DIODES 1.0MHZ, 2A STEP-DOWN DC-DC BUCK CONVERTER
+F https://www.diodes.com/assets/Datasheets/products_inactive_data/AP3419.pdf
+$ENDCMP
+#
+$CMP BQ24090DGQR
+D 1A, Single-Input, Single Cell Li-Ion and Li-Pol Battery Charger
+F http://www.ti.com/lit/ds/symlink/bq24092.pdf
+$ENDCMP
+#
+$CMP SJ2-3595X-SMT
+D Cui 3.5mm Audio Jack
+F https://www.cuidevices.com/product/resource/sj2-3595x-smt.pdf
+$ENDCMP
+#
+$CMP WM8731SEDS_V
+D Portable Internet Audio CODEC with Headphone Driverand Programmable Sample Rates
+F https://statics.cirrus.com/pubs/proDatasheet/WM8731_v4.9.pdf
+$ENDCMP
+#
+#End Doc Library
