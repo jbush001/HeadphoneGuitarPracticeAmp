@@ -1,0 +1,27 @@
+Reference,Quantity,Value,Digikey Part
+C12 C2,13,0.1 uF,https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05F104ZO5NNNC/1276-1004-1-ND/3889090
+C23 C24,2,220uF,https://www.digikey.com/product-detail/en/panasonic-electronic-components/EEE-1VA221UP/PCE3955CT-ND/766331
+C25 C1 C3,3,22uF,https://www.digikey.com/product-detail/en/panasonic-electronic-components/EEE-1VA220SP/PCE3952CT-ND/766328
+C4 C13 C26,3,10uF,https://www.digikey.com/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920
+D1 D2,2,LED,https://www.digikey.com/product-detail/en/vishay-semiconductor-opto-division/VLMS1500-GS08/VLMS1500-GS08CT-ND/3504675
+J3,1,SJ2-3595X-SMT,https://www.digikey.com/product-detail/en/cui-devices/SJ2-35953A-SMT-TR/CP-SJ2-35953A-SMT-CT-ND/6619633
+J4,1,Amphenol 124015,https://www.digikey.com/product-detail/en/amphenol-icc-commercial-products/12401610E4-2A/12401610E4-2ATR-ND/5775519
+L1,1,3.3 uH,https://www.digikey.com/product-detail/en/taiyo-yuden/NRS6020T3R3NMGJ/587-2930-1-ND/2666035
+R1 R2 R4 R5 R15,5,10k,https://www.digikey.com/product-detail/en/yageo/RC0402FR-0710KL/311-10.0KLRCT-ND/729470
+R11 R12,2,33,https://www.digikey.com/product-detail/en/te-connectivity-passive-product/CPF0402B33RE1/A102801CT-ND/2729334
+R13,1,1k,https://www.digikey.com/product-detail/en/yageo/RC0402FR-071KL/311-1.00KLRDKR-ND/732407
+R14,1,2k,https://www.digikey.com/product-detail/en/yageo/RC0402FR-072K2L/311-2.20KLRCT-ND/729500
+R16 R17,2,1.5k,https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-2AEB152X/P1.5KDCCT-ND/1706187
+R3 R18 R7,3,100k,https://www.digikey.com/product-detail/en/yageo/RC0402FR-07100KL/311-100KLRCT-ND/729473
+R6,1,50k,https://www.digikey.com/product-detail/en/vishay-thin-film/PTN0805E5002BST1/764-1535-1-ND/7103319
+R8,1,33.2k,https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402FT33K2/RMCF0402FT33K2CT-ND/2417645
+R9 R10,2,47k,https://www.digikey.com/product-detail/en/yageo/RC0402FR-0747KL/311-47.0KLRCT-ND/729563
+SW4 SW1 SW3 SW2,4,TL3315NF160Q,https://www.digikey.com/product-detail/en/e-switch/TL3315NF160Q/EG4621CT-ND/1870401
+SW5,1,Power,https://www.digikey.com/product-detail/en/c-k/JS102011SAQN/401-1999-1-ND/1640114
+U1,1,STM32F302C8Tx,https://www.digikey.com/product-detail/en/stmicroelectronics/STM32F302C8T6/497-14699-ND/4849411
+U2,1,OPA340NA,https://www.digikey.com/product-detail/en/texas-instruments/OPA340NA-250/OPA340NACT-ND/268639
+U3,1,WM8731SEDS_V,https://www.digikey.com/product-detail/en/cirrus-logic-inc/WM8731SEDS-V/598-2460-ND/5409909
+U4,1,TPS562200,https://www.digikey.com/product-detail/en/texas-instruments/TPS562201DDCR/296-44397-1-ND/6110665
+U5,1,BQ24090DGQR,https://www.digikey.com/product-detail/en/texas-instruments/BQ24090DGQR/296-38875-1-ND/5142987
+Y1,1,8 MHz,https://www.digikey.com/product-detail/en/abracon-llc/AWSCR-8.00CPLB-C30-T4/535-15118-1-ND/10232645
+Y2,1,12MHz,https://www.digikey.com/product-detail/en/abracon-llc/AWSCR-12.00CV-T/535-10007-1-ND/2001630
