@@ -10,13 +10,13 @@ inner_height = pcb_height + pcb_relief * 2;
 inner_radius = 2.5 + pcb_relief;
 boss1x = inner_radius + wall_thickness;
 boss1y = inner_radius + wall_thickness;
-bottom_boss_height = 8.3;
 top_boss_height = 3;
 boss_x_spacing = 70;
 boss_y_spacing = 25;
 epsilon = 0.01; // Used to avoid z-fighting
 lower_boss_outer = 5;
-top_enclosure_height = 13;
+top_enclosure_height = 15;
+plug_housing_length = 20;
 
 module rounded_rect(width, height, depth, radius) {
     hull() {
@@ -46,19 +46,19 @@ module enclosure_top() {
                     rounded_rect(inner_width + wall_thickness * 2, inner_height + wall_thickness * 2, top_enclosure_height, inner_radius + wall_thickness);
                     // Plug housing
                     rotate([-90, 0, 0]) translate([top_enclosure_height / 2, -top_enclosure_height / 2, inner_height - 1])
-                        cylinder(d1=top_enclosure_height, d2=7, h=15);
+                        cylinder(d=top_enclosure_height, h=plug_housing_length);
                 }
 
                 union() {
                     // Inner shell
-                    translate([wall_thickness, wall_thickness, wall_thickness]) rounded_rect(inner_width, inner_height, 13, inner_radius);
+                    translate([wall_thickness, wall_thickness, wall_thickness]) rounded_rect(inner_width, inner_height, top_enclosure_height, inner_radius);
 
                     // Interior of plug housing
                     rotate([-90, 0, 0]) translate([top_enclosure_height / 2, -top_enclosure_height / 2, inner_height - wall_thickness])
-                        cylinder(d1=top_enclosure_height - wall_thickness * 2, d2=top_enclosure_height - 3 - wall_thickness * 2, h=15 - wall_thickness);
+                        cylinder(d=top_enclosure_height - wall_thickness * 2, h=plug_housing_length - wall_thickness);
 
                     // Plug hole
-                    rotate([-90, 0, 0]) translate([top_enclosure_height / 2, -top_enclosure_height / 2, inner_height + 10]) cylinder(d=4, h=10);
+                    rotate([-90, 0, 0]) translate([top_enclosure_height / 2, -top_enclosure_height / 2, inner_height + 10]) cylinder(d=10, h=10);
                 }
             }
 
@@ -102,6 +102,7 @@ module button() {
 }
 
 module bottom_boss() {
+    bottom_boss_height = top_enclosure_height - top_boss_height - pcb_thickness;
     difference() {
         cylinder(h=bottom_boss_height, d=4.2);
         translate([0, 0, 2]) cylinder(h=bottom_boss_height, d=1.8);
@@ -147,6 +148,18 @@ module battery() {
     color("gray") cube([36, 20, 5.6]);
 }
 
+module plug() {
+    // Total length is 48.815625, 1 59/64"
+    translate([-1.5, -3, 0]) cube([3, 1, 11]);
+    translate([-1.5, 2, 0]) cube([3, 1, 11]);
+
+    translate([0, 0, 11]) cylinder(h=6, d=10);
+    translate([0, 0, 17.25]) cylinder(d1=11.8872, d2=10, h=1);
+    translate([0, 0, 18.25]) cylinder(h=25, d=6.324);
+    translate([0, 0, 43.25]) cylinder(h=5.55, d1=6.324, d2=1);
+
+}
+
 module assembly(case_alpha) {
     translate([wall_thickness + pcb_relief, wall_thickness + pcb_relief, 3]) logic_board();
     for (i = [0:3]) {
@@ -157,7 +170,8 @@ module assembly(case_alpha) {
 
     // Render this last to see inner components
     color("yellow", case_alpha) enclosure_top();
-    color("red", case_alpha) translate([wall_thickness + pcb_relief, inner_height + wall_thickness - pcb_relief / 2, 13]) rotate([0, 180, 180]) enclosure_bottom();
+    color("red", case_alpha) translate([wall_thickness + pcb_relief, inner_height + wall_thickness - pcb_relief / 2, top_enclosure_height]) rotate([0, 180, 180]) enclosure_bottom();
+    color("white") rotate([-90, 0, 0]) translate([top_enclosure_height / 2, -top_enclosure_height / 2, 33]) plug();
 }
 
 module cutaway() {
@@ -176,5 +190,5 @@ module printable() {
 }
 
 //cutaway();
-//assembly(0.7);
+//assembly(1);
 printable();
