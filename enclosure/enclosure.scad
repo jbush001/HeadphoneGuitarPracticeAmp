@@ -1,7 +1,7 @@
 $fn = 64;
 
 wall_thickness = 1.3;
-pcb_width = 75;
+pcb_width = 80;
 pcb_height = 30;
 pcb_relief = 0.5;
 pcb_thickness = 1.57;
@@ -11,8 +11,8 @@ inner_radius = 2.5 + pcb_relief;
 boss1x = inner_radius + wall_thickness;
 boss1y = inner_radius + wall_thickness;
 top_boss_height = 3;
-boss_x_spacing = 70;
-boss_y_spacing = 25;
+boss_x_spacing = pcb_width - 5;
+boss_y_spacing = pcb_height - 5;
 epsilon = 0.01; // Used to avoid z-fighting
 lower_boss_outer = 5;
 top_enclosure_height = 15;
@@ -73,16 +73,16 @@ module enclosure_top() {
             translate([inner_width, (inner_height + wall_thickness * 2) / 2 - 4, top_boss_height + pcb_thickness]) cube([20, 8, 4]);
 
             // Audio Jack
-            translate([10 + wall_thickness + pcb_relief, -epsilon, top_boss_height + wall_thickness + 3.5 / 2 + 0.5]) rotate([0, 90, 90]) cylinder(d=6, h=5);
+            translate([12 + wall_thickness + pcb_relief, -epsilon, top_boss_height + wall_thickness + 3.5 / 2 + 0.5]) rotate([0, 90, 90]) cylinder(d=6, h=5);
 
             // Power Switch
-            // Left side 42.291 mm, right 51.308, middle 46.8
-            // 2mm travel, switch is 1.5mm wide. Extents are 46.8 +/- (2 + 1.5) / 2
-            translate([pcb_relief + wall_thickness + 44.5, -1, top_boss_height + pcb_thickness + 1]) cube([4, 2.5, 4]);
+            // Center x is 70mm from origin
+            // 2mm travel, switch is 1.5mm wide. Extents are
+            translate([pcb_relief + wall_thickness + 70 - 2 - 0.75, -1, top_boss_height + pcb_thickness + 1]) cube([4, 2.5, 4]);
 
             // Holes for push buttons
             for (i = [0:3]) {
-                translate([wall_thickness + (35 + 8 * i), wall_thickness + inner_height - 5, -epsilon]) cylinder(d=6, h=5);
+                translate([wall_thickness + (37 + 9 * i), wall_thickness + inner_height - 5, -epsilon]) cylinder(d=6, h=5);
             }
 
             // XXX Light pipe for charging LED
@@ -163,7 +163,7 @@ module plug() {
 module assembly(case_alpha) {
     translate([wall_thickness + pcb_relief, wall_thickness + pcb_relief, 3]) logic_board();
     for (i = [0:3]) {
-        color("blue") translate([36.5 + i * 8, 27.5, 3]) rotate([0, 180, 0]) button();
+        color("blue") translate([37 + wall_thickness + i * 9, 27.5, 3]) rotate([0, 180, 0]) button();
     }
 
     translate([25, 7, 6]) battery();
@@ -189,6 +189,6 @@ module printable() {
     translate([0, 40, 0]) enclosure_top();
 }
 
-//cutaway();
+cutaway();
 //assembly(1);
-printable();
+//printable();

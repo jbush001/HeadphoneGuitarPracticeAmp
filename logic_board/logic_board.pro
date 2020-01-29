@@ -1,4 +1,4 @@
-update=Sunday, January 26, 2020 at 02:17:02 PM
+update=Tuesday, January 28, 2020 at 08:15:53 PM
 version=1
 last_client=kicad
 [general]
@@ -25,7 +25,7 @@ ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=
+LastNetListRead=logic_board.net
 CopperLayerCount=4
 BoardThickness=1.6
 AllowMicroVias=0
@@ -68,9 +68,3 @@ SolderMaskClearance=0.0508
 SolderMaskMinWidth=0.101
 SolderPasteClearance=0
 SolderPasteRatio=-0
-[pcbnew/Layer.In1.Cu]
-Name=In1.Cu
-Type=1
-[pcbnew/Layer.In2.Cu]
-Name=In2.Cu
-Type=1
