@@ -602,4 +602,25 @@ F 3 "http://www.ti.com/lit/ds/symlink/opa340.pdf" H 3550 4050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3450 3550 3450 3500
+$Comp
+L Device:C C10
+U 1 1 5E3526BE
+P 5050 6450
+F 0 "C10" H 5165 6496 50  0000 L CNN
+F 1 "0.1uF" H 5165 6405 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 5088 6300 50  0001 C CNN
+F 3 "~" H 5050 6450 50  0001 C CNN
+	1    5050 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 6050 5050 6050
+Wire Wire Line
+	5050 6050 5050 6300
+Connection ~ 4650 6050
+Wire Wire Line
+	4650 6850 5050 6850
+Wire Wire Line
+	5050 6850 5050 6600
+Connection ~ 4650 6850
 $EndSCHEMATC
