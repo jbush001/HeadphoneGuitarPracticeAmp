@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 17)
+    (drawings 18)
     (tracks 542)
     (zones 0)
     (modules 66)
@@ -2772,6 +2772,9 @@
     )
   )
 
+  (gr_text "Headphone Practice \nAmp v1.0" (at 102.3493 107.8357) (layer F.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.3)) (justify left))
+  )
   (gr_line (start 113 100) (end 113 102.5) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 117 100) (end 117 102.5) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 113 102.5) (end 117 102.5) (layer Edge.Cuts) (width 0.05))
@@ -2800,8 +2803,6 @@
   (gr_line (start 180 102.5) (end 180 127.5) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 102.5 100) (end 113 100) (layer Edge.Cuts) (width 0.05))
 
-  (via (at 168.8084 122.6693) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
-  (via (at 166.37 128.7145) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
   (via (at 157.48 114.4651) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
   (via (at 154.686 114.4905) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
   (via (at 156.9466 126.8095) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
@@ -2880,6 +2881,8 @@
   (segment (start 129.915185 107.9246) (end 129.3495 107.9246) (width 0.25) (layer B.Cu) (net 1))
   (segment (start 132.2142 107.5166) (end 131.8062 107.9246) (width 0.25) (layer B.Cu) (net 1))
   (segment (start 132.2142 107.4166) (end 132.2142 107.5166) (width 0.25) (layer B.Cu) (net 1))
+  (via (at 168.8084 122.6693) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
+  (via (at 166.37 128.7145) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
   (via (at 153.8478 103.4796) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
   (via (at 151.9301 103.4796) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
   (via (at 146.1643 102.87) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
