@@ -27,5 +27,5 @@ Ref,Qnty,Value,Footprint,Vendor
 "U5,",1,BQ24090DGQR,Housings_SSOP:MSOP-10-1EP_3x3mm_Pitch0.5mm,https://www.digikey.com/product-detail/en/texas-instruments/BQ24090DGQR/296-38875-1-ND/5142987
 "Y1,",1,8 MHz,custom_footprints:AWSCR-8.00CPLB-C30-T4,https://www.digikey.com/product-detail/en/abracon-llc/AWSCR-8.00CPLB-C30-T4/535-15118-1-ND/10232645
 "Y2,",1,12MHz,custom_footprints:AWSCR-12.00CV-T,https://www.digikey.com/product-detail/en/abracon-llc/AWSCR-12.00CV-T/535-10007-1-ND/2001630
-"",1,3.7v LiPo Battery,"",https://www.digikey.com/product-detail/en/adafruit-industries-llc/2750/1528-1858-ND/6612470,
-"",1,1/4  Inch Plug,"","https://www.digikey.com/product-detail/en/switchcraft-inc/2P1216/SC2075-ND/1289060",
+"",1,"3.7v LiPo Battery","",https://www.digikey.com/product-detail/en/adafruit-industries-llc/2750/1528-1858-ND/6612470
+"",1,"1/4  Inch Plug","","https://www.digikey.com/product-detail/en/switchcraft-inc/2P1216/SC2075-ND/1289060"
