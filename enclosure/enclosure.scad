@@ -189,6 +189,6 @@ module printable() {
     translate([0, 40, 0]) enclosure_top();
 }
 
-cutaway();
+//cutaway();
 //assembly(1);
-//printable();
+printable();
