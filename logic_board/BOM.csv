@@ -5,9 +5,6 @@ Ref,Qnty,Value,Footprint,Vendor
 "C23, C24,",2,220uF,Capacitors_SMD:C_1206_HandSoldering,https://www.digikey.com/product-detail/en/panasonic-electronic-components/EEE-1VA221UP/PCE3955CT-ND/766331
 "C25, C1, C3,",3,22uF,Capacitors_SMD:CP_Elec_6.3x4.5,https://www.digikey.com/product-detail/en/panasonic-electronic-components/EEE-1VA220SP/PCE3952CT-ND/766328
 "D1, D2,",2,LED,LEDs:LED_D3.0mm,https://www.digikey.com/product-detail/en/kingbright/WP710A10LSRD/754-1590-ND/2769810
-"H1, H2, H3, H4,",4,MountingHole,Mounting_Holes:MountingHole_2.2mm_M2_Pad,
-"J1,",1,SWD Interface,Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm,
-"J2,",1,Audio In,custom_footprints:Solder Pads 2x1,
 "J3,",1,SJ2-3595X-SMT,custom_footprints:SJ2-3595X-SMT_3.5MM_JACK,https://www.digikey.com/product-detail/en/cui-devices/SJ2-35953A-SMT-TR/CP-SJ2-35953A-SMT-CT-ND/6619633
 "J4,",1,Amphenol 124015,Connectors_USB:USB_C_Receptacle_Amphenol_12401610E4-2A,https://www.digikey.com/product-detail/en/amphenol-icc-commercial-products/12401610E4-2A/12401610E4-2ATR-ND/5775519
 "J5,",1,Batt,custom_footprints:JST PH HEADER SMD 2POS 2MM,https://www.digikey.com/product-detail/en/jst-sales-america-inc/B2B-PH-SM4-TB-LF-SN/455-1734-1-ND/926831
@@ -30,6 +27,5 @@ Ref,Qnty,Value,Footprint,Vendor
 "U5,",1,BQ24090DGQR,Housings_SSOP:MSOP-10-1EP_3x3mm_Pitch0.5mm,https://www.digikey.com/product-detail/en/texas-instruments/BQ24090DGQR/296-38875-1-ND/5142987
 "Y1,",1,8 MHz,custom_footprints:AWSCR-8.00CPLB-C30-T4,https://www.digikey.com/product-detail/en/abracon-llc/AWSCR-8.00CPLB-C30-T4/535-15118-1-ND/10232645
 "Y2,",1,12MHz,custom_footprints:AWSCR-12.00CV-T,https://www.digikey.com/product-detail/en/abracon-llc/AWSCR-12.00CV-T/535-10007-1-ND/2001630
-,"""1""","""3.7v LiPo Battery""",https://www.digikey.com/product-detail/en/adafruit-industries-llc/2750/1528-1858-ND/6612470,
-,"""1""","""1/4  Inch Plug""","https://www.digikey.com/product-detail/en/switchcraft-inc/2P1216/SC2075-ND/1289060
-",
+"",1,3.7v LiPo Battery,"",https://www.digikey.com/product-detail/en/adafruit-industries-llc/2750/1528-1858-ND/6612470,
+"",1,1/4  Inch Plug,"","https://www.digikey.com/product-detail/en/switchcraft-inc/2P1216/SC2075-ND/1289060",
