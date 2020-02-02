@@ -27,20 +27,22 @@ BOSS_OUTER_RADIUS=PCB_SCREW_INSET;
 HEADPHONE_JACK_RADIUS=3.175 / 2;
 LED_RADIUS=2.5; // 5mm
 
-//
-// Like cube(), except with a radius on all corners
-//
-module chamfered_cube(width, height, depth, chamfer) {
+module shell(width, height, depth, chamfer) {
     hull() {
-        translate([chamfer, chamfer, chamfer / 2]) cylinder(r=chamfer, h=depth - chamfer);
-        translate([width - chamfer, chamfer, chamfer / 2]) cylinder(r=chamfer, h=depth - chamfer);
-        translate([width - chamfer, height - chamfer, chamfer / 2]) cylinder(r=chamfer, h=depth - chamfer);
-        translate([chamfer, height - chamfer, chamfer / 2]) cylinder(r=chamfer, h=depth - chamfer);
+        x1 = chamfer;
+        y1 = chamfer;
+        x2 = width - chamfer;
+        y2 = height - chamfer;
 
-        translate([chamfer, chamfer, 0]) cylinder(r=chamfer / 2, h=depth);
-        translate([width - chamfer, chamfer, 0]) cylinder(r=chamfer / 2, h=depth);
-        translate([width - chamfer, height - chamfer, 0]) cylinder(r=chamfer / 2, h=depth);
-        translate([chamfer, height - chamfer, 0]) cylinder(r=chamfer / 2, h=depth);
+        translate([x1, y1, 0]) cylinder(r=chamfer, h=depth - chamfer);
+        translate([x2, y1, 0]) cylinder(r=chamfer, h=depth - chamfer);
+        translate([x1, y2, 0]) cylinder(r=chamfer, h=depth - chamfer);
+        translate([x2, y2, 0]) cylinder(r=chamfer, h=depth - chamfer);
+
+        translate([x1, y1, 0]) cylinder(r=chamfer / 2, h=depth);
+        translate([x2, y1, 0]) cylinder(r=chamfer / 2, h=depth);
+        translate([x1, y2, 0]) cylinder(r=chamfer / 2, h=depth);
+        translate([x2, y2, 0]) cylinder(r=chamfer / 2, h=depth);
     }
 }
 
@@ -65,7 +67,7 @@ module bottom_shell() {
     difference() {
         union() {
             // Outer shell
-            translate([0, 0, -EDGE_RADIUS]) chamfered_cube(SHELL_WIDTH, SHELL_HEIGHT, BOTTOM_SHELL_DEPTH + INSET, EDGE_RADIUS);
+            translate([0, 0, 0]) shell(SHELL_WIDTH, SHELL_HEIGHT, BOTTOM_SHELL_DEPTH, EDGE_RADIUS);
 
             // Plug holder
             rotate([90, 0, 0]) translate([PLUG_OFFSET, BOTTOM_SHELL_DEPTH - PLUG_LARGE_RADIUS, -SHELL_HEIGHT - 12]) {
@@ -75,8 +77,8 @@ module bottom_shell() {
 
         union() {
             translate([0, 0, -20]) cube([SHELL_WIDTH, SHELL_HEIGHT, 20]);
-            translate([WALL, WALL, -EDGE_RADIUS - 2]) chamfered_cube(SHELL_WIDTH - WALL * 2, SHELL_HEIGHT - WALL * 2,
-                BOTTOM_SHELL_DEPTH + 2, EDGE_RADIUS - WALL);
+            translate([WALL, WALL, -WALL]) shell(SHELL_WIDTH - WALL * 2, SHELL_HEIGHT - WALL * 2,
+                BOTTOM_SHELL_DEPTH, EDGE_RADIUS - WALL);
 
             // lip
             translate([INSET - RELIEF / 2, INSET - RELIEF / 2, -EPSILON])
@@ -99,7 +101,7 @@ module top_shell() {
     difference() {
         union() {
             difference() {
-                translate([0, 0, -EDGE_RADIUS]) chamfered_cube(SHELL_WIDTH, SHELL_HEIGHT, TOP_SHELL_DEPTH + EDGE_RADIUS, EDGE_RADIUS);
+                translate([0, 0, 0]) shell(SHELL_WIDTH, SHELL_HEIGHT, TOP_SHELL_DEPTH, EDGE_RADIUS);
                 translate([-EPSILON, -EPSILON, -10]) cube([SHELL_WIDTH + EPSILON * 2, SHELL_HEIGHT + EPSILON * 2,
                     11]);
             }
@@ -112,7 +114,7 @@ module top_shell() {
         // Cavity
         union() {
             // Cavity
-            translate([WALL, WALL, -EDGE_RADIUS]) chamfered_cube(SHELL_WIDTH - WALL * 2, SHELL_HEIGHT - WALL * 2,
+            translate([WALL, WALL, -WALL]) shell(SHELL_WIDTH - WALL * 2, SHELL_HEIGHT - WALL * 2,
                 TOP_SHELL_DEPTH, EDGE_RADIUS - WALL);
 
             // Decal Inset
@@ -311,5 +313,5 @@ module cutaway() {
     }
 }
 
-assembled(0.7);
-//cutaway();
+//assembled(0.7);
+cutaway();
