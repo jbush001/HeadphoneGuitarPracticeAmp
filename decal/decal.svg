@@ -7,17 +7,45 @@ Decal Size: 84 - 3 - 0.5, 34 - 3 - 0.5 = (80.5, 30.5)
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
     viewBox="0 0 80.5 30.5" width="80.5mm" height="30.5mm" id="front_decal">
     <style>
-        .small { font: normal 0.5mm fixed; text-align: center}
+        .small { font: normal 0.5mm sans-serif; text-align: center}
+        .medium { font: normal 1mm sans-serif; text-align: center}
     </style>
 
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+        <stop offset="100%" style="stop-color:rgb(255,192,0);stop-opacity:1" />
+    </linearGradient>
 
-    <rect x="0" y="0" width="80.5" height="30.5" rx="1" stroke="black" fill="lightblue" stroke-width="0.5" />
+    <!-- Outer border and fill -->
+    <rect x="0" y="0" width="80.5" height="30.5" rx="1" stroke="black" fill="url(#gradient)" stroke-width="0.5" />
+
+    <!-- Border around buttons -->
     <rect x="30.25" y="18" width="36.5" height="9.5" rx="4.75" stroke="black" fill="white" stroke-width="0.5" />
-    <text x="73.5" y="2.5" class="small" text-anchor="middle">Power</text>
-    <text x="15" y="2.5" class="small" text-anchor="middle">Headphone</text>
-    <text x="33" y="17" class="small" text-anchor="middle">Vol+</text>
-    <text x="42" y="17" class="small" text-anchor="middle">Vol+</text>
-    <text x="51" y="17" class="small" text-anchor="middle">Metronome</text>
-    <text x="60" y="17" class="small" text-anchor="middle">Effect</text>
-    <text x="75" y="15" class="small" text-anchor="right">USB</text>
+
+    <!-- Title -->
+    <text x="2.5" y="11" class="medium" text-anchor="left">Guitar Headphone Amplifier</text>
+
+    <!-- Headphones Icon -->
+    <path stroke="black" fill="none" stroke-width="0.4" d="M13 3 l 0.4 0 l 0 0.5 l -0.4 0 l 0 -1 a 1 1 0 0 1 2.25 0 l 0 1 l -0.4 0 l 0 -0.5 l 0.4 0" />
+
+    <!-- Power symbol -->
+    <path stroke="black" stroke-linecap="round" fill="none" stroke-width="0.4" d="M 70 1.5 l 0 1 m 0.75 -0.5 a 1 1 0 1 1 -1.5 0" />
+
+    <!-- Volume Down -->
+    <path stroke="black" fill="black" stroke-width="0.25" d="M 34 16 l 0.5 0 l 0.5 -0.5 l 0 1.5 l -0.5 -0.5 l -0.5 0 Z"  />
+    <path stroke="black" fill="none" stroke-linecap="round" stroke-width="0.25" d="M 35.4 15.8 a 2 2 0 0 1 0 1"  />
+
+    <!-- Volume Up -->
+    <path stroke="black" fill="black" stroke-width="0.25" d="M 41 16 l 0.5 0 l 0.5 -0.5 l 0 1.5 l -0.5 -0.5 l -0.5 0 Z"  />
+    <path stroke="black" fill="none" stroke-linecap="round" stroke-width="0.25" d="M 42.4 15.8 a 2 2 0 0 1 0 1 m 0.3 0.3 a 2.5 2.5 0 0 0 0 -1.6 m 0.3 -0.3 a 3 3 0 0 1 0 2.2"  />
+
+    <!-- Charge Port -->
+    <path fill="black" d="M 75 14 l 1.5 0 l 0 2.5 l -1.5 0 a 1 1 0 0 1 0 -2.5" />
+    <path stroke="black" fill="none" stroke-width="0.4" stroke-linecap="round" d="M 77 14.5 l 1 0 l 0 1.5 l -1 0" />
+
+    <!-- Metronome -->
+    <path stroke="black" fill="none" stroke-width="0.4" d="M 51 17 l 2 0 l -0.5 -2.5 l -1 0 Z m 1 -0.5 l 1.5 -2" />
+
+    <!-- Effects -->
+    <path stroke="black" fill="none" stroke-width="0.4" d="M 60 17 l 2 -2 m 0.5 -0.5 l 0.3 0 m -0.9 -0.3 l 0.3 0 m 0.5 1 l 0.3 0 m 0.3 -0.5 l 0.3 0" />
 </svg>
