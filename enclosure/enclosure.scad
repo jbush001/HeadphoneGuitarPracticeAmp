@@ -11,8 +11,8 @@ PCB_WIDTH=80;
 PCB_HEIGHT=30;
 PCB_SCREW_INSET=2.5;
 PCB_OFFSET=2;
-TOP_SHELL_DEPTH=7.5;
-BOTTOM_SHELL_DEPTH=7.5;
+TOP_SHELL_DEPTH=8;
+BOTTOM_SHELL_DEPTH=8.5;
 PLUG_LARGE_RADIUS=16 / 2;
 PLUG_CYLINDER_LEN = 37;
 PLUG_OPENING_ID=10;
@@ -115,10 +115,12 @@ module top_shell() {
     }
 }
 
-module make_side_hole(diameter, tombstone) {
+module make_side_hole(diameter, isbottom) {
     cylinder(d=diameter, h=6);
-    if (tombstone)
+    if (isbottom)
         translate([-diameter / 2, 0, 0]) cube([diameter, diameter, 6]);
+    else
+        translate([-diameter / 2, -diameter, 0]) cube([diameter, diameter, 6]);
 }
 
 // This is from the origin of the top surface of the PCB, with positive
@@ -146,7 +148,7 @@ module openings(isbottom) {
     // Power switch
     // Center x is 70mm from origin
     // 2mm travel, switch is 1.5mm wide.
-    translate([65 - 2, -3, PCB_THICKNESS - 1]) cube([4, 5, 4]);
+    translate([65 - 3, -3, PCB_THICKNESS - 1]) cube([6, 5, 4]);
 
     // Front buttons
     for (i = [0:3])
@@ -272,7 +274,7 @@ module assembled(alpha) {
     pcb_xy = WALL + RELIEF;
     pcb_z = TOP_SHELL_DEPTH - WALL - PCB_THICKNESS - PCB_OFFSET;
     translate([WALL + RELIEF, WALL + RELIEF, pcb_z]) pcb();
-    translate([30, 5, pcb_z - 1 - 5.6]) battery();
+    translate([30, 5, pcb_z - 0.5 - 5.6]) battery();
     rotate([90, 0, 0]) translate([16, -6, -5]) plug();
 
     // Front buttons
@@ -294,5 +296,5 @@ module cutaway() {
     }
 }
 
-assembled(1);
+assembled(0.7);
 //cutaway();
