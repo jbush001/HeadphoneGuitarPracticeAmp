@@ -1,5 +1,5 @@
 EPSILON=0.01; // Used to avoid z-fighting
-RELIEF=0.3; // Gap between interfacing parts
+RELIEF=0.5; // Gap between interfacing parts
 EDGE_RADIUS=2.5;
 WALL=1.5; // Thickness of wall
 PCB_THICKNESS=1.57; // Oshpark 4 layer board
@@ -13,15 +13,13 @@ PCB_OFFSET=2;
 TOP_SHELL_DEPTH=7.5;
 BOTTOM_SHELL_DEPTH=7.5;
 PLUG_LARGE_RADIUS=16 / 2;
-PLUG_SMALL_RADIUS=16 / 2;
-PLUG_CONE_LEN=12;
-PLUG_CYLINDER_LEN = 25;
+PLUG_CYLINDER_LEN = 37;
 PLUG_OPENING_ID=10;
 PLUG_OFFSET=8;  // along width
-BOSS1_ID=2;
-BOSS2_ID=1.8;
+BOSS1_ID=2.5;   // For an M2 screw, should be larger
+BOSS2_ID=1.8;   // Also for M2 screw, we want it to self thread into this.
 COUNTERSINK_DEPTH=2;
-COUNTERSINK_ID=3.5;
+COUNTERSINK_ID=4;
 SHELL_WIDTH=PCB_WIDTH + RELIEF * 2 + WALL * 2;
 SHELL_HEIGHT=PCB_HEIGHT + RELIEF * 2 + WALL * 2;
 BOSS_OUTER_RADIUS=PCB_SCREW_INSET;
@@ -71,10 +69,8 @@ module bottom_shell() {
             translate([0, 0, -EDGE_RADIUS]) rounded_cube(SHELL_WIDTH, SHELL_HEIGHT, BOTTOM_SHELL_DEPTH + EDGE_RADIUS, EDGE_RADIUS);
 
             // Plug holder
-            rotate([90, 0, 0]) translate([PLUG_OFFSET, BOTTOM_SHELL_DEPTH - PLUG_LARGE_RADIUS, -SHELL_HEIGHT]) {
+            rotate([90, 0, 0]) translate([PLUG_OFFSET, BOTTOM_SHELL_DEPTH - PLUG_LARGE_RADIUS, -SHELL_HEIGHT - 12]) {
                 rounded_cylinder(PLUG_CYLINDER_LEN, PLUG_LARGE_RADIUS);
-                rotate([180, 0, 0]) translate([PLUG_LARGE_RADIUS, -PLUG_LARGE_RADIUS, 0])
-                    cylinder(h=PLUG_CONE_LEN, r1=PLUG_LARGE_RADIUS, r2=PLUG_SMALL_RADIUS);
             }
         }
 
@@ -89,11 +85,9 @@ module bottom_shell() {
                     WALL + EPSILON, EDGE_RADIUS - (WALL - INSET - RELIEF));
 
             // Inside of plug holder
-            rotate([90, 0, 0]) translate([PLUG_OFFSET, BOTTOM_SHELL_DEPTH - PLUG_LARGE_RADIUS, -SHELL_HEIGHT]) {
-                translate([WALL, WALL, -EPSILON]) rounded_cylinder(PLUG_CYLINDER_LEN - WALL + EPSILON, PLUG_LARGE_RADIUS - WALL);
-                rotate([180, 0, 0]) translate([PLUG_LARGE_RADIUS, -PLUG_LARGE_RADIUS, 0]) cylinder(h=PLUG_CONE_LEN - WALL, r1=PLUG_LARGE_RADIUS - WALL,
-                    r2=PLUG_SMALL_RADIUS - WALL);
-                translate([PLUG_LARGE_RADIUS, PLUG_LARGE_RADIUS, -PLUG_CONE_LEN - 1]) cylinder(d=PLUG_OPENING_ID, h=PLUG_CONE_LEN);
+            rotate([90, 0, 0]) translate([PLUG_OFFSET, BOTTOM_SHELL_DEPTH - PLUG_LARGE_RADIUS, -SHELL_HEIGHT - 12 + WALL]) {
+                translate([WALL, WALL, -EPSILON]) rounded_cylinder(PLUG_CYLINDER_LEN - WALL * 2 + EPSILON, PLUG_LARGE_RADIUS - WALL);
+                translate([PLUG_LARGE_RADIUS, PLUG_LARGE_RADIUS, -3]) cylinder(d=PLUG_OPENING_ID, h=6); // Opening
             }
         }
     }
@@ -149,7 +143,7 @@ module openings() {
 
     // Front buttons
     for (i = [0:3])
-        translate([37 + i * 8, 25, 0]) rotate([0, -180, 0]) cylinder(d=6, h=5);
+        translate([37 + i * 8, 25, 0]) rotate([0, -180, 0]) cylinder(d=6, h=7);
 }
 
 module bottom_enclosure() {
@@ -293,7 +287,5 @@ module cutaway() {
     }
 }
 
-//assembled(0.5);
-cutaway();
-//exploded();
-//openings();
+assembled(0.5);
+//cutaway();
