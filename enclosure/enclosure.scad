@@ -110,8 +110,23 @@ module top_shell() {
         }
 
         // Cavity
-        translate([WALL, WALL, -EDGE_RADIUS]) chamfered_cube(SHELL_WIDTH - WALL * 2, SHELL_HEIGHT - WALL * 2,
-            TOP_SHELL_DEPTH, EDGE_RADIUS - WALL);
+        union() {
+            // Cavity
+            translate([WALL, WALL, -EDGE_RADIUS]) chamfered_cube(SHELL_WIDTH - WALL * 2, SHELL_HEIGHT - WALL * 2,
+                TOP_SHELL_DEPTH, EDGE_RADIUS - WALL);
+
+            // Decal Inset
+            difference() {
+                translate([1.5, 1.5, TOP_SHELL_DEPTH - 0.4])
+                    rounded_rect(SHELL_WIDTH - 3, SHELL_HEIGHT - 3, 1, 1);
+
+                // Front buttons
+                hull() {
+                    translate([35, 8, TOP_SHELL_DEPTH - 1]) cylinder(d=9, h=1);
+                    translate([62, 8, TOP_SHELL_DEPTH - 1]) cylinder(d=9, h=1);
+                }
+            }
+        }
     }
 }
 

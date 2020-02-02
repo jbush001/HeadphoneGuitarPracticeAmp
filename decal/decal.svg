@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+Shell size is 84x34mm
+Decal cutout is inset 3mm total on both sides. Add 0.5mm of extra gap to sticker.
+Decal Size: 84 - 3 - 0.5, 34 - 3 - 0.5 = (80.5, 30.5)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+    viewBox="0 0 80.5 30.5" width="80.5mm" height="30.5mm" id="front_decal">
+    <style>
+        .small { font: normal 0.5mm fixed; text-align: center}
+    </style>
+
+
+    <rect x="0" y="0" width="80.5" height="30.5" rx="1" stroke="black" fill="lightblue" stroke-width="0.5" />
+    <rect x="30.25" y="18" width="36.5" height="9.5" rx="4.75" stroke="black" fill="white" stroke-width="0.5" />
+    <text x="73.5" y="2.5" class="small" text-anchor="middle">Power</text>
+    <text x="15" y="2.5" class="small" text-anchor="middle">Headphone</text>
+    <text x="33" y="17" class="small" text-anchor="middle">Vol+</text>
+    <text x="42" y="17" class="small" text-anchor="middle">Vol+</text>
+    <text x="51" y="17" class="small" text-anchor="middle">Metronome</text>
+    <text x="60" y="17" class="small" text-anchor="middle">Effect</text>
+    <text x="75" y="15" class="small" text-anchor="right">USB</text>
+</svg>
