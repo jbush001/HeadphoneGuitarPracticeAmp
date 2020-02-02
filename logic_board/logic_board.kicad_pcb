@@ -36,7 +36,7 @@
   )
 
   (setup
-    (last_trace_width 0.8)
+    (last_trace_width 0.25)
     (user_trace_width 0.8)
     (user_trace_width 1)
     (user_trace_width 1.25)
@@ -910,7 +910,7 @@
   )
 
   (module custom_footprints:TL3315NF160Q_Tactile_Switch (layer F.Cu) (tedit 5E2D255F) (tstamp 5E339BBC)
-    (at 160.9471 124.8918)
+    (at 161 125)
     (path /5E257800/5E4374E4)
     (fp_text reference SW4 (at -0.9144 -3.7084) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -935,7 +935,7 @@
   )
 
   (module custom_footprints:TL3315NF160Q_Tactile_Switch (layer F.Cu) (tedit 5E2D255F) (tstamp 5E339BAC)
-    (at 153.0985 124.9553)
+    (at 153 125)
     (path /5E257800/5E436F53)
     (fp_text reference SW3 (at -0.0254 -3.7719) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -960,7 +960,7 @@
   )
 
   (module custom_footprints:TL3315NF160Q_Tactile_Switch (layer F.Cu) (tedit 5E2D255F) (tstamp 5E339B9C)
-    (at 145.1356 124.9934)
+    (at 145 125)
     (path /5E257800/5E43625B)
     (fp_text reference SW2 (at 0.0254 -3.7719) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -985,7 +985,7 @@
   )
 
   (module custom_footprints:TL3315NF160Q_Tactile_Switch (layer F.Cu) (tedit 5E2D255F) (tstamp 5E339B8C)
-    (at 137.0584 125.0061)
+    (at 137 125)
     (path /5E257800/5E437998)
     (fp_text reference SW1 (at 0 -3.8227) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -2774,7 +2774,6 @@
   (gr_line (start 180 102.5) (end 180 127.5) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 102.5 100) (end 113 100) (layer Edge.Cuts) (width 0.05))
 
-  (via (at 143.31188 116.26088) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
   (via (at 155.89504 114.48796) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
   (via (at 156.9466 126.8095) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
   (via (at 156.2227 119.7991) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
@@ -2848,6 +2847,7 @@
   (segment (start 140.1377 110.4206) (end 140.0937 110.4646) (width 0.25) (layer F.Cu) (net 1))
   (segment (start 140.2676 110.6385) (end 140.0937 110.4646) (width 0.8) (layer B.Cu) (net 1))
   (segment (start 140.2676 111.3917) (end 140.2676 110.6385) (width 0.8) (layer B.Cu) (net 1))
+  (via (at 143.31188 116.26088) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
   (via (at 168.8084 122.6693) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
   (via (at 166.37 128.7145) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
   (via (at 152.9842 103.61168) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
@@ -3316,7 +3316,7 @@
   (segment (start 125.183402 119.7316) (end 127.2032 117.711802) (width 0.25) (layer F.Cu) (net 74))
   (segment (start 124.1484 119.7316) (end 125.183402 119.7316) (width 0.25) (layer F.Cu) (net 74))
 
-  (zone (net 1) (net_name +3V3) (layer In1.Cu) (tstamp 5E35217B) (hatch edge 0.508)
+  (zone (net 1) (net_name +3V3) (layer In1.Cu) (tstamp 5E35E792) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -3854,7 +3854,7 @@
       )
     )
   )
-  (zone (net 2) (net_name GND) (layer In2.Cu) (tstamp 5E352178) (hatch edge 0.508)
+  (zone (net 2) (net_name GND) (layer In2.Cu) (tstamp 5E35E78F) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
