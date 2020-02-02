@@ -6,6 +6,7 @@ PCB_THICKNESS=1.57; // Oshpark 4 layer board
 $fs = 0.5;
 $fa = 0.5;
 
+
 PCB_WIDTH=80;
 PCB_HEIGHT=30;
 PCB_SCREW_INSET=2.5;
@@ -29,19 +30,17 @@ LED_RADIUS=2.5; // 5mm
 //
 // Like cube(), except with a radius on all corners
 //
-module rounded_cube(width, height, depth, radius) {
+module chamfered_cube(width, height, depth, chamfer) {
     hull() {
-        // Bottom
-        translate([radius, radius, radius]) sphere(radius);
-        translate([width - radius, radius, radius]) sphere(radius);
-        translate([width - radius, height - radius, radius]) sphere(radius);
-        translate([radius, height - radius, radius]) sphere(radius);
+        translate([chamfer, chamfer, chamfer / 2]) cylinder(r=chamfer, h=depth - chamfer);
+        translate([width - chamfer, chamfer, chamfer / 2]) cylinder(r=chamfer, h=depth - chamfer);
+        translate([width - chamfer, height - chamfer, chamfer / 2]) cylinder(r=chamfer, h=depth - chamfer);
+        translate([chamfer, height - chamfer, chamfer / 2]) cylinder(r=chamfer, h=depth - chamfer);
 
-        // Top
-        translate([radius, radius, depth - radius]) sphere(radius);
-        translate([width - radius, radius, depth - radius]) sphere(radius);
-        translate([width - radius, height - radius, depth - radius]) sphere(radius);
-        translate([radius, height - radius, depth - radius]) sphere(radius);
+        translate([chamfer, chamfer, 0]) cylinder(r=chamfer / 2, h=depth);
+        translate([width - chamfer, chamfer, 0]) cylinder(r=chamfer / 2, h=depth);
+        translate([width - chamfer, height - chamfer, 0]) cylinder(r=chamfer / 2, h=depth);
+        translate([chamfer, height - chamfer, 0]) cylinder(r=chamfer / 2, h=depth);
     }
 }
 
@@ -66,7 +65,7 @@ module bottom_shell() {
     difference() {
         union() {
             // Outer shell
-            translate([0, 0, -EDGE_RADIUS]) rounded_cube(SHELL_WIDTH, SHELL_HEIGHT, BOTTOM_SHELL_DEPTH + EDGE_RADIUS, EDGE_RADIUS);
+            translate([0, 0, -EDGE_RADIUS]) chamfered_cube(SHELL_WIDTH, SHELL_HEIGHT, BOTTOM_SHELL_DEPTH + INSET, EDGE_RADIUS);
 
             // Plug holder
             rotate([90, 0, 0]) translate([PLUG_OFFSET, BOTTOM_SHELL_DEPTH - PLUG_LARGE_RADIUS, -SHELL_HEIGHT - 12]) {
@@ -75,14 +74,14 @@ module bottom_shell() {
         }
 
         union() {
-            translate([0, 0, -EDGE_RADIUS]) cube([SHELL_WIDTH, SHELL_HEIGHT, EDGE_RADIUS]);
-            translate([WALL, WALL, -EDGE_RADIUS]) rounded_cube(SHELL_WIDTH - WALL * 2, SHELL_HEIGHT - WALL * 2,
-                BOTTOM_SHELL_DEPTH, EDGE_RADIUS - WALL);
+            translate([0, 0, -20]) cube([SHELL_WIDTH, SHELL_HEIGHT, 20]);
+            translate([WALL, WALL, -EDGE_RADIUS - 2]) chamfered_cube(SHELL_WIDTH - WALL * 2, SHELL_HEIGHT - WALL * 2,
+                BOTTOM_SHELL_DEPTH + 2, EDGE_RADIUS - WALL);
 
             // lip
-            translate([INSET + RELIEF, INSET + RELIEF, -EPSILON])
-                rounded_rect(SHELL_WIDTH - (WALL - INSET + RELIEF) * 2, SHELL_HEIGHT - (WALL - INSET + RELIEF) * 2,
-                    WALL + EPSILON, EDGE_RADIUS - (WALL - INSET - RELIEF));
+            translate([INSET - RELIEF / 2, INSET - RELIEF / 2, -EPSILON])
+                rounded_rect(SHELL_WIDTH - (INSET - RELIEF / 2) * 2, SHELL_HEIGHT - (INSET - RELIEF / 2) * 2,
+                    INSET + EPSILON, EDGE_RADIUS - (WALL - INSET - RELIEF));
 
             // Inside of plug holder
             rotate([90, 0, 0]) translate([PLUG_OFFSET, BOTTOM_SHELL_DEPTH - PLUG_LARGE_RADIUS, -SHELL_HEIGHT - 12 + WALL]) {
@@ -100,41 +99,49 @@ module top_shell() {
     difference() {
         union() {
             difference() {
-                translate([0, 0, -EDGE_RADIUS]) rounded_cube(SHELL_WIDTH, SHELL_HEIGHT, TOP_SHELL_DEPTH + EDGE_RADIUS, EDGE_RADIUS);
-                translate([-EPSILON, -EPSILON, -EDGE_RADIUS]) cube([SHELL_WIDTH + EPSILON * 2, SHELL_HEIGHT + EPSILON * 2,
-                    EDGE_RADIUS + WALL]);
+                translate([0, 0, -EDGE_RADIUS]) chamfered_cube(SHELL_WIDTH, SHELL_HEIGHT, TOP_SHELL_DEPTH + EDGE_RADIUS, EDGE_RADIUS);
+                translate([-EPSILON, -EPSILON, -10]) cube([SHELL_WIDTH + EPSILON * 2, SHELL_HEIGHT + EPSILON * 2,
+                    11]);
             }
 
             // Lip
             translate([WALL - INSET, WALL - INSET, -EPSILON]) rounded_rect(SHELL_WIDTH - (WALL - INSET) * 2,
-                SHELL_HEIGHT - (WALL - INSET) * 2, WALL + EPSILON, EDGE_RADIUS - (WALL - INSET));
+                SHELL_HEIGHT - (WALL - INSET) * 2, INSET * 2, EDGE_RADIUS - (WALL - INSET));
         }
 
         // Cavity
-        translate([WALL, WALL, -EDGE_RADIUS]) rounded_cube(SHELL_WIDTH - WALL * 2, SHELL_HEIGHT - WALL * 2,
+        translate([WALL, WALL, -EDGE_RADIUS]) chamfered_cube(SHELL_WIDTH - WALL * 2, SHELL_HEIGHT - WALL * 2,
             TOP_SHELL_DEPTH, EDGE_RADIUS - WALL);
     }
 }
 
+module make_side_hole(diameter, tombstone) {
+    cylinder(d=diameter, h=6);
+    if (tombstone)
+        translate([-diameter / 2, 0, 0]) cube([diameter, diameter, 6]);
+}
+
 // This is from the origin of the top surface of the PCB, with positive
 // extending away from the bottom.
-module openings() {
+// When is bottom is true, it will "tombstone" the holes to cut overlapping
+// portion of the lip away.
+module openings(isbottom) {
     // USB port
     usb_port_width = 8;
     translate([PCB_WIDTH- 1, (PCB_HEIGHT - usb_port_width) / 2, PCB_THICKNESS])
-        cube([WALL * 2, 8, 4]);
+        cube([10, 8, 4]);
 
     // Audio jack
     jack_id = 4;
-    translate([15, -3, PCB_THICKNESS + 1.85]) rotate([-90, 0, 0]) cylinder(d=jack_id, h=6);
+    translate([15, -3, PCB_THICKNESS + 1.85]) rotate([-90, 0, 0]) make_side_hole(jack_id, isbottom);
 
     // Power LED
     led_od = 3.1;
-    translate([73.56836, -3, PCB_THICKNESS + led_od / 2 + 0.5]) rotate([-90, 0, 0]) cylinder(d=led_od, h=6);
+    translate([73.56836, -3, PCB_THICKNESS + led_od / 2 + 0.5]) rotate([-90, 0, 0]) make_side_hole(led_od,  isbottom);
 
     // Charging LED
-    translate([PCB_WIDTH - 1, 24.19, PCB_THICKNESS + led_od / 2 + 0.5]) rotate([0, 90, 0])
-        cylinder(d=led_od, h=4);
+    translate([PCB_WIDTH - 1, 24.19, PCB_THICKNESS + led_od / 2 + 0.5]) rotate([90, 180, 90])
+        make_side_hole(led_od, isbottom);
 
     // Power switch
     // Center x is 70mm from origin
@@ -143,7 +150,7 @@ module openings() {
 
     // Front buttons
     for (i = [0:3])
-        translate([37 + i * 8, 25, 0]) rotate([0, -180, 0]) cylinder(d=6, h=7);
+        translate([33 + i * 9, 24, 0]) rotate([0, -180, 0]) cylinder(d=7 + RELIEF, h=7);
 }
 
 module bottom_enclosure() {
@@ -157,10 +164,10 @@ module bottom_enclosure() {
         union() {
             bottom_shell();
 
-            translate([xy1, xy1, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length);
-            translate([x2, xy1, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length);
-            translate([xy1, y2, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length);
-            translate([x2, y2, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length);
+            translate([xy1, xy1, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length - WALL / 2);
+            translate([x2, xy1, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length - WALL / 2);
+            translate([xy1, y2, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length - WALL / 2);
+            translate([x2, y2, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length - WALL / 2);
         }
 
         union() {
@@ -169,7 +176,7 @@ module bottom_enclosure() {
             translate([x2, xy1, boss_bottom - EPSILON]) cylinder(d=BOSS2_ID, h=boss_length - WALL);
             translate([xy1, y2, boss_bottom - EPSILON]) cylinder(d=BOSS2_ID, h=boss_length - WALL);
             translate([x2, y2, boss_bottom - EPSILON]) cylinder(d=BOSS2_ID, h=boss_length - WALL);
-            translate([WALL + RELIEF, WALL + RELIEF, boss_bottom]) openings();
+            translate([WALL + RELIEF, WALL + RELIEF, boss_bottom]) openings(true);
         }
     }
 }
@@ -207,14 +214,14 @@ module top_enclosure() {
                 translate([x2, y2, 0]) cylinder(d=COUNTERSINK_ID, h=COUNTERSINK_DEPTH + EPSILON);
             }
 
-            translate([WALL + RELIEF, WALL + RELIEF, pcb_boss_bottom]) rotate([180, 0, 0]) translate([0, -PCB_HEIGHT, 0]) openings();
+            translate([WALL + RELIEF, WALL + RELIEF, pcb_boss_bottom]) rotate([180, 0, 0]) translate([0, -PCB_HEIGHT, 0]) openings(false);
         }
     }
 }
 
 module button() {
-    cylinder(h=1, d=7);
-    cylinder(h=4, d=5.5);
+    cylinder(h=1, d=9.5);
+    cylinder(h=4, d=7);
 }
 
 // This is a stand-in for the PCB, useful during design to check fit.
@@ -270,11 +277,11 @@ module assembled(alpha) {
 
     // Front buttons
     for (i = [0:3])
-        translate([pcb_xy + 37 + i * 8, SHELL_HEIGHT - pcb_xy - 25, pcb_z + PCB_THICKNESS + 0.5]) button();
+        translate([pcb_xy + 33 + i * 9, SHELL_HEIGHT - pcb_xy - 24, pcb_z + PCB_THICKNESS + 0.5]) button();
 
     color("yellow", alpha) {
         top_enclosure();
-        rotate([180,0,0]) translate([0, -SHELL_HEIGHT, -WALL]) bottom_enclosure();
+        rotate([180,0,0]) translate([0, -SHELL_HEIGHT, -WALL * 1.5]) bottom_enclosure();
     }
 }
 
@@ -287,5 +294,5 @@ module cutaway() {
     }
 }
 
-assembled(0.5);
+assembled(1);
 //cutaway();
