@@ -1,10 +1,5 @@
 EESchema-DOCLIB  Version 2.0
 #
-$CMP AP3419
-D DIODES 1.0MHZ, 2A STEP-DOWN DC-DC BUCK CONVERTER
-F https://www.diodes.com/assets/Datasheets/products_inactive_data/AP3419.pdf
-$ENDCMP
-#
 $CMP BQ24090DGQR
 D 1A, Single-Input, Single Cell Li-Ion and Li-Pol Battery Charger
 F http://www.ti.com/lit/ds/symlink/bq24092.pdf
