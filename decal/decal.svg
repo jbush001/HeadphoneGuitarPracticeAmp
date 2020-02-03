@@ -13,7 +13,6 @@ Decal Size: 84 - 3 - 0.5, 34 - 3 - 0.5 = (80.5, 30.5)
 
     <!-- Outer border and fill -->
     <rect width="100%" height="100%" fill="blue" />
-    <image href="./background.jpg" x="0" y="-10" width="80.5" height="50.5" />
     <rect x="0.5" y="0.5" width="79.5" height="29.5" rx="2" fill="none" stroke="white" stroke-width="0.7" />
 
     <!-- Border around buttons
@@ -21,27 +20,50 @@ Decal Size: 84 - 3 - 0.5, 34 - 3 - 0.5 = (80.5, 30.5)
     -->
     <rect x="26.25" y="16" width="36.5" height="9.5" rx="4.75" stroke="white" stroke-width="0.5" />
 
+    <!-- Show where buttons are for alignment -->
+    <!--
+    <circle cx="31" cy="20.75" r="4" fill="white" />
+    <circle cx="40" cy="20.75" r="4" fill="white" />
+    <circle cx="49" cy="20.75" r="4" fill="white" />
+    <circle cx="58" cy="20.75" r="4" fill="white" />
+    -->
+
     <!-- Headphones Icon -->
-    <path stroke="white" fill="none" stroke-width="0.4" d="M13 3 l 0.4 0 l 0 0.5 l -0.4 0 l 0 -1 a 1 1 0 0 1 2.25 0 l 0 1 l -0.4 0 l 0 -0.5 l 0.4 0" />
+    <g transform="translate(13 5) scale(1.5)">
+        <path stroke="white" fill="none" stroke-width="0.4" d="M 0 0 l 0.4 0 l 0 0.5 l -0.4 0 l 0 -1 a 1 1 0 0 1 2.25 0 l 0 1 l -0.4 0 l 0 -0.5 l 0.4 0" />
+    </g>
 
     <!-- Power symbol -->
-    <path stroke="white" stroke-linecap="round" fill="none" stroke-width="0.4" d="M 67 1.5 l 0 1 m 0.75 -0.5 a 1 1 0 1 1 -1.5 0" />
+    <g transform="translate(67 2.5) scale(1.5)">
+        <path stroke="white" stroke-linecap="round" fill="none" stroke-width="0.4" d="M 0 0 l 0 1 m 0.75 -0.5 a 1.05 1.05 0 1 1 -1.5 0" />
+    </g>
 
     <!-- Charge Port -->
-    <path fill="white" d="M 75 14 l 1.5 0 l 0 2.5 l -1.5 0 a 1 1 0 0 1 0 -2.5" />
-    <path stroke="white" fill="none" stroke-width="0.35" stroke-linecap="round" d="M 77 14.5 l 1 0 l 0 1.5 l -1 0 m 0.3 -0.5 l 0.1 0 m 0 -0.5 l -0.1 0" />
+    <g transform="translate(74 14) scale(1.1)">
+        <path fill="white" d="M 0 0 l 1.5 0 l 0 2.5 l -1.5 0 a 1 1 0 0 1 0 -2.5" />
+        <path stroke="white" fill="none" stroke-width="0.35" stroke-linecap="round" d="M 2 0.5 l 1.2 0 l 0 1.5 l -1.2 0 m 0.6 -0.5 l 0.1 0 m 0 -0.5 l -0.1 0" />
+        <path stroke="white" fill="none" stroke-width="0.7" stroke-linecap="round" d="M -1 1.25 l -1.5 0" />
+    </g>
 
     <!-- Volume Down -->
-    <path stroke="white" fill="white" stroke-width="0.25" d="M 32 13.5 l 0.5 0 l 0.75 -0.75 l 0 2.25 l -0.75 -0.75 l -0.5 0 Z"  />
-    <path stroke="white" fill="none" stroke-linecap="round" stroke-width="0.3" d="M 33.75 13.4 a 1 1 0 0 1 0 1"  />
+    <g transform="translate(30 12.5) scale(1.2)">
+        <path stroke="white" fill="white" stroke-width="0.25" d="M 0 0 l 0.5 0 l 0.75 -0.75 l 0 2.25 l -0.75 -0.75 l -0.5 0 Z"  />
+        <path stroke="white" fill="none" stroke-linecap="round" stroke-width="0.3" d="M 1.75 -0.1 a 1 1 0 0 1 0 1"  />
+    </g>
 
     <!-- Volume Up -->
-    <path stroke="white" fill="white" stroke-width="0.25" d="M 39 13.5 l 0.5 0 l 0.75 -0.75 l 0 2.25 l -0.75 -0.75 l -0.5 0 Z"  />
-    <path stroke="white" fill="none" stroke-linecap="round" stroke-width="0.3" d="M 40.75 13.4 a 1 1 0 0 1 0 1 m 0.4 0.4 a 1.6 1.6 0 0 0 0 -1.8 m 0.4 -0.4 a 2 2 0 0 1 0 2.6"  />
+    <g transform="translate(38 12.5) scale(1.2)">
+        <path stroke="white" fill="white" stroke-width="0.25" d="M 0 0 l 0.5 0 l 0.75 -0.75 l 0 2.25 l -0.75 -0.75 l -0.5 0 Z"  />
+        <path stroke="white" fill="none" stroke-linecap="round" stroke-width="0.3" d="M 1.75 -0.1 a 1 1 0 0 1 0 1 m 0.4 0.4 a 1.6 1.6 0 0 0 0 -1.8 m 0.4 -0.4 a 2 2 0 0 1 0 2.6"  />
+    </g>
 
     <!-- Metronome -->
-    <path stroke="white" fill="none" stroke-width="0.4" d="M 49 15 l 2 0 l -0.5 -2.5 l -1 0 Z m 1 -0.5 l 1.5 -2" />
+    <g transform="translate(48 14.5) scale(1.2)">
+        <path stroke="white" fill="none" stroke-width="0.4" d="M 0 0 l 2 0 l -0.5 -2.5 l -1 0 Z m 1 -0.5 l 1.5 -2" />
+    </g>
 
     <!-- Effects -->
-    <path stroke="white" fill="none" stroke-width="0.4" d="M 57.25 15 l 2 -2 m 0.5 -0.5 l 0.3 0 m -0.9 -0.3 l 0.3 0 m 0.5 1 l 0.3 0 m 0.3 -0.5 l 0.3 0" />
+    <g transform="translate(56.5 14.5) scale(1.2)">
+        <path stroke="white" fill="none" stroke-width="0.4" d="M 0 0 l 2 -2 m 0.5 -0.5 l 0.3 0 m -0.9 -0.3 l 0.3 0 m 0.5 1 l 0.3 0 m 0.3 -0.5 l 0.3 0" />
+    </g>
 </svg>
