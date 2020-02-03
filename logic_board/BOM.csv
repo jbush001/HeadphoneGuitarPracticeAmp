@@ -1,12 +1,12 @@
 Ref,Qnty,Value,Footprint,Vendor
 "C4, C13, C26,",3,10uF,Capacitors_SMD:C_0805_HandSoldering,https://www.digikey.com/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920
 "C5, C6, C7, C8, C12, C18, C15, C17, C19, C14, C16, C20, C10, C2,",14,0.1uF,Capacitors_SMD:C_0402,https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05F104ZO5NNNC/1276-1004-1-ND/3889090
-"C9,",1,10uF,Capacitors_SMD:C_0402,https://www.digikey.com/product-detail/en/murata-electronics/GRM155R60E106ME16D/490-10692-2-ND/4905100
+"C9,",1,10uF,Capacitors_SMD:C_0402,https://www.digikey.com/product-detail/en/murata-electronics/GRM155R60E106ME16D/490-10692-1-ND/5251413
 "C23, C24,",2,220uF,Capacitors_SMD:C_1206_HandSoldering,https://www.digikey.com/product-detail/en/panasonic-electronic-components/EEE-1VA221UP/PCE3955CT-ND/766331
 "C25, C1, C3,",3,22uF,Capacitors_SMD:CP_Elec_6.3x4.5,https://www.digikey.com/product-detail/en/panasonic-electronic-components/EEE-1VA220SP/PCE3952CT-ND/766328
 "D1, D2,",2,LED,LEDs:LED_D3.0mm,https://www.digikey.com/product-detail/en/kingbright/WP710A10LSRD/754-1590-ND/2769810
 "J3,",1,SJ2-3595X-SMT,custom_footprints:SJ2-3595X-SMT_3.5MM_JACK,https://www.digikey.com/product-detail/en/cui-devices/SJ2-35953A-SMT-TR/CP-SJ2-35953A-SMT-CT-ND/6619633
-"J4,",1,Amphenol 124015,Connectors_USB:USB_C_Receptacle_Amphenol_12401610E4-2A,https://www.digikey.com/product-detail/en/amphenol-icc-commercial-products/12401610E4-2A/12401610E4-2ATR-ND/5775519
+"J4,",1,Amphenol 124015,Connectors_USB:USB_C_Receptacle_Amphenol_12401610E4-2A,https://www.digikey.com/product-detail/en/amphenol-icc-commercial-products/12401610E4-2A/12401610E4-2ACT-ND/5775520
 "J5,",1,Batt,custom_footprints:JST PH HEADER SMD 2POS 2MM,https://www.digikey.com/product-detail/en/jst-sales-america-inc/B2B-PH-SM4-TB-LF-SN/455-1734-1-ND/926831
 "L1,",1,3.3 uH,Inductors_SMD:L_Taiyo-Yuden_NR-60xx_HandSoldering,https://www.digikey.com/product-detail/en/taiyo-yuden/NRS6020T3R3NMGJ/587-2930-1-ND/2666035
 "R1, R2, R4, R5, R15,",5,10k,Resistors_SMD:R_0402,https://www.digikey.com/product-detail/en/yageo/RC0402FR-0710KL/311-10.0KLRCT-ND/729470
@@ -16,7 +16,7 @@ Ref,Qnty,Value,Footprint,Vendor
 "R9, R10,",2,47k,Resistors_SMD:R_0402,https://www.digikey.com/product-detail/en/yageo/RC0402FR-0747KL/311-47.0KLRCT-ND/729563
 "R11, R12,",2,33,Resistors_SMD:R_0402,https://www.digikey.com/product-detail/en/te-connectivity-passive-product/CPF0402B33RE1/A102801CT-ND/2729334
 "R13,",1,1k,Resistors_SMD:R_0402,https://www.digikey.com/product-detail/en/yageo/RC0402FR-071KL/311-1.00KLRDKR-ND/732407
-"R14,",1,2k,Resistors_SMD:R_0402,https://www.digikey.com/product-detail/en/yageo/RC0402FR-072KL/311-2KLRTR-ND/2827565
+"R14,",1,2k,Resistors_SMD:R_0402,https://www.digikey.com/product-detail/en/yageo/RC0402FR-072KL/311-2KLRCT-ND/2827883
 "R17, R16,",2,1.5k,Resistors_SMD:R_0402,https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-2AEB152X/P1.5KDCCT-ND/1706187
 "SW4, SW1, SW3, SW2,",4,TL3315NF160Q,custom_footprints:TL3315NF160Q_Tactile_Switch,https://www.digikey.com/product-detail/en/e-switch/TL3315NF160Q/EG4621CT-ND/1870401
 "SW5,",1,Power,custom_footprints:JS102011SAQN,https://www.digikey.com/product-detail/en/c-k/JS102011SAQN/401-1999-1-ND/1640114
