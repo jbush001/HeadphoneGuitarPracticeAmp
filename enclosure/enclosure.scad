@@ -118,7 +118,7 @@ module top_shell() {
             translate([WALL, WALL, -WALL]) shell(SHELL_WIDTH - WALL * 2, SHELL_HEIGHT - WALL * 2,
                 TOP_SHELL_DEPTH, EDGE_RADIUS - WALL);
 
-            // Decal Inset
+            // Label Inset
             difference() {
                 translate([1.5, 1.5, TOP_SHELL_DEPTH - 0.4])
                     rounded_rect(SHELL_WIDTH - 3, SHELL_HEIGHT - 3, 1, 1);
