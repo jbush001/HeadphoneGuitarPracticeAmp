@@ -184,10 +184,10 @@ module bottom_enclosure() {
         union() {
             bottom_shell();
 
-            translate([xy1, xy1, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length + WALL);
-            translate([x2, xy1, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length + WALL);
-            translate([xy1, y2, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length + WALL);
-            translate([x2, y2, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length + WALL);
+            translate([xy1, xy1, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
+            translate([x2, xy1, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
+            translate([xy1, y2, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
+            translate([x2, y2, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
 
             // Attach to side walls
             reinf_wh = BOSS_OUTER_RADIUS * 1.91;
@@ -328,5 +328,5 @@ module cutaway() {
     }
 }
 
-//assembled(0.7);
-cutaway();
+assembled(0.7);
+//cutaway();

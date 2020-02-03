@@ -24,9 +24,6 @@ Decal Size: 84 - 3 - 0.5, 34 - 3 - 0.5 = (80.5, 30.5)
     -->
     <rect x="26.25" y="16" width="36.5" height="9.5" rx="4.75" stroke="black" fill="white" stroke-width="0.5" />
 
-    <!-- Title -->
-    <text x="3" y="10" class="medium" text-anchor="left">Guitar Headphone Amplifier</text>
-
     <!-- Headphones Icon -->
     <path stroke="black" fill="none" stroke-width="0.4" d="M13 3 l 0.4 0 l 0 0.5 l -0.4 0 l 0 -1 a 1 1 0 0 1 2.25 0 l 0 1 l -0.4 0 l 0 -0.5 l 0.4 0" />
 
@@ -35,19 +32,19 @@ Decal Size: 84 - 3 - 0.5, 34 - 3 - 0.5 = (80.5, 30.5)
 
     <!-- Charge Port -->
     <path fill="black" d="M 75 14 l 1.5 0 l 0 2.5 l -1.5 0 a 1 1 0 0 1 0 -2.5" />
-    <path stroke="black" fill="none" stroke-width="0.4" stroke-linecap="round" d="M 77 14.5 l 1 0 l 0 1.5 l -1 0" />
+    <path stroke="black" fill="none" stroke-width="0.35" stroke-linecap="round" d="M 77 14.5 l 1 0 l 0 1.5 l -1 0 m 0.3 -0.5 l 0.1 0 m 0 -0.5 l -0.1 0" />
 
     <!-- Volume Down -->
-    <path stroke="black" fill="black" stroke-width="0.25" d="M 32 14 l 0.5 0 l 0.5 -0.5 l 0 1.5 l -0.5 -0.5 l -0.5 0 Z"  />
-    <path stroke="black" fill="none" stroke-linecap="round" stroke-width="0.25" d="M 33.4 13.8 a 2 2 0 0 1 0 1"  />
+    <path stroke="black" fill="black" stroke-width="0.25" d="M 32 13.5 l 0.5 0 l 0.75 -0.75 l 0 2.25 l -0.75 -0.75 l -0.5 0 Z"  />
+    <path stroke="black" fill="none" stroke-linecap="round" stroke-width="0.3" d="M 33.75 13.4 a 1 1 0 0 1 0 1"  />
 
     <!-- Volume Up -->
-    <path stroke="black" fill="black" stroke-width="0.25" d="M 39 14 l 0.5 0 l 0.5 -0.5 l 0 1.5 l -0.5 -0.5 l -0.5 0 Z"  />
-    <path stroke="black" fill="none" stroke-linecap="round" stroke-width="0.25" d="M 40.4 13.8 a 2 2 0 0 1 0 1 m 0.3 0.3 a 2.5 2.5 0 0 0 0 -1.6 m 0.3 -0.3 a 3 3 0 0 1 0 2.2"  />
+    <path stroke="black" fill="black" stroke-width="0.25" d="M 39 13.5 l 0.5 0 l 0.75 -0.75 l 0 2.25 l -0.75 -0.75 l -0.5 0 Z"  />
+    <path stroke="black" fill="none" stroke-linecap="round" stroke-width="0.3" d="M 40.75 13.4 a 1 1 0 0 1 0 1 m 0.4 0.4 a 1.6 1.6 0 0 0 0 -1.8 m 0.4 -0.4 a 2 2 0 0 1 0 2.6"  />
 
     <!-- Metronome -->
     <path stroke="black" fill="none" stroke-width="0.4" d="M 49 15 l 2 0 l -0.5 -2.5 l -1 0 Z m 1 -0.5 l 1.5 -2" />
 
     <!-- Effects -->
-    <path stroke="black" fill="none" stroke-width="0.4" d="M 58 15 l 2 -2 m 0.5 -0.5 l 0.3 0 m -0.9 -0.3 l 0.3 0 m 0.5 1 l 0.3 0 m 0.3 -0.5 l 0.3 0" />
+    <path stroke="black" fill="none" stroke-width="0.4" d="M 57.25 15 l 2 -2 m 0.5 -0.5 l 0.3 0 m -0.9 -0.3 l 0.3 0 m 0.5 1 l 0.3 0 m 0.3 -0.5 l 0.3 0" />
 </svg>
