@@ -10,9 +10,10 @@ $fa = 0.5;
 PCB_WIDTH=80;
 PCB_HEIGHT=30;
 PCB_SCREW_INSET=2.5;
-PCB_OFFSET=2;
+PCB_OFFSET=4;
 TOP_SHELL_DEPTH=8;
 BOTTOM_SHELL_DEPTH=8.5;
+LIP_HEIGHT = 1.5;
 PLUG_LARGE_RADIUS=16 / 2;
 PLUG_CYLINDER_LEN = 37;
 PLUG_OPENING_ID=10;
@@ -83,7 +84,7 @@ module bottom_shell() {
             // lip
             translate([INSET - RELIEF / 2, INSET - RELIEF / 2, -EPSILON])
                 rounded_rect(SHELL_WIDTH - (INSET - RELIEF / 2) * 2, SHELL_HEIGHT - (INSET - RELIEF / 2) * 2,
-                    INSET + EPSILON, EDGE_RADIUS - (WALL - INSET - RELIEF));
+                    LIP_HEIGHT, EDGE_RADIUS - (WALL - INSET - RELIEF));
 
             // Inside of plug holder
             rotate([90, 0, 0]) translate([PLUG_OFFSET, BOTTOM_SHELL_DEPTH - PLUG_LARGE_RADIUS, -SHELL_HEIGHT - 12 + WALL]) {
@@ -101,9 +102,9 @@ module top_shell() {
     difference() {
         union() {
             difference() {
-                translate([0, 0, 0]) shell(SHELL_WIDTH, SHELL_HEIGHT, TOP_SHELL_DEPTH, EDGE_RADIUS);
+                shell(SHELL_WIDTH, SHELL_HEIGHT, TOP_SHELL_DEPTH, EDGE_RADIUS);
                 translate([-EPSILON, -EPSILON, -10]) cube([SHELL_WIDTH + EPSILON * 2, SHELL_HEIGHT + EPSILON * 2,
-                    11]);
+                    10 + LIP_HEIGHT]);
             }
 
             // Lip
@@ -147,8 +148,8 @@ module make_side_hole(diameter, isbottom) {
 module openings(isbottom) {
     // USB port
     usb_port_width = 8;
-    translate([PCB_WIDTH- 1, (PCB_HEIGHT - usb_port_width) / 2, PCB_THICKNESS])
-        cube([10, 8, 4]);
+    translate([PCB_WIDTH- 1, (PCB_HEIGHT - usb_port_width) / 2, PCB_THICKNESS - 1])
+        cube([10, 8, 5]);
 
     // Audio jack
     jack_id = 4;
@@ -239,8 +240,15 @@ module top_enclosure() {
 }
 
 module button() {
-    cylinder(h=1, d=9.5);
-    cylinder(h=4, d=7);
+    top_radius = 8;
+    button_height = 6.5;
+    base_thickness = 1;
+
+    cylinder(h=base_thickness, d=8.5);
+    intersection() {
+        cylinder(h=10, d=7);
+        translate([0, 0, -top_radius + base_thickness + button_height]) sphere(r=top_radius);
+    }
 }
 
 // This is a stand-in for the PCB, useful during design to check fit.
@@ -309,9 +317,9 @@ module assembled(alpha) {
 module cutaway() {
     difference() {
         assembled(1);
-        translate([15,-20,-7]) cube([SHELL_WIDTH,SHELL_HEIGHT,50]);
+        translate([15,-27,-7]) cube([SHELL_WIDTH,SHELL_HEIGHT,50]);
     }
 }
 
-//assembled(0.7);
-cutaway();
+assembled(0.7);
+//button();
