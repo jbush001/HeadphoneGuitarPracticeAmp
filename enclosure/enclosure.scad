@@ -18,10 +18,10 @@ PLUG_LARGE_RADIUS=16 / 2;
 PLUG_CYLINDER_LEN = 37;
 PLUG_OPENING_ID=10;
 PLUG_OFFSET=8;  // along width
-BOSS1_ID=2.5;   // For an M2 screw, should be larger
+BOSS1_ID=2.2;   // For an M2 screw, should be larger
 BOSS2_ID=1.8;   // Also for M2 screw, we want it to self thread into this.
-COUNTERSINK_DEPTH=2;
-COUNTERSINK_ID=4;
+COUNTERBORE_DEPTH=2;
+COUNTERBORE_ID=3.8;
 SHELL_WIDTH=PCB_WIDTH + RELIEF * 2 + WALL * 2;
 SHELL_HEIGHT=PCB_HEIGHT + RELIEF * 2 + WALL * 2;
 BOSS_OUTER_RADIUS=PCB_SCREW_INSET;
@@ -233,12 +233,12 @@ module top_enclosure() {
             translate([xy1, y2, 0]) cylinder(d=BOSS1_ID, h=TOP_SHELL_DEPTH + EPSILON);
             translate([x2, y2, 0]) cylinder(d=BOSS1_ID, h=TOP_SHELL_DEPTH + EPSILON);
 
-            // Countersink screw heads
-            translate([0, 0, BOTTOM_SHELL_DEPTH - COUNTERSINK_DEPTH]) {
-                translate([xy1, xy1, 0]) cylinder(d=COUNTERSINK_ID, h=COUNTERSINK_DEPTH + EPSILON);
-                translate([x2, xy1, 0]) cylinder(d=COUNTERSINK_ID, h=COUNTERSINK_DEPTH + EPSILON);
-                translate([xy1, y2, 0]) cylinder(d=COUNTERSINK_ID, h=COUNTERSINK_DEPTH + EPSILON);
-                translate([x2, y2, 0]) cylinder(d=COUNTERSINK_ID, h=COUNTERSINK_DEPTH + EPSILON);
+            // Counterbore screw heads
+            translate([0, 0, pcb_boss_bottom + WALL]) {
+                translate([xy1, xy1, 0]) cylinder(d=COUNTERBORE_ID, h=20);
+                translate([x2, xy1, 0]) cylinder(d=COUNTERBORE_ID, h=20);
+                translate([xy1, y2, 0]) cylinder(d=COUNTERBORE_ID, h=20);
+                translate([x2, y2, 0]) cylinder(d=COUNTERBORE_ID, h=20);
             }
 
             translate([WALL + RELIEF, WALL + RELIEF, pcb_boss_bottom]) rotate([180, 0, 0]) translate([0, -PCB_HEIGHT, 0]) openings(false);
@@ -330,3 +330,4 @@ module cutaway() {
 
 assembled(0.7);
 //cutaway();
+//difference() {  bottom_enclosure();  translate([-1,-1, -1]) cube([200, 5, 200]);}
