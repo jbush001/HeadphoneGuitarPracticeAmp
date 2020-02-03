@@ -134,11 +134,11 @@ module top_shell() {
 }
 
 module make_side_hole(diameter, isbottom) {
-    cylinder(d=diameter, h=6);
+    cylinder(d=diameter, h=4);
     if (isbottom)
-        translate([-diameter / 2, 0, 0]) cube([diameter, diameter, 6]);
+        translate([-diameter / 2, 0, 0]) cube([diameter, diameter, 4]);
     else
-        translate([-diameter / 2, -diameter, 0]) cube([diameter, diameter, 6]);
+        translate([-diameter / 2, -diameter, 0]) cube([diameter, diameter, 4]);
 }
 
 // This is from the origin of the top surface of the PCB, with positive
@@ -184,14 +184,21 @@ module bottom_enclosure() {
         union() {
             bottom_shell();
 
-            translate([xy1, xy1, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length - WALL / 2);
-            translate([x2, xy1, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length - WALL / 2);
-            translate([xy1, y2, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length - WALL / 2);
-            translate([x2, y2, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length - WALL / 2);
+            translate([xy1, xy1, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length + WALL);
+            translate([x2, xy1, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length + WALL);
+            translate([xy1, y2, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length + WALL);
+            translate([x2, y2, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length + WALL);
+
+            // Attach to side walls
+            reinf_wh = BOSS_OUTER_RADIUS * 1.91;
+            translate([WALL - EPSILON, WALL - EPSILON, LIP_HEIGHT]) cube([reinf_wh, reinf_wh, boss_length - LIP_HEIGHT]);
+            translate([SHELL_WIDTH - WALL - reinf_wh + EPSILON, WALL - EPSILON, LIP_HEIGHT]) cube([reinf_wh, reinf_wh, boss_length - LIP_HEIGHT]);
+            translate([WALL - EPSILON, SHELL_HEIGHT - WALL - reinf_wh, LIP_HEIGHT]) cube([reinf_wh, reinf_wh, boss_length - LIP_HEIGHT]);
+            translate([SHELL_WIDTH - WALL - reinf_wh + EPSILON, SHELL_HEIGHT - WALL - reinf_wh, LIP_HEIGHT]) cube([reinf_wh, reinf_wh, boss_length - LIP_HEIGHT]);
         }
 
         union() {
-            // Screw holes to attach to bottom
+            // Screw holes to attach to top.
             translate([xy1, xy1, boss_bottom - EPSILON]) cylinder(d=BOSS2_ID, h=boss_length - WALL);
             translate([x2, xy1, boss_bottom - EPSILON]) cylinder(d=BOSS2_ID, h=boss_length - WALL);
             translate([xy1, y2, boss_bottom - EPSILON]) cylinder(d=BOSS2_ID, h=boss_length - WALL);
@@ -321,5 +328,5 @@ module cutaway() {
     }
 }
 
-assembled(0.7);
-//button();
+//assembled(0.7);
+cutaway();
