@@ -5,8 +5,8 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 4
-Title "MCU"
-Date "2020-01-26"
+Title "Microcontroller"
+Date "2020-02-02"
 Rev "1.0"
 Comp ""
 Comment1 ""
@@ -545,7 +545,7 @@ F 0 "SW4" H 8450 3335 50  0000 C CNN
 F 1 "TL3315NF160Q" H 8450 3244 50  0000 C CNN
 F 2 "custom_footprints:TL3315NF160Q_Tactile_Switch" H 8450 3250 50  0001 C CNN
 F 3 "http://spec_sheets.e-switch.com/specs/P010337.pdf" H 8450 3250 50  0001 C CNN
-F 4 "Metronome" H 8800 3150 50  0000 C CNN "Name"
+F 4 "Switch Effect" H 8800 3150 50  0000 C CNN "Name"
 	1    8450 3050
 	1    0    0    -1  
 $EndComp
@@ -557,7 +557,7 @@ F 0 "SW1" H 8450 2235 50  0000 C CNN
 F 1 "TL3315NF160Q" H 8450 2144 50  0000 C CNN
 F 2 "custom_footprints:TL3315NF160Q_Tactile_Switch" H 8450 2150 50  0001 C CNN
 F 3 "http://spec_sheets.e-switch.com/specs/P010337.pdf" H 8450 2150 50  0001 C CNN
-F 4 "Volume Up" H 8800 2050 50  0000 C CNN "Name"
+F 4 "Volume Down" H 8800 2050 50  0000 C CNN "Name"
 	1    8450 1950
 	1    0    0    -1  
 $EndComp
@@ -569,7 +569,7 @@ F 0 "SW3" H 8450 2985 50  0000 C CNN
 F 1 "TL3315NF160Q" H 8450 2894 50  0000 C CNN
 F 2 "custom_footprints:TL3315NF160Q_Tactile_Switch" H 8450 2900 50  0001 C CNN
 F 3 "http://spec_sheets.e-switch.com/specs/P010337.pdf" H 8450 2900 50  0001 C CNN
-F 4 "Next Fx" H 8750 2750 50  0000 C CNN "Name"
+F 4 "Metronome" H 8750 2750 50  0000 C CNN "Name"
 	1    8450 2700
 	1    0    0    -1  
 $EndComp
@@ -581,7 +581,7 @@ F 0 "SW2" H 8450 2635 50  0000 C CNN
 F 1 "TL3315NF160Q" H 8450 2544 50  0000 C CNN
 F 2 "custom_footprints:TL3315NF160Q_Tactile_Switch" H 8450 2550 50  0001 C CNN
 F 3 "http://spec_sheets.e-switch.com/specs/P010337.pdf" H 8450 2550 50  0001 C CNN
-F 4 "Volume Down" H 8850 2450 50  0000 C CNN "Field4"
+F 4 "Volume Up" H 8850 2450 50  0000 C CNN "Field4"
 	1    8450 2350
 	1    0    0    -1  
 $EndComp

@@ -5,8 +5,8 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 4
-Title "Guitar Headphone Practice Amp"
-Date "2020-01-26"
+Title "Headphone Guitar Practice Amp"
+Date "2020-02-02"
 Rev "1.0"
 Comp ""
 Comment1 ""
