@@ -1,3 +1,11 @@
+//
+// Print Settings (tested with Cura Slicer, Creality Ender 3)
+//   Infill Density: 100%
+//   Support Placement: Everywhere
+//   Support Density: 8%
+//   Layer Height: 0.2mm
+//
+
 EPSILON=0.01; // Used to avoid z-fighting
 RELIEF=0.5; // Gap between interfacing parts
 EDGE_RADIUS=2.5;
@@ -250,12 +258,26 @@ module button() {
     top_radius = 8;
     button_height = 6.5;
     base_thickness = 1;
+    od = 8.5;
+    id = 6.9;
+    support_width = 0.8;
 
-    cylinder(h=base_thickness, d=8.5);
-    intersection() {
-        cylinder(h=10, d=7);
-        translate([0, 0, -top_radius + base_thickness + button_height]) sphere(r=top_radius);
+    difference() {
+        union() {
+            cylinder(h=base_thickness, d=od);  // Bottom flange
+            intersection() {
+                // Main button and rounded top
+                cylinder(h=10, d=7);
+                translate([0, 0, -top_radius + base_thickness + button_height]) sphere(r=top_radius);
+            }
+        }
+
+        translate([0, 0, -EPSILON]) cylinder(h=6, d=id); // Hollow out middle
     }
+
+    // Add cross supports
+    translate([-id / 2, -support_width / 2, 0]) cube([id, support_width, 6.5]);
+    translate([-support_width / 2, -id / 2, 0]) cube([support_width, id, 6.5]);
 }
 
 // This is a stand-in for the PCB, useful during design to check fit.
@@ -328,6 +350,7 @@ module cutaway() {
     }
 }
 
-assembled(0.7);
+//assembled(0.7);
 //cutaway();
 //difference() {  bottom_enclosure();  translate([-1,-1, -1]) cube([200, 5, 200]);}
+bottom_enclosure();
