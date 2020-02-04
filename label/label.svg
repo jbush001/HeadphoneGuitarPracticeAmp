@@ -13,7 +13,7 @@ Decal Size: 84 - 3 - 0.5, 34 - 3 - 0.5 = (80.5, 30.5)
 
     <!-- Outer border and fill -->
     <rect width="100%" height="100%" fill="blue" />
-    <rect x="0.5" y="0.5" width="79.5" height="29.5" rx="2" fill="none" stroke="white" stroke-width="0.7" />
+    <rect x="0.5" y="0.5" width="79.5" height="29.5" rx="1" fill="none" stroke="white" stroke-width="0.7" />
 
     <!-- Border around buttons
     First hole centered 33mm from left edge, last is 60. 9mm diameter cutout on plastic, sticker has 0.5 border,radius is 4.75.
