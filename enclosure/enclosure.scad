@@ -155,31 +155,32 @@ module make_side_hole(diameter, isbottom) {
 
 // This is from the origin of the top surface of the PCB, with positive
 // extending away from the bottom.
-// When is bottom is true, it will "tombstone" the holes to cut overlapping
-// portion of the lip away.
+// The isbottom flag cuts the lip away in the correct direction.
 module openings(isbottom) {
-    // USB port
-    usb_port_width = 8;
+    // USB port. This extends 3.2mm from the PCB surface it is soldered to and is
+    // about 9.18mm wide.
+    usb_port_width = 10;
+    usb_port_height = 4;
     translate([PCB_WIDTH - 1, (PCB_HEIGHT - usb_port_width) / 2, 0]) {
-        cube([4, usb_port_width, 6]);
+        cube([4, usb_port_width, usb_port_height + PCB_THICKNESS]);
     }
-
-    // Audio jack
-    jack_id = 4;
-    translate([15, -3, PCB_THICKNESS + 1.85]) rotate([-90, 0, 0]) make_side_hole(jack_id, isbottom);
-
-    // Power LED
-    led_od = 3.1;
-    translate([73.56836, -3, PCB_THICKNESS + led_od / 2 + 0.5]) rotate([-90, 0, 0]) make_side_hole(led_od,  isbottom);
 
     // Charging LED
     translate([PCB_WIDTH - 1, 24.19, PCB_THICKNESS + led_od / 2 + 0.5]) rotate([90, 180, 90])
         make_side_hole(led_od, isbottom);
 
+    // Power LED
+    led_od = 3.1;
+    translate([73.56836, -3, PCB_THICKNESS + led_od / 2 + 0.5]) rotate([-90, 0, 0]) make_side_hole(led_od,  isbottom);
+
     // Power switch
     // Center x is 70mm from origin
     // 2mm travel, switch is 1.5mm wide.
-    translate([65 - 3, -3, PCB_THICKNESS - 1]) cube([6, 5, 4]);
+    translate([65 - 3, -3, 0]) cube([6, 5, 4 + PCB_THICKNESS]);
+
+    // Audio jack
+    jack_id = 4;
+    translate([15, -3, PCB_THICKNESS + 1.85]) rotate([-90, 0, 0]) make_side_hole(jack_id, isbottom);
 
     // Front buttons
     for (i = [0:3])
@@ -201,8 +202,6 @@ module bottom_enclosure() {
             translate([x2, xy1, boss_bottom - WALL + EPSILON]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
             translate([xy1, y2, boss_bottom - WALL + EPSILON]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
             translate([x2, y2, boss_bottom - WALL + EPSILON]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
-
-            // XXX Attach to side walls
         }
 
         union() {
