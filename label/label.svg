@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
-Shell size is 84x34mm
-Decal cutout is inset 1.5mm on each sides. The sticker is 0.5mm smaller than that on each side.
-Decal Size: 84 - 3 - 0.5, 34 - 3 - 0.5 = (80.5, 30.5)
--->
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-    viewBox="0 0 81.5 31.5" width="80.5mm" height="30.5mm" id="front_decal">
+    viewBox="0 0 81 31" width="80.5mm" height="30.5mm" id="front_decal">
     <style>
         .small { font: normal 0.5mm sans-serif; text-align: center}
         .medium { font: normal 1mm sans-serif; text-align: center}
@@ -13,18 +8,19 @@ Decal Size: 84 - 3 - 0.5, 34 - 3 - 0.5 = (80.5, 30.5)
 
     <!-- Outer border and fill -->
     <rect width="100%" height="100%" fill="black" />
-    <rect x="0.5" y="0.5" width="80.5" height="30.5" rx="3" fill="blue" stroke="white" stroke-width="0.7" />
+    <rect x="0.5" y="0.5" width="80" height="30" rx="3" fill="blue" stroke="white" stroke-width="0.7" />
 
     <!-- Border around buttons
     First hole centered 33mm from left edge, last is 60. 9mm diameter cutout on plastic, sticker has 0.5 border,radius is 4.75.
     -->
-    <rect x="29" y="16" width="36.5" height="9.5" rx="4.75" stroke="white" stroke-width="0.5" />
+    <rect x="28.5" y="15.5" width="36.5" height="9.5" rx="4.75" stroke="white" stroke-width="0.5" />
 
-    <!-- Show where buttons are for alignment -->
-    <circle cx="33.75" cy="20.75" r="4" fill="white" />
-    <circle cx="42.75" cy="20.75" r="4" fill="white" />
-    <circle cx="51.75" cy="20.75" r="4" fill="white" />
-    <circle cx="60.75" cy="20.75" r="4" fill="white" />
+    <!-- Show where buttons are for alignment
+    <circle cx="33.25" cy="20.25" r="4" fill="white" />
+    <circle cx="42.25" cy="20.25" r="4" fill="white" />
+    <circle cx="51.25" cy="20.25" r="4" fill="white" />
+    <circle cx="60.25" cy="20.25" r="4" fill="white" />
+     -->
 
     <!-- Headphones Icon -->
     <g transform="translate(13 5) scale(1.5)">
@@ -44,24 +40,24 @@ Decal Size: 84 - 3 - 0.5, 34 - 3 - 0.5 = (80.5, 30.5)
     </g>
 
     <!-- Volume Down -->
-    <g transform="translate(33 12.5) scale(1.2)">
+    <g transform="translate(32.5 12.5) scale(1.2)">
         <path stroke="white" fill="white" stroke-width="0.25" d="M 0 0 l 0.5 0 l 0.75 -0.75 l 0 2.25 l -0.75 -0.75 l -0.5 0 Z"  />
         <path stroke="white" fill="none" stroke-linecap="round" stroke-width="0.3" d="M 1.75 -0.1 a 1 1 0 0 1 0 1"  />
     </g>
 
     <!-- Volume Up -->
-    <g transform="translate(41 12.5) scale(1.2)">
+    <g transform="translate(40.5 12.5) scale(1.2)">
         <path stroke="white" fill="white" stroke-width="0.25" d="M 0 0 l 0.5 0 l 0.75 -0.75 l 0 2.25 l -0.75 -0.75 l -0.5 0 Z"  />
         <path stroke="white" fill="none" stroke-linecap="round" stroke-width="0.3" d="M 1.75 -0.1 a 1 1 0 0 1 0 1 m 0.4 0.4 a 1.6 1.6 0 0 0 0 -1.8 m 0.4 -0.4 a 2 2 0 0 1 0 2.6"  />
     </g>
 
     <!-- Metronome -->
-    <g transform="translate(50.5 14.5) scale(1.2)">
+    <g transform="translate(50 14.5) scale(1.2)">
         <path stroke="white" fill="none" stroke-width="0.4" d="M 0 0 l 2 0 l -0.5 -2.5 l -1 0 Z m 1 -0.5 l 1.5 -2" />
     </g>
 
     <!-- Effects -->
-    <g transform="translate(59.5 14.5) scale(1.2)">
+    <g transform="translate(59 14.5) scale(1.2)">
         <path stroke="white" fill="none" stroke-width="0.4" d="M 0 0 l 2 -2 m 0.5 -0.5 l 0.3 0 m -0.9 -0.3 l 0.3 0 m 0.5 1 l 0.3 0 m 0.3 -0.5 l 0.3 0" />
     </g>
 </svg>
