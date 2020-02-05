@@ -8,13 +8,12 @@
 
 EPSILON=0.01; // Used to avoid z-fighting
 RELIEF=0.5; // Gap between interfacing parts
-EDGE_RADIUS=2.5;
-WALL=1.5; // Thickness of wall
+WALL=2; // Thickness of wall
 PCB_THICKNESS=1.57; // Oshpark 4 layer board
 $fs = 0.5;
 $fa = 0.5;
 
-
+EDGE_RADIUS=2.5 + WALL + RELIEF;
 PCB_WIDTH=80;
 PCB_HEIGHT=30;
 PCB_SCREW_INSET=2.5;
@@ -36,22 +35,24 @@ BOSS_OUTER_RADIUS=PCB_SCREW_INSET;
 HEADPHONE_JACK_RADIUS=3.175 / 2;
 LED_RADIUS=2.5; // 5mm
 
-module shell(width, height, depth, chamfer) {
+module shell(width, height, depth, radius) {
     hull() {
-        x1 = chamfer;
-        y1 = chamfer;
-        x2 = width - chamfer;
-        y2 = height - chamfer;
+        chamfer = radius / 4;
 
-        translate([x1, y1, 0]) cylinder(r=chamfer, h=depth - chamfer);
-        translate([x2, y1, 0]) cylinder(r=chamfer, h=depth - chamfer);
-        translate([x1, y2, 0]) cylinder(r=chamfer, h=depth - chamfer);
-        translate([x2, y2, 0]) cylinder(r=chamfer, h=depth - chamfer);
+        x1 = radius;
+        y1 = radius;
+        x2 = width - radius;
+        y2 = height - radius;
 
-        translate([x1, y1, 0]) cylinder(r=chamfer / 2, h=depth);
-        translate([x2, y1, 0]) cylinder(r=chamfer / 2, h=depth);
-        translate([x1, y2, 0]) cylinder(r=chamfer / 2, h=depth);
-        translate([x2, y2, 0]) cylinder(r=chamfer / 2, h=depth);
+        translate([x1, y1, 0]) cylinder(r=radius, h=depth - chamfer);
+        translate([x2, y1, 0]) cylinder(r=radius, h=depth - chamfer);
+        translate([x1, y2, 0]) cylinder(r=radius, h=depth - chamfer);
+        translate([x2, y2, 0]) cylinder(r=radius, h=depth - chamfer);
+
+        translate([x1, y1, 0]) cylinder(r=radius - chamfer, h=depth);
+        translate([x2, y1, 0]) cylinder(r=radius - chamfer, h=depth);
+        translate([x1, y2, 0]) cylinder(r=radius - chamfer, h=depth);
+        translate([x2, y2, 0]) cylinder(r=radius - chamfer, h=depth);
     }
 }
 
@@ -128,14 +129,16 @@ module top_shell() {
 
             // Label Inset
             difference() {
-                translate([1.5, 1.5, TOP_SHELL_DEPTH - 0.4])
-                    rounded_rect(SHELL_WIDTH - 3, SHELL_HEIGHT - 3, 1, 1);
-
+                translate([EDGE_RADIUS / 4 + 0.5, EDGE_RADIUS / 4 + 0.5, TOP_SHELL_DEPTH - 0.4])
+                    rounded_rect(SHELL_WIDTH - (EDGE_RADIUS / 2 + 1), SHELL_HEIGHT - (EDGE_RADIUS / 2 + 1), 1, EDGE_RADIUS - 2);
+                echo("Label size", SHELL_WIDTH - (EDGE_RADIUS / 2 + 1), SHELL_HEIGHT - (EDGE_RADIUS / 2 + 1));
                 // Front buttons
                 hull() {
-                    translate([35, 8, TOP_SHELL_DEPTH - 1]) cylinder(d=9, h=1);
-                    translate([62, 8, TOP_SHELL_DEPTH - 1]) cylinder(d=9, h=1);
+                    translate([33 + 2.5, 8.5, TOP_SHELL_DEPTH - 1]) cylinder(d=9, h=1);
+                    translate([60 + 2.5, 8.5, TOP_SHELL_DEPTH - 1]) cylinder(d=9, h=1);
                 }
+
+                echo("button1 cx from label edge", 33 + 2.5 - (EDGE_RADIUS / 4 + 0.5));
             }
         }
     }
@@ -144,10 +147,11 @@ module top_shell() {
 module make_side_hole(diameter, isbottom) {
     cylinder(d=diameter, h=4);
     if (isbottom)
-        translate([-diameter / 2, 0, 0]) cube([diameter, diameter, 4]);
+        translate([-diameter / 2, 0, 0]) cube([diameter, diameter + 1, 4]);
     else
         translate([-diameter / 2, -diameter, 0]) cube([diameter, diameter, 4]);
 }
+
 
 // This is from the origin of the top surface of the PCB, with positive
 // extending away from the bottom.
@@ -156,8 +160,9 @@ module make_side_hole(diameter, isbottom) {
 module openings(isbottom) {
     // USB port
     usb_port_width = 8;
-    translate([PCB_WIDTH- 1, (PCB_HEIGHT - usb_port_width) / 2, PCB_THICKNESS - 1])
-        cube([10, 8, 5]);
+    translate([PCB_WIDTH - 1, (PCB_HEIGHT - usb_port_width) / 2, 0]) {
+        cube([4, usb_port_width, 6]);
+    }
 
     // Audio jack
     jack_id = 4;
@@ -192,25 +197,20 @@ module bottom_enclosure() {
         union() {
             bottom_shell();
 
-            translate([xy1, xy1, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
-            translate([x2, xy1, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
-            translate([xy1, y2, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
-            translate([x2, y2, boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
+            translate([xy1, xy1, boss_bottom - WALL + EPSILON]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
+            translate([x2, xy1, boss_bottom - WALL + EPSILON]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
+            translate([xy1, y2, boss_bottom - WALL + EPSILON]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
+            translate([x2, y2, boss_bottom - WALL + EPSILON]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
 
-            // Attach to side walls
-            reinf_wh = BOSS_OUTER_RADIUS * 1.91;
-            translate([WALL - EPSILON, WALL - EPSILON, LIP_HEIGHT]) cube([reinf_wh, reinf_wh, boss_length - LIP_HEIGHT]);
-            translate([SHELL_WIDTH - WALL - reinf_wh + EPSILON, WALL - EPSILON, LIP_HEIGHT]) cube([reinf_wh, reinf_wh, boss_length - LIP_HEIGHT]);
-            translate([WALL - EPSILON, SHELL_HEIGHT - WALL - reinf_wh, LIP_HEIGHT]) cube([reinf_wh, reinf_wh, boss_length - LIP_HEIGHT]);
-            translate([SHELL_WIDTH - WALL - reinf_wh + EPSILON, SHELL_HEIGHT - WALL - reinf_wh, LIP_HEIGHT]) cube([reinf_wh, reinf_wh, boss_length - LIP_HEIGHT]);
+            // XXX Attach to side walls
         }
 
         union() {
             // Screw holes to attach to top.
-            translate([xy1, xy1, boss_bottom - EPSILON]) cylinder(d=BOSS2_ID, h=boss_length - WALL);
-            translate([x2, xy1, boss_bottom - EPSILON]) cylinder(d=BOSS2_ID, h=boss_length - WALL);
-            translate([xy1, y2, boss_bottom - EPSILON]) cylinder(d=BOSS2_ID, h=boss_length - WALL);
-            translate([x2, y2, boss_bottom - EPSILON]) cylinder(d=BOSS2_ID, h=boss_length - WALL);
+            translate([xy1, xy1, boss_bottom - WALL * 2]) cylinder(d=BOSS2_ID, h=boss_length);
+            translate([x2, xy1, boss_bottom - WALL * 2]) cylinder(d=BOSS2_ID, h=boss_length);
+            translate([xy1, y2, boss_bottom - WALL * 2]) cylinder(d=BOSS2_ID, h=boss_length);
+            translate([x2, y2, boss_bottom - WALL * 2]) cylinder(d=BOSS2_ID, h=boss_length);
             translate([WALL + RELIEF, WALL + RELIEF, boss_bottom]) openings(true);
         }
     }
@@ -256,8 +256,8 @@ module top_enclosure() {
 
 module button() {
     top_radius = 8;
-    button_height = 6.5;
-    base_thickness = 1;
+    button_height = 7.5;
+    base_thickness = 4;
     od = 8.5;
     id = 6.9;
     support_width = 0.8;
@@ -267,17 +267,17 @@ module button() {
             cylinder(h=base_thickness, d=od);  // Bottom flange
             intersection() {
                 // Main button and rounded top
-                cylinder(h=10, d=7);
-                translate([0, 0, -top_radius + base_thickness + button_height]) sphere(r=top_radius);
+                cylinder(h=button_height * 2, d=7);
+                translate([0, 0, -top_radius + button_height]) sphere(r=top_radius);
             }
         }
 
-        translate([0, 0, -EPSILON]) cylinder(h=6, d=id); // Hollow out middle
+        translate([0, 0, -EPSILON]) cylinder(h=button_height - 1, d=id); // Hollow out middle
     }
 
     // Add cross supports
-    translate([-id / 2, -support_width / 2, 0]) cube([id, support_width, 6.5]);
-    translate([-support_width / 2, -id / 2, 0]) cube([support_width, id, 6.5]);
+    translate([-id / 2, -support_width / 2, 0]) cube([id, support_width, button_height - 1]);
+    translate([-support_width / 2, -id / 2, 0]) cube([support_width, id, button_height - 1]);
 }
 
 // This is a stand-in for the PCB, useful during design to check fit.
@@ -350,7 +350,5 @@ module cutaway() {
     }
 }
 
-//assembled(0.7);
+assembled(0.7);
 //cutaway();
-//difference() {  bottom_enclosure();  translate([-1,-1, -1]) cube([200, 5, 200]);}
-bottom_enclosure();
