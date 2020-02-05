@@ -257,27 +257,36 @@ module top_enclosure() {
 module button() {
     top_radius = 8;
     button_height = 7.5;
-    base_thickness = 4;
-    od = 8.5;
-    id = 6.9;
+    od = 7;
     support_width = 0.8;
+    flange_rod = 1.5;
+    flange_thickness = 4;
 
     difference() {
         union() {
-            cylinder(h=base_thickness, d=od);  // Bottom flange
+            cylinder(h=flange_thickness, d=od + flange_rod);  // Bottom flange
             intersection() {
                 // Main button and rounded top
-                cylinder(h=button_height * 2, d=7);
+                cylinder(h=button_height * 2, d=od);
                 translate([0, 0, -top_radius + button_height]) sphere(r=top_radius);
             }
         }
 
-        translate([0, 0, -EPSILON]) cylinder(h=button_height - 1, d=id); // Hollow out middle
+        // Hollow out middle
+        union() translate([0, 0, -EPSILON]) {
+            cylinder(h=button_height - flange_rod, d=od - 1);
+            cylinder(h=flange_thickness - 1, d=od + flange_rod - 1);
+        }
     }
 
     // Add cross supports
-    translate([-id / 2, -support_width / 2, 0]) cube([id, support_width, button_height - 1]);
-    translate([-support_width / 2, -id / 2, 0]) cube([support_width, id, button_height - 1]);
+    support_length1 = od - 0.5;
+    translate([-support_length1 / 2, -support_width / 2, 0]) cube([support_length1, support_width, button_height - 1]);
+    translate([-support_width / 2, -support_length1 / 2, 0]) cube([support_width, support_length1, button_height - 1]);
+
+    support_length2 = od + flange_rod - 0.5;
+    translate([-support_length2 / 2, -support_width / 2, 0]) cube([support_length2, support_width, flange_thickness - 0.1]);
+    translate([-support_width / 2, -support_length2 / 2, 0]) cube([support_width, support_length2, flange_thickness - 0.1]);
 }
 
 // This is a stand-in for the PCB, useful during design to check fit.
@@ -350,5 +359,5 @@ module cutaway() {
     }
 }
 
-assembled(0.7);
-//cutaway();
+//assembled(0.7);
+cutaway();
