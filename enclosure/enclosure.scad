@@ -17,7 +17,7 @@ EDGE_RADIUS=2.5 + WALL + RELIEF;
 PCB_WIDTH=80;
 PCB_HEIGHT=30;
 PCB_SCREW_INSET=2.5;
-PCB_OFFSET=4;
+PCB_OFFSET=3 + WALL; // From top surface
 TOP_SHELL_DEPTH=8;
 BOTTOM_SHELL_DEPTH=8.5;
 LIP_HEIGHT = 1.5;
@@ -126,20 +126,6 @@ module top_shell() {
             // Cavity
             translate([WALL, WALL, -WALL]) shell(SHELL_WIDTH - WALL * 2, SHELL_HEIGHT - WALL * 2,
                 TOP_SHELL_DEPTH, EDGE_RADIUS - WALL);
-
-            // Label Inset
-            difference() {
-                translate([EDGE_RADIUS / 4 + 0.5, EDGE_RADIUS / 4 + 0.5, TOP_SHELL_DEPTH - 0.4])
-                    rounded_rect(SHELL_WIDTH - (EDGE_RADIUS / 2 + 1), SHELL_HEIGHT - (EDGE_RADIUS / 2 + 1), 1, EDGE_RADIUS - 2);
-                echo("Label size", SHELL_WIDTH - (EDGE_RADIUS / 2 + 1), SHELL_HEIGHT - (EDGE_RADIUS / 2 + 1));
-                // Front buttons
-                hull() {
-                    translate([33 + 2.5, 8.5, TOP_SHELL_DEPTH - 1]) cylinder(d=9, h=1);
-                    translate([60 + 2.5, 8.5, TOP_SHELL_DEPTH - 1]) cylinder(d=9, h=1);
-                }
-
-                echo("button1 cx from label edge", 33 + 2.5 - (EDGE_RADIUS / 4 + 0.5));
-            }
         }
     }
 }
@@ -188,8 +174,8 @@ module openings(isbottom) {
 }
 
 module bottom_enclosure() {
-    boss_length = TOP_SHELL_DEPTH + BOTTOM_SHELL_DEPTH - PCB_OFFSET - WALL * 2 - PCB_THICKNESS - RELIEF;
-    boss_bottom = TOP_SHELL_DEPTH - WALL - boss_length;
+    boss_length = TOP_SHELL_DEPTH + BOTTOM_SHELL_DEPTH - PCB_OFFSET - PCB_THICKNESS - RELIEF; // offset from bottom surface
+    boss_top = BOTTOM_SHELL_DEPTH - boss_length;
     xy1 = PCB_SCREW_INSET + WALL + RELIEF;
     x2 = xy1 + PCB_WIDTH - PCB_SCREW_INSET * 2;
     y2 = xy1 + PCB_HEIGHT - PCB_SCREW_INSET * 2;
@@ -198,25 +184,25 @@ module bottom_enclosure() {
         union() {
             bottom_shell();
 
-            translate([xy1, xy1, boss_bottom - WALL + EPSILON]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
-            translate([x2, xy1, boss_bottom - WALL + EPSILON]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
-            translate([xy1, y2, boss_bottom - WALL + EPSILON]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
-            translate([x2, y2, boss_bottom - WALL + EPSILON]) cylinder(r=BOSS_OUTER_RADIUS, h=BOTTOM_SHELL_DEPTH - boss_bottom);
+            translate([xy1, xy1, boss_top]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length);
+            translate([x2, xy1, boss_top]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length);
+            translate([xy1, y2, boss_top]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length);
+            translate([x2, y2, boss_top]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length);
         }
 
         union() {
             // Screw holes to attach to top.
-            translate([xy1, xy1, boss_bottom - WALL * 2]) cylinder(d=BOSS2_ID, h=boss_length);
-            translate([x2, xy1, boss_bottom - WALL * 2]) cylinder(d=BOSS2_ID, h=boss_length);
-            translate([xy1, y2, boss_bottom - WALL * 2]) cylinder(d=BOSS2_ID, h=boss_length);
-            translate([x2, y2, boss_bottom - WALL * 2]) cylinder(d=BOSS2_ID, h=boss_length);
-            translate([WALL + RELIEF, WALL + RELIEF, boss_bottom]) openings(true);
+            translate([xy1, xy1, boss_top - EPSILON]) cylinder(d=BOSS2_ID, h=boss_length - WALL);
+            translate([x2, xy1, boss_top - EPSILON]) cylinder(d=BOSS2_ID, h=boss_length - WALL);
+            translate([xy1, y2, boss_top - EPSILON]) cylinder(d=BOSS2_ID, h=boss_length - WALL);
+            translate([x2, y2, boss_top - EPSILON]) cylinder(d=BOSS2_ID, h=boss_length - WALL);
+            translate([WALL + RELIEF, WALL + RELIEF, boss_top]) openings(true);
         }
     }
 }
 
 module top_enclosure() {
-    pcb_boss_bottom=TOP_SHELL_DEPTH - WALL - PCB_OFFSET;
+    pcb_boss_bottom = TOP_SHELL_DEPTH - PCB_OFFSET;
 
     xy1 = PCB_SCREW_INSET + WALL + RELIEF;
     x2 = xy1 + PCB_WIDTH - PCB_SCREW_INSET * 2;
@@ -227,10 +213,10 @@ module top_enclosure() {
             top_shell();
 
             // Bosses to attach to bottom
-            translate([xy1, xy1, pcb_boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=PCB_OFFSET + EPSILON);
-            translate([x2, xy1, pcb_boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=PCB_OFFSET + EPSILON);
-            translate([xy1, y2, pcb_boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=PCB_OFFSET + EPSILON);
-            translate([x2, y2, pcb_boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=PCB_OFFSET + EPSILON);
+            translate([xy1, xy1, pcb_boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=PCB_OFFSET);
+            translate([x2, xy1, pcb_boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=PCB_OFFSET);
+            translate([xy1, y2, pcb_boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=PCB_OFFSET);
+            translate([x2, y2, pcb_boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=PCB_OFFSET);
         }
 
         union() {
@@ -248,22 +234,37 @@ module top_enclosure() {
                 translate([x2, y2, 0]) cylinder(d=COUNTERBORE_ID, h=20);
             }
 
+            // Openings for various connectors
             translate([WALL + RELIEF, WALL + RELIEF, pcb_boss_bottom]) rotate([180, 0, 0]) translate([0, -PCB_HEIGHT, 0]) openings(false);
+
+            // Label Inset
+            difference() {
+                translate([EDGE_RADIUS / 4 + 0.5, EDGE_RADIUS / 4 + 0.5, TOP_SHELL_DEPTH - 0.4])
+                    rounded_rect(SHELL_WIDTH - (EDGE_RADIUS / 2 + 1), SHELL_HEIGHT - (EDGE_RADIUS / 2 + 1), 1, EDGE_RADIUS - 2);
+                echo("Label size", SHELL_WIDTH - (EDGE_RADIUS / 2 + 1), SHELL_HEIGHT - (EDGE_RADIUS / 2 + 1));
+                // Front buttons
+                hull() {
+                    translate([33 + 2.5, 8.5, TOP_SHELL_DEPTH - 1]) cylinder(d=9, h=1);
+                    translate([60 + 2.5, 8.5, TOP_SHELL_DEPTH - 1]) cylinder(d=9, h=1);
+                }
+
+                echo("button1 cx from label edge", 33 + 2.5 - (EDGE_RADIUS / 4 + 0.5));
+            }
         }
     }
 }
 
 module button() {
     top_radius = 8;
-    button_height = 7.5;
+    button_height = 6.5;
     od = 7;
     support_width = 0.8;
-    flange_rod = 1.5;
-    flange_thickness = 4;
+    flange_odr = 1.5;
+    flange_thickness = 1.5;
 
     difference() {
         union() {
-            cylinder(h=flange_thickness, d=od + flange_rod);  // Bottom flange
+            cylinder(h=flange_thickness, d=od + flange_odr);  // Bottom flange
             intersection() {
                 // Main button and rounded top
                 cylinder(h=button_height * 2, d=od);
@@ -273,8 +274,7 @@ module button() {
 
         // Hollow out middle
         union() translate([0, 0, -EPSILON]) {
-            cylinder(h=button_height - flange_rod, d=od - 1);
-            cylinder(h=flange_thickness - 1, d=od + flange_rod - 1);
+            cylinder(h=button_height - flange_odr, d=od - 1);
         }
     }
 
@@ -282,10 +282,6 @@ module button() {
     support_length1 = od - 0.5;
     translate([-support_length1 / 2, -support_width / 2, 0]) cube([support_length1, support_width, button_height - 1]);
     translate([-support_width / 2, -support_length1 / 2, 0]) cube([support_width, support_length1, button_height - 1]);
-
-    support_length2 = od + flange_rod - 0.5;
-    translate([-support_length2 / 2, -support_width / 2, 0]) cube([support_length2, support_width, flange_thickness - 0.1]);
-    translate([-support_width / 2, -support_length2 / 2, 0]) cube([support_width, support_length2, flange_thickness - 0.1]);
 }
 
 // This is a stand-in for the PCB, useful during design to check fit.
@@ -334,7 +330,7 @@ module plug() {
 // design to check fit.
 module assembled(alpha) {
     pcb_xy = WALL + RELIEF;
-    pcb_z = TOP_SHELL_DEPTH - WALL - PCB_THICKNESS - PCB_OFFSET;
+    pcb_z = TOP_SHELL_DEPTH - PCB_OFFSET - PCB_THICKNESS;
     translate([WALL + RELIEF, WALL + RELIEF, pcb_z]) pcb();
     translate([30, 5, pcb_z - 0.5 - 5.6]) battery();
     rotate([90, 0, 0]) translate([16, -6, -5]) plug();
@@ -345,7 +341,7 @@ module assembled(alpha) {
 
     color("yellow", alpha) {
         top_enclosure();
-        rotate([180,0,0]) translate([0, -SHELL_HEIGHT, -WALL * 1.5]) bottom_enclosure();
+        rotate([180,0,0]) translate([0, -SHELL_HEIGHT, -LIP_HEIGHT]) bottom_enclosure();
     }
 }
 
