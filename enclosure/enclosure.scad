@@ -241,7 +241,9 @@ module top_enclosure() {
             difference() {
                 translate([EDGE_RADIUS / 4 + 0.5, EDGE_RADIUS / 4 + 0.5, TOP_SHELL_DEPTH - 0.4])
                     rounded_rect(SHELL_WIDTH - (EDGE_RADIUS / 2 + 1), SHELL_HEIGHT - (EDGE_RADIUS / 2 + 1), 1, EDGE_RADIUS - 2);
+                echo("Enclosure size", SHELL_WIDTH, SHELL_HEIGHT);
                 echo("Label size", SHELL_WIDTH - (EDGE_RADIUS / 2 + 1), SHELL_HEIGHT - (EDGE_RADIUS / 2 + 1));
+                echo("Label inset", EDGE_RADIUS / 4 + 0.5);
                 // Front buttons
                 hull() {
                     translate([33 + 2.5, 8.5, TOP_SHELL_DEPTH - 1]) cylinder(d=9, h=1);
