@@ -458,15 +458,15 @@ F 3 "" H 4700 2550 50  0001 C CNN
 	1    4700 2550
 	0    -1   -1   0   
 $EndComp
-Text GLabel 4500 4900 0    50   Output ~ 0
+Text GLabel 4500 4900 0    50   Input ~ 0
 BCLK
-Text GLabel 4500 4700 0    50   Output ~ 0
+Text GLabel 4500 4800 0    50   Input ~ 0
 ADCLRC
-Text GLabel 6400 5100 2    50   Output ~ 0
+Text GLabel 6400 5100 2    50   Input ~ 0
 DACLRC
-Text GLabel 4500 5000 0    50   Input ~ 0
+Text GLabel 4500 5100 0    50   Input ~ 0
 ADCDAT
-Text GLabel 4550 4200 0    50   Output ~ 0
+Text GLabel 4550 4100 0    50   Output ~ 0
 DACDAT
 $Comp
 L parts:STM32G474CET6 U1
@@ -480,22 +480,7 @@ F 3 "https://www.st.com/resource/en/datasheet/stm32g473cb.pdf" H 5400 3150 50  0
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4500 4900 4600 4900
-Wire Wire Line
-	4700 4800 4600 4800
-Wire Wire Line
-	4600 4800 4600 4900
-Connection ~ 4600 4900
-Wire Wire Line
-	4600 4900 4700 4900
-Wire Wire Line
-	4500 5000 4700 5000
-Wire Wire Line
-	4550 4200 4700 4200
-Wire Wire Line
 	6150 5100 6400 5100
-Wire Wire Line
-	4500 4700 4700 4700
 Wire Wire Line
 	6150 4700 6400 4700
 Wire Wire Line
@@ -591,12 +576,10 @@ NoConn ~ 4700 3400
 NoConn ~ 4700 3600
 NoConn ~ 4700 3700
 NoConn ~ 4700 3800
-NoConn ~ 4700 3900
 NoConn ~ 4700 4000
-NoConn ~ 4700 4100
 NoConn ~ 4700 4500
 NoConn ~ 4700 4600
-NoConn ~ 4700 5100
+NoConn ~ 4700 5000
 NoConn ~ 6150 3600
 NoConn ~ 6150 3700
 NoConn ~ 6150 4000
@@ -653,4 +636,38 @@ Text Notes 6850 3900 0    50   ~ 0
 RX
 Text Notes 6850 4000 0    50   ~ 0
 GND
+Wire Wire Line
+	4550 4100 4700 4100
+NoConn ~ 4700 4200
+Wire Wire Line
+	4500 4900 4700 4900
+Text GLabel 4550 3900 0    50   Input ~ 0
+BCLK
+Wire Wire Line
+	4550 3900 4700 3900
+Text Notes 5670 5230 0    35   ~ 0
+I2S3_WS
+Wire Wire Line
+	4500 5100 4700 5100
+Text Notes 4860 5230 0    35   ~ 0
+I2S2_SD
+NoConn ~ 4700 4700
+Wire Wire Line
+	4500 4800 4700 4800
+Text Notes 5170 4930 0    35   ~ 0
+I2S2_CK
+Text Notes 5170 4830 0    35   ~ 0
+I2S2_WS
+Text Notes 5120 4130 0    35   ~ 0
+I2S3_SD
+Text Notes 5120 3930 0    35   ~ 0
+I2S3_CK
+Text Notes 5460 3830 0    35   ~ 0
+USART2_TX
+Text Notes 5450 3920 0    35   ~ 0
+USART2_RX
+Text Notes 5510 4420 0    35   ~ 0
+I2C2_SDA
+Text Notes 5510 4520 0    35   ~ 0
+I2C2_SCL
 $EndSCHEMATC

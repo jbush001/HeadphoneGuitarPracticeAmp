@@ -162,15 +162,15 @@ Wire Wire Line
 Connection ~ 8700 3350
 Wire Wire Line
 	8700 3350 9000 3350
-Text GLabel 7050 2250 2    50   Input ~ 0
+Text GLabel 7050 2250 2    50   Output ~ 0
 BCLK
 Text GLabel 7050 2350 2    50   Input ~ 0
 DACDAT
-Text GLabel 7050 2450 2    50   Input ~ 0
+Text GLabel 7050 2450 2    50   Output ~ 0
 DACLRC
 Text GLabel 7050 2550 2    50   Output ~ 0
 ADCDAT
-Text GLabel 7050 2650 2    50   Input ~ 0
+Text GLabel 7050 2650 2    50   Output ~ 0
 ADCLRC
 Wire Wire Line
 	6650 2250 7050 2250
@@ -190,8 +190,6 @@ Wire Wire Line
 	6650 2850 7050 2850
 Wire Wire Line
 	6650 2950 7050 2950
-Wire Wire Line
-	6650 3050 6800 3050
 $Comp
 L power:GND #PWR020
 U 1 1 5E2C0890
@@ -305,17 +303,6 @@ F 2 "" H 3450 3500 50  0001 C CNN
 F 3 "" H 3450 3500 50  0001 C CNN
 	1    3450 3500
 	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR022
-U 1 1 5E2E70D7
-P 6800 3050
-F 0 "#PWR022" H 6800 2900 50  0001 C CNN
-F 1 "+3V3" V 6815 3178 50  0000 L CNN
-F 2 "" H 6800 3050 50  0001 C CNN
-F 3 "" H 6800 3050 50  0001 C CNN
-	1    6800 3050
-	0    1    1    0   
 $EndComp
 Wire Wire Line
 	6650 2750 7050 2750
@@ -632,4 +619,19 @@ F 3 "" H 7050 2750 50  0001 C CNN
 	1    7050 2750
 	0    -1   -1   0   
 $EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5E3FC3F1
+P 7050 3050
+F 0 "#PWR0107" H 7050 2800 50  0001 C CNN
+F 1 "GND" V 7055 2922 50  0000 R CNN
+F 2 "" H 7050 3050 50  0001 C CNN
+F 3 "" H 7050 3050 50  0001 C CNN
+	1    7050 3050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6650 3050 7050 3050
+Text Notes 5550 4200 0    50   ~ 0
+I2C address: 0x1A
 $EndSCHEMATC
