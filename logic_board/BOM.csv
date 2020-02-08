@@ -20,7 +20,7 @@ Ref,Qnty,Value,Footprint,Vendor
 "R17, R16,",2,1.5k,Resistors_SMD:R_0402,https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-2AEB152X/P1.5KDCCT-ND/1706187
 "SW4, SW1, SW3, SW2,",4,TL3315NF160Q,custom_footprints:TL3315NF160Q_Tactile_Switch,https://www.digikey.com/product-detail/en/e-switch/TL3315NF160Q/EG4621CT-ND/1870401
 "SW5,",1,Power,custom_footprints:JS102011SAQN,https://www.digikey.com/product-detail/en/c-k/JS102011SAQN/401-1999-1-ND/1640114
-"U1,",1,STM32F302C8Tx,Housings_QFP:LQFP-48_7x7mm_Pitch0.5mm,https://www.digikey.com/product-detail/en/stmicroelectronics/STM32F302C8T6/497-14699-ND/4849411
+"U1,",1,STM32G473CET6,Housings_QFP:LQFP-48_7x7mm_Pitch0.5mm,https://www.digikey.com/product-detail/en/stmicroelectronics/STM32G473CET6/497-STM32G473CET6-ND/10326771
 "U2,",1,OPA340NA,TO_SOT_Packages_SMD:TSOT-23-5_HandSoldering,https://www.digikey.com/product-detail/en/texas-instruments/OPA340NA-250/OPA340NACT-ND/268639
 "U3,",1,WM8731SEDS_V,Housings_SSOP:SSOP-28_5.3x10.2mm_Pitch0.65mm,https://www.digikey.com/product-detail/en/cirrus-logic-inc/WM8731SEDS-V/598-2460-ND/5409909
 "U4,",1,TPS562200,TO_SOT_Packages_SMD:SOT-23-6_Handsoldering,https://www.digikey.com/product-detail/en/texas-instruments/TPS562201DDCR/296-44397-1-ND/6110665

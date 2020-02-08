@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 4
 Title "Power"
-Date "2020-02-02"
-Rev "1.0"
+Date "2020-02-08"
+Rev "1.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -559,8 +559,6 @@ $EndComp
 Wire Wire Line
 	7800 5100 7800 5200
 Wire Wire Line
-	7800 5500 7800 5600
-Wire Wire Line
 	2600 3500 2900 3500
 Wire Wire Line
 	8250 2100 8400 2100
@@ -638,4 +636,24 @@ F 3 "" H 7800 2600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7800 2600 7800 2450
+Wire Wire Line
+	7800 5500 7800 5550
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5E598B20
+P 7600 5450
+F 0 "#FLG0102" H 7600 5525 50  0001 C CNN
+F 1 "PWR_FLAG" H 7600 5623 50  0000 C CNN
+F 2 "" H 7600 5450 50  0001 C CNN
+F 3 "~" H 7600 5450 50  0001 C CNN
+	1    7600 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 5550 7600 5550
+Wire Wire Line
+	7600 5550 7600 5450
+Connection ~ 7800 5550
+Wire Wire Line
+	7800 5550 7800 5600
 $EndSCHEMATC

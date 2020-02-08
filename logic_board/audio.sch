@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 4
 Title "Audio"
-Date "2020-02-02"
-Rev "1.0"
+Date "2020-02-08"
+Rev "1.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -183,9 +183,9 @@ Wire Wire Line
 Wire Wire Line
 	6650 2650 7050 2650
 Text GLabel 7050 2850 2    50   Input ~ 0
-SPI_MOSI
+SDA
 Text GLabel 7050 2950 2    50   Input ~ 0
-SPI_CLK
+SCL
 Wire Wire Line
 	6650 2850 7050 2850
 Wire Wire Line
@@ -317,8 +317,6 @@ F 3 "" H 6800 3050 50  0001 C CNN
 	1    6800 3050
 	0    1    1    0   
 $EndComp
-Text GLabel 7050 2750 2    50   Input ~ 0
-~SPI_SS
 Wire Wire Line
 	6650 2750 7050 2750
 $Comp
@@ -623,4 +621,15 @@ Wire Wire Line
 Wire Wire Line
 	5050 6850 5050 6600
 Connection ~ 4650 6850
+$Comp
+L power:GND #PWR0104
+U 1 1 5E56A195
+P 7050 2750
+F 0 "#PWR0104" H 7050 2500 50  0001 C CNN
+F 1 "GND" V 7055 2622 50  0000 R CNN
+F 2 "" H 7050 2750 50  0001 C CNN
+F 3 "" H 7050 2750 50  0001 C CNN
+	1    7050 2750
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

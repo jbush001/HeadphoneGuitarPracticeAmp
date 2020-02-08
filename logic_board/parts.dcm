@@ -10,6 +10,11 @@ D Cui 3.5mm Audio Jack
 F https://www.cuidevices.com/product/resource/sj2-3595x-smt.pdf
 $ENDCMP
 #
+$CMP STM32G474CET6
+D ARM® Cortex®-M4 STM32G4 Microcontroller IC
+F https://www.st.com/resource/en/datasheet/stm32g473cb.pdf
+$ENDCMP
+#
 $CMP WM8731SEDS_V
 D Portable Internet Audio CODEC with Headphone Driverand Programmable Sample Rates
 F https://statics.cirrus.com/pubs/proDatasheet/WM8731_v4.9.pdf
