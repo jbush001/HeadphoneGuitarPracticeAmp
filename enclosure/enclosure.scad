@@ -1,10 +1,10 @@
 //
 // Print Settings (tested with Cura Slicer, Creality Ender 3)
-//   Infill Density: 100%
+//   Infill Density: 20%
 //   Support Placement: Everywhere
-//   Support Density: 8%
+//   Support Density: 20%
 //   Layer Height: 0.2mm
-//
+// Both shells are printed with the open side pointed towards the print bed.
 
 EPSILON=0.01; // Used to avoid z-fighting
 RELIEF=0.5; // Gap between interfacing parts
@@ -18,8 +18,8 @@ PCB_WIDTH=80;
 PCB_HEIGHT=30;
 PCB_SCREW_INSET=2.5;
 PCB_OFFSET=3 + WALL; // From top surface
-TOP_SHELL_DEPTH=8;
-BOTTOM_SHELL_DEPTH=8.5;
+TOP_SHELL_DEPTH=9;
+BOTTOM_SHELL_DEPTH=9;
 LIP_HEIGHT = 1.5;
 PLUG_LARGE_RADIUS=16 / 2;
 PLUG_CYLINDER_LEN = 37;
