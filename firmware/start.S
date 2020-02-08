@@ -2,7 +2,7 @@
             .thumb
 
             .section .interrupt_vector
-            .word 0x20004000    // Stack pointer
+            .word 0x20020000    // Stack pointer
             .word _reset
             .word default_handler
             .word default_handler
