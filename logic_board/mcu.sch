@@ -267,7 +267,6 @@ F 3 "" H 9800 3200 50  0001 C CNN
 	1    9800 3200
 	1    0    0    -1  
 $EndComp
-NoConn ~ 5300 2200
 Wire Wire Line
 	5600 1850 5600 1550
 $Comp
@@ -585,4 +584,9 @@ Wire Wire Line
 	7850 3100 9300 3100
 Wire Wire Line
 	6150 4900 7550 4900
+Wire Wire Line
+	5400 1850 5300 1850
+Wire Wire Line
+	5300 1850 5300 2200
+Connection ~ 5400 1850
 $EndSCHEMATC
