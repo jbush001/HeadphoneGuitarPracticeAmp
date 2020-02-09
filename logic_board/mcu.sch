@@ -158,33 +158,16 @@ Wire Wire Line
 Wire Wire Line
 	2700 6900 2700 6700
 $Comp
-L power:GND #PWR011
-U 1 1 5E3784CF
-P 7900 5350
-F 0 "#PWR011" H 7900 5100 50  0001 C CNN
-F 1 "GND" H 7905 5177 50  0000 C CNN
-F 2 "" H 7900 5350 50  0001 C CNN
-F 3 "" H 7900 5350 50  0001 C CNN
-	1    7900 5350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7900 5350 7900 5200
-Wire Wire Line
-	7900 5200 8000 5200
-$Comp
 L power:+3V3 #PWR010
 U 1 1 5E40AE38
-P 7800 5100
-F 0 "#PWR010" H 7800 4950 50  0001 C CNN
-F 1 "+3V3" V 7815 5228 50  0000 L CNN
-F 2 "" H 7800 5100 50  0001 C CNN
-F 3 "" H 7800 5100 50  0001 C CNN
-	1    7800 5100
+P 7900 4800
+F 0 "#PWR010" H 7900 4650 50  0001 C CNN
+F 1 "+3V3" V 7915 4928 50  0000 L CNN
+F 2 "" H 7900 4800 50  0001 C CNN
+F 3 "" H 7900 4800 50  0001 C CNN
+	1    7900 4800
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	7800 5100 8000 5100
 Wire Wire Line
 	9700 2000 9800 2000
 Wire Wire Line
@@ -322,7 +305,7 @@ F 1 "8 MHz" H 3750 3000 50  0000 C CNN
 F 2 "custom_footprints:AWSCR-8.00CPLB-C30-T4" H 3925 2850 50  0001 C CNN
 F 3 "~" H 3925 2850 50  0001 C CNN
 	1    3950 2850
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR04
@@ -398,15 +381,15 @@ SW4
 $Comp
 L Connector_Generic:Conn_01x04 J1
 U 1 1 5E4DEDD9
-P 8200 5000
-F 0 "J1" H 8150 5350 50  0000 L CNN
-F 1 "SWD" H 8100 5250 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 8200 5000 50  0001 C CNN
-F 3 "~" H 8200 5000 50  0001 C CNN
-	1    8200 5000
-	1    0    0    -1  
+P 8200 4900
+F 0 "J1" H 8150 5250 50  0000 L CNN
+F 1 "SWD" H 8100 5150 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 8200 4900 50  0001 C CNN
+F 3 "~" H 8200 4900 50  0001 C CNN
+	1    8200 4900
+	1    0    0    1   
 $EndComp
-Text Notes 8300 5000 0    50   ~ 0
+Text Notes 8300 4900 0    50   ~ 0
 SWDIO
 Wire Wire Line
 	4550 3050 4700 3050
@@ -424,21 +407,6 @@ Wire Wire Line
 	6150 4400 6400 4400
 Wire Wire Line
 	6150 4500 6400 4500
-Wire Wire Line
-	7550 4900 7550 5000
-Wire Wire Line
-	7550 5000 8000 5000
-Wire Wire Line
-	6150 5000 7450 5000
-Wire Wire Line
-	7450 5000 7450 4800
-Wire Wire Line
-	7450 4800 7850 4800
-Wire Wire Line
-	7850 4800 7850 4900
-Wire Wire Line
-	7850 4900 8000 4900
-NoConn ~ 4700 3400
 NoConn ~ 4700 3600
 NoConn ~ 4700 3700
 NoConn ~ 4700 3800
@@ -490,11 +458,11 @@ F 3 "" H 6550 4000 50  0001 C CNN
 	1    6550 4000
 	0    1    1    0   
 $EndComp
-Text Notes 8300 4900 0    50   ~ 0
+Text Notes 8300 5000 0    50   ~ 0
 SWCLK
-Text Notes 8300 5100 0    50   ~ 0
+Text Notes 8300 4800 0    50   ~ 0
 3v3
-Text Notes 8300 5200 0    50   ~ 0
+Text Notes 8300 4700 0    50   ~ 0
 GND
 Text Notes 6850 3800 0    50   ~ 0
 TX
@@ -515,7 +483,7 @@ Text Notes 5670 5230 0    35   ~ 0
 I2S3_WS
 Wire Wire Line
 	4500 5100 4700 5100
-Text Notes 4860 5230 0    35   ~ 0
+Text Notes 4920 5220 0    35   ~ 0
 I2S2_SD
 Wire Wire Line
 	4500 4800 4700 4800
@@ -583,10 +551,44 @@ Wire Wire Line
 Wire Wire Line
 	7850 3100 9300 3100
 Wire Wire Line
-	6150 4900 7550 4900
-Wire Wire Line
 	5400 1850 5300 1850
 Wire Wire Line
 	5300 1850 5300 2200
 Connection ~ 5400 1850
+$Comp
+L power:+3V3 #PWR0108
+U 1 1 5E3FFADC
+P 4500 3400
+F 0 "#PWR0108" H 4500 3250 50  0001 C CNN
+F 1 "+3V3" V 4515 3528 50  0000 L CNN
+F 2 "" H 4500 3400 50  0001 C CNN
+F 3 "" H 4500 3400 50  0001 C CNN
+	1    4500 3400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4500 3400 4700 3400
+Wire Wire Line
+	6150 5000 8000 5000
+Wire Wire Line
+	6150 4900 8000 4900
+$Comp
+L power:GND #PWR?
+U 1 1 5E423761
+P 7900 4700
+F 0 "#PWR?" H 7900 4450 50  0001 C CNN
+F 1 "GND" V 7905 4572 50  0000 R CNN
+F 2 "" H 7900 4700 50  0001 C CNN
+F 3 "" H 7900 4700 50  0001 C CNN
+	1    7900 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7900 4800 8000 4800
+Wire Wire Line
+	7900 4700 8000 4700
+Text Notes 5110 2770 0    35   ~ 0
+OSC_IN
+Text Notes 5100 2870 0    35   ~ 0
+OSC_OUT
 $EndSCHEMATC
