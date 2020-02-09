@@ -399,12 +399,10 @@ Wire Wire Line
 	4550 3250 4700 3250
 Wire Wire Line
 	4550 4300 4700 4300
-Text GLabel 6400 4400 2    50   Input ~ 0
+Text GLabel 6400 4600 2    50   Input ~ 0
 SDA
 Text GLabel 6400 4500 2    50   Input ~ 0
 SCL
-Wire Wire Line
-	6150 4400 6400 4400
 Wire Wire Line
 	6150 4500 6400 4500
 NoConn ~ 4700 3600
@@ -420,7 +418,6 @@ NoConn ~ 6150 4000
 NoConn ~ 6150 4100
 NoConn ~ 6150 4200
 NoConn ~ 6150 4300
-NoConn ~ 6150 4600
 $Comp
 L power:GND #PWR0105
 U 1 1 5E57500F
@@ -499,9 +496,9 @@ Text Notes 5460 3830 0    35   ~ 0
 USART2_TX
 Text Notes 5450 3920 0    35   ~ 0
 USART2_RX
-Text Notes 5510 4420 0    35   ~ 0
+Text Notes 5460 4630 0    35   ~ 0
 I2C2_SDA
-Text Notes 5510 4520 0    35   ~ 0
+Text Notes 5460 4520 0    35   ~ 0
 I2C2_SCL
 $Comp
 L Device:LED D3
@@ -591,4 +588,7 @@ Text Notes 5110 2770 0    35   ~ 0
 OSC_IN
 Text Notes 5100 2870 0    35   ~ 0
 OSC_OUT
+Wire Wire Line
+	6150 4600 6400 4600
+NoConn ~ 6150 4400
 $EndSCHEMATC
