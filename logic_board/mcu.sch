@@ -173,32 +173,6 @@ Wire Wire Line
 Wire Wire Line
 	7900 5200 8000 5200
 $Comp
-L Device:R R3
-U 1 1 5E3A1553
-P 7250 4500
-F 0 "R3" H 7320 4546 50  0000 L CNN
-F 1 "100k" H 7320 4455 50  0000 L CNN
-F 2 "Resistors_SMD:R_0402" V 7180 4500 50  0001 C CNN
-F 3 "~" H 7250 4500 50  0001 C CNN
-	1    7250 4500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR09
-U 1 1 5E3A1C59
-P 7250 4150
-F 0 "#PWR09" H 7250 4000 50  0001 C CNN
-F 1 "+3V3" H 7265 4323 50  0000 C CNN
-F 2 "" H 7250 4150 50  0001 C CNN
-F 3 "" H 7250 4150 50  0001 C CNN
-	1    7250 4150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7250 4150 7250 4350
-Wire Wire Line
-	7250 4900 7250 4650
-$Comp
 L power:+3V3 #PWR010
 U 1 1 5E40AE38
 P 7800 5100
@@ -212,112 +186,24 @@ $EndComp
 Wire Wire Line
 	7800 5100 8000 5100
 Wire Wire Line
-	9600 1750 9700 1750
+	9700 2000 9800 2000
 Wire Wire Line
-	9600 2850 9700 2850
+	9700 3100 9800 3100
 Wire Wire Line
-	9700 2850 9700 2950
+	9800 3100 9800 3200
 Wire Wire Line
-	9700 1750 9700 2150
-Connection ~ 9700 2850
+	9800 2000 9800 2400
+Connection ~ 9800 3100
 Wire Wire Line
-	7750 1750 8150 1750
+	9700 2400 9800 2400
+Connection ~ 9800 2400
 Wire Wire Line
-	9600 2150 9700 2150
-Connection ~ 9700 2150
+	9800 2400 9800 2750
 Wire Wire Line
-	9700 2150 9700 2500
+	9700 2750 9800 2750
+Connection ~ 9800 2750
 Wire Wire Line
-	9600 2500 9700 2500
-Connection ~ 9700 2500
-Wire Wire Line
-	9700 2500 9700 2850
-$Comp
-L Device:R R1
-U 1 1 5E46297B
-P 8150 1400
-F 0 "R1" H 8220 1446 50  0000 L CNN
-F 1 "10k" H 8220 1355 50  0000 L CNN
-F 2 "Resistors_SMD:R_0402" V 8080 1400 50  0001 C CNN
-F 3 "~" H 8150 1400 50  0001 C CNN
-	1    8150 1400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 5E463893
-P 8400 1400
-F 0 "R2" H 8470 1446 50  0000 L CNN
-F 1 "10k" H 8470 1355 50  0000 L CNN
-F 2 "Resistors_SMD:R_0402" V 8330 1400 50  0001 C CNN
-F 3 "~" H 8400 1400 50  0001 C CNN
-	1    8400 1400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5E463D11
-P 8650 1400
-F 0 "R4" H 8720 1446 50  0000 L CNN
-F 1 "10k" H 8720 1355 50  0000 L CNN
-F 2 "Resistors_SMD:R_0402" V 8580 1400 50  0001 C CNN
-F 3 "~" H 8650 1400 50  0001 C CNN
-	1    8650 1400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 5E4642B0
-P 8900 1400
-F 0 "R5" H 8970 1446 50  0000 L CNN
-F 1 "10k" H 8970 1355 50  0000 L CNN
-F 2 "Resistors_SMD:R_0402" V 8830 1400 50  0001 C CNN
-F 3 "~" H 8900 1400 50  0001 C CNN
-	1    8900 1400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8150 1550 8150 1750
-Connection ~ 8150 1750
-Wire Wire Line
-	8400 1550 8400 2150
-Connection ~ 8400 2150
-Wire Wire Line
-	8650 1550 8650 2500
-Connection ~ 8650 2500
-Wire Wire Line
-	8900 1550 8900 2850
-Connection ~ 8900 2850
-$Comp
-L power:+3V3 #PWR08
-U 1 1 5E46F451
-P 8150 1000
-F 0 "#PWR08" H 8150 850 50  0001 C CNN
-F 1 "+3V3" H 8165 1173 50  0000 C CNN
-F 2 "" H 8150 1000 50  0001 C CNN
-F 3 "" H 8150 1000 50  0001 C CNN
-	1    8150 1000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8900 1250 8900 1100
-Wire Wire Line
-	8900 1100 8650 1100
-Wire Wire Line
-	8150 1100 8150 1000
-Wire Wire Line
-	8150 1250 8150 1100
-Connection ~ 8150 1100
-Wire Wire Line
-	8400 1250 8400 1100
-Connection ~ 8400 1100
-Wire Wire Line
-	8400 1100 8150 1100
-Wire Wire Line
-	8650 1250 8650 1100
-Connection ~ 8650 1100
-Wire Wire Line
-	8650 1100 8400 1100
+	9800 2750 9800 3100
 Text GLabel 6400 4800 2    50   BiDi ~ 0
 USB_DP
 Text GLabel 6400 4700 2    50   BiDi ~ 0
@@ -325,70 +211,62 @@ USB_DM
 $Comp
 L Switch:SW_Push SW4
 U 1 1 5E4374E4
-P 9400 2850
-F 0 "SW4" H 9400 3135 50  0000 C CNN
-F 1 "TL3315NF160Q" H 9400 3044 50  0000 C CNN
-F 2 "custom_footprints:TL3315NF160Q_Tactile_Switch" H 9400 3050 50  0001 C CNN
-F 3 "http://spec_sheets.e-switch.com/specs/P010337.pdf" H 9400 3050 50  0001 C CNN
-F 4 "Switch Effect" H 9750 2950 50  0000 C CNN "Name"
-	1    9400 2850
+P 9500 3100
+F 0 "SW4" H 9500 3385 50  0000 C CNN
+F 1 "TL3315NF160Q" H 9500 3294 50  0000 C CNN
+F 2 "custom_footprints:TL3315NF160Q_Tactile_Switch" H 9500 3300 50  0001 C CNN
+F 3 "http://spec_sheets.e-switch.com/specs/P010337.pdf" H 9500 3300 50  0001 C CNN
+F 4 "Switch Effect" H 9850 3200 50  0000 C CNN "Name"
+	1    9500 3100
 	1    0    0    -1  
 $EndComp
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5E437998
-P 9400 1750
-F 0 "SW1" H 9400 2035 50  0000 C CNN
-F 1 "TL3315NF160Q" H 9400 1944 50  0000 C CNN
-F 2 "custom_footprints:TL3315NF160Q_Tactile_Switch" H 9400 1950 50  0001 C CNN
-F 3 "http://spec_sheets.e-switch.com/specs/P010337.pdf" H 9400 1950 50  0001 C CNN
-F 4 "Volume Down" H 9750 1850 50  0000 C CNN "Name"
-	1    9400 1750
+P 9500 2000
+F 0 "SW1" H 9500 2285 50  0000 C CNN
+F 1 "TL3315NF160Q" H 9500 2194 50  0000 C CNN
+F 2 "custom_footprints:TL3315NF160Q_Tactile_Switch" H 9500 2200 50  0001 C CNN
+F 3 "http://spec_sheets.e-switch.com/specs/P010337.pdf" H 9500 2200 50  0001 C CNN
+F 4 "Volume Down" H 9850 2100 50  0000 C CNN "Name"
+	1    9500 2000
 	1    0    0    -1  
 $EndComp
 $Comp
 L Switch:SW_Push SW3
 U 1 1 5E436F53
-P 9400 2500
-F 0 "SW3" H 9400 2785 50  0000 C CNN
-F 1 "TL3315NF160Q" H 9400 2694 50  0000 C CNN
-F 2 "custom_footprints:TL3315NF160Q_Tactile_Switch" H 9400 2700 50  0001 C CNN
-F 3 "http://spec_sheets.e-switch.com/specs/P010337.pdf" H 9400 2700 50  0001 C CNN
-F 4 "Metronome" H 9700 2550 50  0000 C CNN "Name"
-	1    9400 2500
+P 9500 2750
+F 0 "SW3" H 9500 3035 50  0000 C CNN
+F 1 "TL3315NF160Q" H 9500 2944 50  0000 C CNN
+F 2 "custom_footprints:TL3315NF160Q_Tactile_Switch" H 9500 2950 50  0001 C CNN
+F 3 "http://spec_sheets.e-switch.com/specs/P010337.pdf" H 9500 2950 50  0001 C CNN
+F 4 "Metronome" H 9800 2800 50  0000 C CNN "Name"
+	1    9500 2750
 	1    0    0    -1  
 $EndComp
 $Comp
 L Switch:SW_Push SW2
 U 1 1 5E43625B
-P 9400 2150
-F 0 "SW2" H 9400 2435 50  0000 C CNN
-F 1 "TL3315NF160Q" H 9400 2344 50  0000 C CNN
-F 2 "custom_footprints:TL3315NF160Q_Tactile_Switch" H 9400 2350 50  0001 C CNN
-F 3 "http://spec_sheets.e-switch.com/specs/P010337.pdf" H 9400 2350 50  0001 C CNN
-F 4 "Volume Up" H 9800 2250 50  0000 C CNN "Field4"
-	1    9400 2150
+P 9500 2400
+F 0 "SW2" H 9500 2685 50  0000 C CNN
+F 1 "TL3315NF160Q" H 9500 2594 50  0000 C CNN
+F 2 "custom_footprints:TL3315NF160Q_Tactile_Switch" H 9500 2600 50  0001 C CNN
+F 3 "http://spec_sheets.e-switch.com/specs/P010337.pdf" H 9500 2600 50  0001 C CNN
+F 4 "Volume Up" H 9900 2500 50  0000 C CNN "Field4"
+	1    9500 2400
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0101
 U 1 1 5E31F2DC
-P 9700 2950
-F 0 "#PWR0101" H 9700 2700 50  0001 C CNN
-F 1 "GND" H 9705 2777 50  0000 C CNN
-F 2 "" H 9700 2950 50  0001 C CNN
-F 3 "" H 9700 2950 50  0001 C CNN
-	1    9700 2950
+P 9800 3200
+F 0 "#PWR0101" H 9800 2950 50  0001 C CNN
+F 1 "GND" H 9805 3027 50  0000 C CNN
+F 2 "" H 9800 3200 50  0001 C CNN
+F 3 "" H 9800 3200 50  0001 C CNN
+	1    9800 3200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8150 1750 9200 1750
-Wire Wire Line
-	8400 2150 9200 2150
-Wire Wire Line
-	8650 2500 9200 2500
-Wire Wire Line
-	8900 2850 9200 2850
 NoConn ~ 5300 2200
 Wire Wire Line
 	5600 1850 5600 1550
@@ -500,20 +378,14 @@ Wire Wire Line
 	4700 4400 4550 4400
 Text GLabel 4550 4300 0    50   Input ~ 0
 SW1
-Text GLabel 7750 1750 0    50   Input ~ 0
+Text GLabel 7850 2000 0    50   Input ~ 0
 SW1
-Text GLabel 7750 2150 0    50   Input ~ 0
+Text GLabel 7850 2400 0    50   Input ~ 0
 SW2
-Text GLabel 7750 2500 0    50   Input ~ 0
+Text GLabel 7850 2750 0    50   Input ~ 0
 SW3
-Text GLabel 7750 2850 0    50   Input ~ 0
+Text GLabel 7850 3100 0    50   Input ~ 0
 SW4
-Wire Wire Line
-	7750 2150 8400 2150
-Wire Wire Line
-	7750 2500 8650 2500
-Wire Wire Line
-	7750 2850 8900 2850
 Text GLabel 4550 3050 0    50   Input ~ 0
 SW2
 Wire Wire Line
@@ -535,8 +407,6 @@ F 3 "~" H 8200 5000 50  0001 C CNN
 	1    8200 5000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6150 4900 7250 4900
 Text Notes 8300 5000 0    50   ~ 0
 SWDIO
 Wire Wire Line
@@ -556,12 +426,9 @@ Wire Wire Line
 Wire Wire Line
 	6150 4500 6400 4500
 Wire Wire Line
-	7250 4900 7550 4900
-Wire Wire Line
 	7550 4900 7550 5000
 Wire Wire Line
 	7550 5000 8000 5000
-Connection ~ 7250 4900
 Wire Wire Line
 	6150 5000 7450 5000
 Wire Wire Line
@@ -708,4 +575,14 @@ Wire Wire Line
 	3200 4700 3350 4700
 Wire Wire Line
 	3650 4700 3800 4700
+Wire Wire Line
+	7850 2000 9300 2000
+Wire Wire Line
+	7850 2400 9300 2400
+Wire Wire Line
+	7850 2750 9300 2750
+Wire Wire Line
+	7850 3100 9300 3100
+Wire Wire Line
+	6150 4900 7550 4900
 $EndSCHEMATC
