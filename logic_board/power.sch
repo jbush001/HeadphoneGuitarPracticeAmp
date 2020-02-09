@@ -95,50 +95,20 @@ Text GLabel 4000 2500 2    50   BiDi ~ 0
 USB_DM
 Text GLabel 4000 2700 2    50   BiDi ~ 0
 USB_DP
-$Comp
-L Device:R R11
-U 1 1 5E4A45C0
-P 3750 2500
-F 0 "R11" V 3543 2500 50  0000 C CNN
-F 1 "33" V 3634 2500 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 3680 2500 50  0001 C CNN
-F 3 "~" H 3750 2500 50  0001 C CNN
-	1    3750 2500
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R12
-U 1 1 5E4A4FEC
-P 3750 2700
-F 0 "R12" V 3865 2700 50  0000 C CNN
-F 1 "33" V 3956 2700 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 3680 2700 50  0001 C CNN
-F 3 "~" H 3750 2700 50  0001 C CNN
-	1    3750 2700
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	3500 2500 3550 2500
 Wire Wire Line
 	3500 2700 3550 2700
-Wire Wire Line
-	3900 2500 4000 2500
-Wire Wire Line
-	3900 2700 4000 2700
 Wire Wire Line
 	3500 2600 3550 2600
 Wire Wire Line
 	3550 2600 3550 2500
 Connection ~ 3550 2500
 Wire Wire Line
-	3550 2500 3600 2500
-Wire Wire Line
 	3500 2800 3550 2800
 Wire Wire Line
 	3550 2800 3550 2700
 Connection ~ 3550 2700
-Wire Wire Line
-	3550 2700 3600 2700
 $Comp
 L Device:R R14
 U 1 1 5E283C3D
@@ -706,4 +676,8 @@ Wire Wire Line
 	4150 2200 4250 2200
 Wire Wire Line
 	4150 2300 4250 2300
+Wire Wire Line
+	3550 2500 4000 2500
+Wire Wire Line
+	3550 2700 4000 2700
 $EndSCHEMATC
