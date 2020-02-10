@@ -335,7 +335,7 @@ module assembled(alpha) {
     pcb_z = TOP_SHELL_DEPTH - PCB_OFFSET - PCB_THICKNESS;
     translate([WALL + RELIEF, WALL + RELIEF, pcb_z]) pcb();
     translate([30, 5, pcb_z - 0.5 - 5.6]) battery();
-    rotate([90, 0, 0]) translate([16, -6, -5]) plug();
+    rotate([90, 0, 0]) translate([16, -7.5, -5]) plug();
 
     // Front buttons
     for (i = [0:3])
@@ -356,5 +356,5 @@ module cutaway() {
     }
 }
 
-//assembled(0.7);
-cutaway();
+assembled(1);
+//cutaway();

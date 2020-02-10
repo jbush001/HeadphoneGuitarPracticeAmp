@@ -15,4 +15,4 @@ board in a 3D printed enclosure.
 
 This is still a work in progress and I'm in the process of building it.
 
-![image](https://user-images.githubusercontent.com/1145212/73628993-aaf2ac00-4606-11ea-85fc-025e09a772a1.png)
+![image](https://user-images.githubusercontent.com/1145212/74165936-ae73cd80-4bda-11ea-834e-933c16f151d0.png)
