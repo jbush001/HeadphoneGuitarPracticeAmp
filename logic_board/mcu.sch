@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:logic_board-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -300,8 +299,8 @@ $Comp
 L Device:Resonator Y1
 U 1 1 5E41265A
 P 3950 2850
-F 0 "Y1" H 3750 3100 50  0000 C CNN
-F 1 "8 MHz" H 3750 3000 50  0000 C CNN
+F 0 "Y1" H 3950 3100 50  0000 C CNN
+F 1 "8 MHz" H 3950 3000 50  0000 C CNN
 F 2 "custom_footprints:AWSCR-8.00CPLB-C30-T4" H 3925 2850 50  0001 C CNN
 F 3 "~" H 3925 2850 50  0001 C CNN
 	1    3950 2850
@@ -360,13 +359,13 @@ Wire Wire Line
 	4700 4400 4550 4400
 Text GLabel 4550 4300 0    50   Input ~ 0
 SW1
-Text GLabel 7850 2000 0    50   Input ~ 0
+Text GLabel 7850 2000 0    50   Output ~ 0
 SW1
-Text GLabel 7850 2400 0    50   Input ~ 0
+Text GLabel 7850 2400 0    50   Output ~ 0
 SW2
-Text GLabel 7850 2750 0    50   Input ~ 0
+Text GLabel 7850 2750 0    50   Output ~ 0
 SW3
-Text GLabel 7850 3100 0    50   Input ~ 0
+Text GLabel 7850 3100 0    50   Output ~ 0
 SW4
 Text GLabel 4550 3050 0    50   Input ~ 0
 SW2
@@ -399,9 +398,9 @@ Wire Wire Line
 	4550 3250 4700 3250
 Wire Wire Line
 	4550 4300 4700 4300
-Text GLabel 6400 4600 2    50   Input ~ 0
+Text GLabel 6400 4600 2    50   Output ~ 0
 SDA
-Text GLabel 6400 4500 2    50   Input ~ 0
+Text GLabel 6400 4500 2    50   Output ~ 0
 SCL
 Wire Wire Line
 	6150 4500 6400 4500
