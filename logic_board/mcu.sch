@@ -377,17 +377,6 @@ Text GLabel 4550 3150 0    50   Input ~ 0
 SW3
 Text GLabel 4550 3250 0    50   Input ~ 0
 SW4
-$Comp
-L Connector_Generic:Conn_01x04 J1
-U 1 1 5E4DEDD9
-P 8200 4900
-F 0 "J1" H 8150 5250 50  0000 L CNN
-F 1 "SWD" H 8100 5150 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 8200 4900 50  0001 C CNN
-F 3 "~" H 8200 4900 50  0001 C CNN
-	1    8200 4900
-	1    0    0    1   
-$EndComp
 Text Notes 8300 4900 0    50   ~ 0
 SWDIO
 Wire Wire Line
@@ -428,43 +417,17 @@ F 3 "" H 5500 5600 50  0001 C CNN
 	1    5500 5600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x03 J6
-U 1 1 5E57B910
-P 6750 3900
-F 0 "J6" H 6700 4250 50  0000 L CNN
-F 1 "Serial" H 6650 4150 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 6750 3900 50  0001 C CNN
-F 3 "~" H 6750 3900 50  0001 C CNN
-	1    6750 3900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6150 3800 6550 3800
-Wire Wire Line
-	6150 3900 6550 3900
-$Comp
-L power:GND #PWR0106
-U 1 1 5E58AEDF
-P 6550 4000
-F 0 "#PWR0106" H 6550 3750 50  0001 C CNN
-F 1 "GND" V 6555 3872 50  0000 R CNN
-F 2 "" H 6550 4000 50  0001 C CNN
-F 3 "" H 6550 4000 50  0001 C CNN
-	1    6550 4000
-	0    1    1    0   
-$EndComp
 Text Notes 8300 5000 0    50   ~ 0
 SWCLK
 Text Notes 8300 4800 0    50   ~ 0
 3v3
 Text Notes 8300 4700 0    50   ~ 0
 GND
-Text Notes 6850 3800 0    50   ~ 0
+Text Notes 8300 4500 0    50   ~ 0
 TX
-Text Notes 6850 3900 0    50   ~ 0
+Text Notes 8300 4600 0    50   ~ 0
 RX
-Text Notes 6850 4000 0    50   ~ 0
+Text Notes 8300 4400 0    50   ~ 0
 GND
 Wire Wire Line
 	4550 4100 4700 4100
@@ -590,4 +553,40 @@ OSC_OUT
 Wire Wire Line
 	6150 4600 6400 4600
 NoConn ~ 6150 4400
+$Comp
+L Connector_Generic:Conn_01x07 J1
+U 1 1 5E41669C
+P 8200 4700
+F 0 "J1" H 8150 4150 50  0000 L CNN
+F 1 "Debug" H 8100 4250 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x07_Pitch2.54mm" H 8200 4700 50  0001 C CNN
+F 3 "~" H 8200 4700 50  0001 C CNN
+	1    8200 4700
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6150 3900 7450 3900
+$Comp
+L power:GND #PWR011
+U 1 1 5E42451A
+P 7900 4400
+F 0 "#PWR011" H 7900 4150 50  0001 C CNN
+F 1 "GND" V 7905 4272 50  0000 R CNN
+F 2 "" H 7900 4400 50  0001 C CNN
+F 3 "" H 7900 4400 50  0001 C CNN
+	1    7900 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7900 4400 8000 4400
+Wire Wire Line
+	7450 4600 8000 4600
+Wire Wire Line
+	7450 3900 7450 4600
+Wire Wire Line
+	8000 4500 7550 4500
+Wire Wire Line
+	7550 4500 7550 3800
+Wire Wire Line
+	6150 3800 7550 3800
 $EndSCHEMATC
