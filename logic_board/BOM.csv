@@ -1,29 +1,29 @@
-Ref,Qnty,Value,Footprint,Vendor
-"C4, C13, C26,",3,10uF,Capacitors_SMD:C_0805_HandSoldering,https://www.digikey.com/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920
-"C5, C6, C7, C8, C12, C18, C15, C17, C19, C16, C20, C10,",12,0.1uF,Capacitors_SMD:C_0402,https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05F104ZO5NNNC/1276-1004-1-ND/3889090
-"C9,",1,10uF,Capacitors_SMD:C_0402,https://www.digikey.com/product-detail/en/murata-electronics/GRM155R60E106ME16D/490-10692-1-ND/5251413
-"C23, C24,",2,220uF,Capacitors_SMD:C_1206_HandSoldering,https://www.digikey.com/product-detail/en/panasonic-electronic-components/EEE-1VA221UP/PCE3955CT-ND/766331
-"C25, C3,",2,22uF,Capacitors_SMD:CP_Elec_6.3x4.5,https://www.digikey.com/product-detail/en/panasonic-electronic-components/EEE-1VA220SP/PCE3952CT-ND/766328
-"D1, D2,",2,LED,LEDs:LED_D3.0mm_Horizontal_O1.27mm_Z2.0mm,https://www.digikey.com/product-detail/en/kingbright/WP710A10LSRD/754-1590-ND/2769810
-"D3,",1,Debug,LEDs:LED_0603_HandSoldering,https://www.digikey.com/product-detail/en/lite-on-inc/LTST-C191TBKT/160-1647-1-ND/573587
-"J3,",1,SJ2-3595X-SMT,custom_footprints:SJ2-3595X-SMT_3.5MM_JACK,https://www.digikey.com/product-detail/en/cui-devices/SJ2-35953A-SMT-TR/CP-SJ2-35953A-SMT-CT-ND/6619633
-"J4,",1,Amphenol 124015,Connectors_USB:USB_C_Receptacle_Amphenol_12401610E4-2A,https://www.digikey.com/product-detail/en/amphenol-icc-commercial-products/12401610E4-2A/12401610E4-2ACT-ND/5775520
-"J5,",1,Batt,custom_footprints:JST PH HEADER SMD 2POS 2MM,https://www.digikey.com/product-detail/en/jst-sales-america-inc/B2B-PH-SM4-TB-LF-SN/455-1734-1-ND/926831
-"R1, R2,",2,5.1k,Resistors_SMD:R_0402,https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-2AEB512X/P5.1KDCCT-ND/1706200
-"R6,",1,50k,Resistors_SMD:R_0805_HandSoldering,https://www.digikey.com/product-detail/en/vishay-thin-film/PTN0805E5002BST1/764-1535-1-ND/7103319
-"R7,",1,100k,Resistors_SMD:R_0402,https://www.digikey.com/product-detail/en/yageo/RC0402FR-07100KL/311-100KLRCT-ND/729473
-"R9, R10,",2,47k,Resistors_SMD:R_0402,https://www.digikey.com/product-detail/en/yageo/RC0402FR-0747KL/311-47.0KLRCT-ND/729563
-"R13,",1,1k,Resistors_SMD:R_0402,https://www.digikey.com/product-detail/en/yageo/RC0402FR-071KL/311-1.00KLRDKR-ND/732407
-"R14,",1,2k,Resistors_SMD:R_0402,https://www.digikey.com/product-detail/en/yageo/RC0402FR-072KL/311-2KLRCT-ND/2827883
-"R18, R17, R16,",3,1.5k,Resistors_SMD:R_0402,https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-2AEB152X/P1.5KDCCT-ND/1706187
-"SW4, SW1, SW3, SW2,",4,TL3315NF160Q,custom_footprints:TL3315NF160Q_Tactile_Switch,https://www.digikey.com/product-detail/en/e-switch/TL3315NF160Q/EG4621CT-ND/1870401
-"SW5,",1,Power,custom_footprints:JS102011SAQN,https://www.digikey.com/product-detail/en/c-k/JS102011SAQN/401-1999-1-ND/1640114
-"U1,",1,STM32G474CET6,Housings_QFP:LQFP-48_7x7mm_Pitch0.5mm,https://www.digikey.com/product-detail/en/stmicroelectronics/STM32G473CET6/497-STM32G473CET6-ND/10326771
-"U2,",1,OPA340NA,TO_SOT_Packages_SMD:TSOT-23-5_HandSoldering,https://www.digikey.com/product-detail/en/texas-instruments/OPA340NA-250/OPA340NACT-ND/268639
-"U3,",1,WM8731SEDS_V,Housings_SSOP:SSOP-28_5.3x10.2mm_Pitch0.65mm,https://www.digikey.com/product-detail/en/cirrus-logic-inc/WM8731SEDS-V/598-2460-ND/5409909
-"U4,",1,SPX3819M5-L-3-3,TO_SOT_Packages_SMD:TSOT-23-5_HandSoldering,https://www.digikey.com/product-detail/en/maxlinear-inc/SPX3819M5-L-3-3-TR/1016-1873-1-ND/3586590
-"U5,",1,BQ24090DGQR,Housings_SSOP:MSOP-10-1EP_3x3mm_Pitch0.5mm,https://www.digikey.com/product-detail/en/texas-instruments/BQ24090DGQR/296-38875-1-ND/5142987
-"Y1,",1,8 MHz,custom_footprints:AWSCR-8.00CPLB-C30-T4,https://www.digikey.com/product-detail/en/abracon-llc/AWSCR-8.00CPLB-C30-T4/535-15118-1-ND/10232645
-"Y2,",1,12MHz,custom_footprints:AWSCR-12.00CV-T,https://www.digikey.com/product-detail/en/abracon-llc/AWSCR-12.00CV-T/535-10007-1-ND/2001630
-,1,3.7v LiPo Battery,,https://www.digikey.com/product-detail/en/adafruit-industries-llc/2750/1528-1858-ND/6612470
-,1,1/4  Inch Plug,,https://www.digikey.com/product-detail/en/switchcraft-inc/2P1216/SC2075-ND/1289060
+﻿"Manufacturer Part Number","Manufacturer","Digi-Key Part Number","Quantity","Unit Price","Description"
+"C0805C106K8PACTU","KEMET","399-4925-1-ND","3","0.16000","CAP CER 10UF 10V X5R 0805"
+"CL05F104ZO5NNNC","Samsung Electro-Mechanics","1276-1004-1-ND","12","0.01800","CAP CER 0.1UF 16V Y5V 0402"
+"EEE-1VA220SP","Panasonic Electronic Components","PCE3952CT-ND","2","0.35000","CAP ALUM 22UF 20% 35V SMD"
+"WP710A10LSRD","Kingbright","754-1590-ND","2","0.50000","LED RED DIFFUSED T-1 T/H"
+"LTST-C191TBKT","Lite-On Inc.","160-1647-1-ND","1","0.50000","LED BLUE CLEAR CHIP SMD"
+"SJ2-35953A-SMT-TR","CUI Devices","CP-SJ2-35953A-SMT-CT-ND","1","1.41000","AUDIO JACK, 3.5 MM, RT, 3 CONDUC"
+"12401610E4#2A","Amphenol ICC (Commercial Products)","12401610E4#2ACT-ND","1","1.75000","CONN RCP USB3.1 TYPEC 24P SMD RA"
+"B2B-PH-SM4-TB(LF)(SN)","JST Sales America Inc.","455-1734-1-ND","1","0.55000","CONN HEADER SMD 2POS 2MM"
+"ERA-2AEB512X","Panasonic Electronic Components","P5.1KDCCT-ND","2","0.45000","RES SMD 5.1K OHM 0.1% 1/16W 0402"
+"PTN0805E5002BST1","Vishay Thin Film","764-1535-1-ND","1","0.74000","RES 50K OHM 0.1% 1/5W 0805"
+"RC0402FR-07100KL","Yageo","311-100KLRCT-ND","1","0.10000","RES SMD 100K OHM 1% 1/16W 0402"
+"RC0402FR-0747KL","Yageo","311-47.0KLRCT-ND","2","0.10000","RES SMD 47K OHM 1% 1/16W 0402"
+"RC0402FR-071KL","Yageo","311-1.00KLRCT-ND","1","0.10000","RES SMD 1K OHM 1% 1/16W 0402"
+"RC0402FR-072KL","Yageo","311-2KLRCT-ND","1","0.10000","RES SMD 2K OHM 1% 1/16W 0402"
+"ERA-2AEB152X","Panasonic Electronic Components","P1.5KDCCT-ND","3","0.43000","RES SMD 1.5K OHM 0.1% 1/16W 0402"
+"TL3315NF160Q","E-Switch","EG4621CT-ND","4","0.18000","SWITCH TACTILE SPST-NO 0.05A 15V"
+"JS102011SAQN","C&K","401-1999-1-ND","1","0.56000","SWITCH SLIDE SPDT 300MA 6V"
+"STM32G473CET6","STMicroelectronics","497-STM32G473CET6-ND","1","6.29000","MAINSTREAM ARM CORTEX-M4 CORE WI"
+"OPA340NA/3K","Texas Instruments","296-26275-1-ND","1","2.54000","IC OPAMP GP 1 CIRCUIT SOT23-5"
+"WM8731SEDS/V","Cirrus Logic Inc.","598-2460-ND","1","3.92000","IC CODEC PORT INTERNET 28SSOP"
+"SPX3819M5-L-3-3/TR","MaxLinear, Inc.","1016-1873-1-ND","1","0.51000","IC REG LINEAR 3.3V 500MA SOT23-5"
+"BQ24090DGQT","Texas Instruments","296-25863-1-ND","1","1.48000","IC BATT CHRGR LI-ION 10MSOP"
+"AWSCR-8.00CPLB-C30-T4","Abracon LLC","535-15118-1-ND","1","0.50000","CERAMIC RES 8.0000MHZ 30PF SMD"
+"AWSCR-12.00CV-T","Abracon LLC","535-10007-1-ND","1","0.40000","CERAMIC RES 12.0000MHZ 22PF SMD"
+"2750","Adafruit Industries LLC","1528-1858-ND","1","6.95000","BATTERY LITHIUM 3.7V 350MAH"
+"2P1216","Switchcraft Inc.","SC2075-ND","1","4.06000","CONN PLUG MONO 6.35MM 2COND"
+"CL05A106MP8NUB8","Samsung Electro-Mechanics","1276-6830-1-ND","1","0.47000","CAP CER 10UF 10V X5R 0402"
+"EEE-1AA221XP","Panasonic Electronic Components","PCE3871CT-ND","2","0.47000","CAP ALUM 220UF 20% 10V SMD"
