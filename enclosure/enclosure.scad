@@ -7,9 +7,9 @@
 // Both shells are printed with the open side pointed towards the print bed.
 
 EPSILON=0.01; // Used to avoid z-fighting
-RELIEF=0.5; // Gap between interfacing parts
+RELIEF=0.8; // Gap between interfacing parts
 WALL=2; // Thickness of wall
-PCB_THICKNESS=1.57; // Oshpark 4 layer board
+PCB_THICKNESS=1.5; // Oshpark 4 layer board (actually 1.46)
 $fs = 0.5;
 $fa = 0.5;
 
@@ -25,10 +25,9 @@ PLUG_LARGE_RADIUS=16 / 2;
 PLUG_CYLINDER_LEN = 37;
 PLUG_OPENING_ID=10;
 PLUG_OFFSET=8;  // along width
-BOSS1_ID=2.2;   // For an M2 screw, should be larger
-BOSS2_ID=1.8;   // Also for M2 screw, we want it to self thread into this.
-COUNTERBORE_DEPTH=2;
-COUNTERBORE_ID=3.8;
+BOSS1_ID=2.5;   // For an M2.3 screw, should be larger
+BOSS2_ID=2.2;   // Also for M2.3 screw, we want it to self thread into this.
+COUNTERBORE_ID=4.0; // Head of screw is 3.56mm
 SHELL_WIDTH=PCB_WIDTH + RELIEF * 2 + WALL * 2;
 SHELL_HEIGHT=PCB_HEIGHT + RELIEF * 2 + WALL * 2;
 BOSS_OUTER_RADIUS=PCB_SCREW_INSET;
@@ -184,10 +183,10 @@ module bottom_enclosure() {
         union() {
             bottom_shell();
 
-            translate([xy1, xy1, boss_top]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length);
-            translate([x2, xy1, boss_top]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length);
-            translate([xy1, y2, boss_top]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length);
-            translate([x2, y2, boss_top]) cylinder(r=BOSS_OUTER_RADIUS, h=boss_length);
+            translate([xy1, xy1, boss_top]) cylinder(r1=BOSS_OUTER_RADIUS, r2=BOSS_OUTER_RADIUS + 1, h=boss_length);
+            translate([x2, xy1, boss_top]) cylinder(r1=BOSS_OUTER_RADIUS, r2=BOSS_OUTER_RADIUS + 1, h=boss_length);
+            translate([xy1, y2, boss_top]) cylinder(r1=BOSS_OUTER_RADIUS, r2=BOSS_OUTER_RADIUS + 1, h=boss_length);
+            translate([x2, y2, boss_top]) cylinder(r1=BOSS_OUTER_RADIUS, r2=BOSS_OUTER_RADIUS + 1, h=boss_length);
         }
 
         union() {
@@ -213,10 +212,10 @@ module top_enclosure() {
             top_shell();
 
             // Bosses to attach to bottom
-            translate([xy1, xy1, pcb_boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=PCB_OFFSET);
-            translate([x2, xy1, pcb_boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=PCB_OFFSET);
-            translate([xy1, y2, pcb_boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=PCB_OFFSET);
-            translate([x2, y2, pcb_boss_bottom]) cylinder(r=BOSS_OUTER_RADIUS, h=PCB_OFFSET);
+            translate([xy1, xy1, pcb_boss_bottom]) cylinder(r1=BOSS_OUTER_RADIUS, r2=BOSS_OUTER_RADIUS + 1, h=PCB_OFFSET);
+            translate([x2, xy1, pcb_boss_bottom]) cylinder(r1=BOSS_OUTER_RADIUS, r2=BOSS_OUTER_RADIUS + 1, h=PCB_OFFSET);
+            translate([xy1, y2, pcb_boss_bottom]) cylinder(r1=BOSS_OUTER_RADIUS, r2=BOSS_OUTER_RADIUS + 1, h=PCB_OFFSET);
+            translate([x2, y2, pcb_boss_bottom]) cylinder(r1=BOSS_OUTER_RADIUS, r2=BOSS_OUTER_RADIUS + 1, h=PCB_OFFSET);
         }
 
         union() {
@@ -333,7 +332,7 @@ module plug() {
 module assembled(alpha) {
     pcb_xy = WALL + RELIEF;
     pcb_z = TOP_SHELL_DEPTH - PCB_OFFSET - PCB_THICKNESS;
-    translate([WALL + RELIEF, WALL + RELIEF, pcb_z]) pcb();
+//    translate([WALL + RELIEF, WALL + RELIEF, pcb_z]) pcb();
     translate([30, 5, pcb_z - 0.5 - 5.6]) battery();
     rotate([90, 0, 0]) translate([16, -7.5, -5]) plug();
 
@@ -352,9 +351,10 @@ module assembled(alpha) {
 module cutaway() {
     difference() {
         assembled(1);
-        translate([15,-27,-7]) cube([SHELL_WIDTH,SHELL_HEIGHT,50]);
+        translate([15,-29,-7]) cube([SHELL_WIDTH,SHELL_HEIGHT,50]);
     }
 }
 
-assembled(1);
+//assembled(1);
 //cutaway();
+bottom_enclosure();
