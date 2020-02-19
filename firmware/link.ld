@@ -5,27 +5,24 @@ MEMORY {
 }
 
 SECTIONS {
-    .text : {
-        . = ALIGN(4);
+    .text : ALIGN(4) {
         KEEP(*(.interrupt_vector))
-        *(.text)
-        *(.rodata)
+        *(.text .text.*)
+        *(.rodata .rodata.*)
+        _etext = .;
     } > FLASH
 
-    _flash_data = .;
-
-    .data : AT (_flash_data) {
-        . = ALIGN(4);
-        _data_begin = .;
-        *(.data)
-        _data_end = .;
+    /* https://sourceware.org/binutils/docs/ld/Output-Section-LMA.html#Output-Section-LMA */
+    .data : AT (ALIGN(ADDR(.text) + SIZEOF(.text), 4)) ALIGN(4) {
+        _data = .;
+        *(.data .data.*)
+        _edata = .;
     } > SRAM
 
-    .bss : {
-        . = ALIGN(4);
-        _bss_begin = .;
-        *(.bss)
-        _bss_end = .;
+    .bss : ALIGN(4) {
+        _bss = .;
+        *(.bss .bss.*)
+        _ebss = .;
     } > SRAM
 }
 
