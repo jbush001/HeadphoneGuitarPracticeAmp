@@ -387,7 +387,7 @@ Wire Wire Line
 	4550 3250 4700 3250
 Wire Wire Line
 	4550 4300 4700 4300
-Text GLabel 6400 4600 2    50   Output ~ 0
+Text GLabel 6400 4400 2    50   Output ~ 0
 SDA
 Text GLabel 6400 4500 2    50   Output ~ 0
 SCL
@@ -458,7 +458,7 @@ Text Notes 5460 3830 0    35   ~ 0
 USART2_TX
 Text Notes 5450 3920 0    35   ~ 0
 USART2_RX
-Text Notes 5460 4630 0    35   ~ 0
+Text Notes 5450 4450 0    35   ~ 0
 I2C2_SDA
 Text Notes 5460 4520 0    35   ~ 0
 I2C2_SCL
@@ -551,8 +551,8 @@ OSC_IN
 Text Notes 5100 2870 0    35   ~ 0
 OSC_OUT
 Wire Wire Line
-	6150 4600 6400 4600
-NoConn ~ 6150 4400
+	6150 4400 6400 4400
+NoConn ~ 6150 4600
 $Comp
 L Connector_Generic:Conn_01x07 J1
 U 1 1 5E41669C
