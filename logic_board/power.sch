@@ -34,7 +34,7 @@ U 1 1 5E295CC7
 P 2900 2600
 F 0 "J4" H 3007 3467 50  0000 C CNN
 F 1 "Amphenol 124015" H 3007 3376 50  0000 C CNN
-F 2 "Connector_USB:USB_C_Receptacle_Amphenol_12401610E4-2A" H 3050 2600 50  0001 C CNN
+F 2 "Connector_USB:USB_C_Receptacle_GCT_USB4085" H 3050 2600 50  0001 C CNN
 F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 3050 2600 50  0001 C CNN
 	1    2900 2600
 	1    0    0    -1  
