@@ -274,7 +274,7 @@ module button() {
         }
 
         // Hollow out middle
-        union() translate([0, 0, -epsilon]) {
+        union() translate([0, 0, -epsilon * 2]) {
             cylinder(h=button_height - flange_odr, d=od - 1);
         }
     }
@@ -283,6 +283,9 @@ module button() {
     support_length1 = od - 0.5;
     translate([-support_length1 / 2, -support_width / 2, 0]) cube([support_length1, support_width, button_height - 1]);
     translate([-support_width / 2, -support_length1 / 2, 0]) cube([support_width, support_length1, button_height - 1]);
+
+    // Bottom sticks out to press dome switch
+    translate([0, 0, -0.5]) cylinder(h=button_height, d=2);  // Bottom flange
 }
 
 // Stand-in for the PCB.
@@ -337,7 +340,7 @@ module assembled(alpha) {
 
     // Front buttons
     for (i = [0:3])
-        translate([pcb_xy + 33 + i * 9, shell_height - pcb_xy - 24.8 + relief, pcb_z + pcb_thickness + 0.5]) button();
+        translate([pcb_xy + 33 + i * 9, shell_height - pcb_xy - 24.8 + relief, pcb_z + pcb_thickness + 1.5]) button();
 
     color("yellow", alpha) {
         top_enclosure();
