@@ -5,11 +5,15 @@ Setting up software development environment:
 
 ## Macos
 
-Install ARM toolchain and stlink tools:
+Install ARM toolchain:
 
     brew tap ArmMbed/homebrew-formulae
-    brew install arm-none-eabi-gcc stlink
+    brew install arm-none-eabi-gcc
 
 ## Linux
 
-    sudo apt-get install stlink-tools gcc-arm-none-eabi binutils-arm-none-eabi
+    sudo apt-get install gcc-arm-none-eabi binutils-arm-none-eabi
+
+This requires at least version 1.6.1 of the st-link tools for STM32G4 support. This version
+is not in Homebrew (at least), so they need to be built manually following instructions here:
+<https://github.com/stlink-org/stlink/blob/develop/doc/compiling.md#macOS>
