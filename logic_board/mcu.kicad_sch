@@ -4967,6 +4967,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC part number" "SSSS211603"
+			(at 110.49 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "39510b99-992a-4076-b1dd-4955782b6ebf")
 		)
