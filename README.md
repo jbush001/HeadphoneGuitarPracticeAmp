@@ -19,7 +19,7 @@ board in a 3D printed enclosure.
 
 ### CAD
 
-This uses the build123d package for all CAD design. To set up:
+This uses the build123d package for all CAD design. To set up first time:
 
     python3 -m venv .venv
     pip install -r requirements.txt
@@ -30,7 +30,7 @@ When starting a new terminal/session:
 
 You can regenerate the generated STL file by typing:
 
-    python hello_world.py
+    python enclosure.py
 
 The STL file can be viewed with a system viewer.
 
@@ -53,12 +53,13 @@ From the PCB Editor:
 - Open the menu File -> Fabrication Outputs -> Gerber Files.
   Select plot format "Gerber". Set the output directory to the fabrication subdirectory.
   Press the 'plot' button.
-  (Should double check these by double clicking to open the gerber viewer)
+  (Should double check these by double clicking to open the Gerber viewer)
 - Open the menu File -> Fabrication Outputs -> Drill Files.
-  Press the 'Generate' button.
+  Press the 'Generate' button. These should also go in the fabrication directory.
 - Open the menu Fabrication Outputs -> Component placement.
   Hand modify the first line of the CSV file, replacing it with:
   Ref,Val,Package,Mid X,Mid Y,Rotation,Layer
+
 From the schematic editor:
 - Open the menu Tools -> Generate Bill of Materials. Click the export button.
   (This will be in the logic_board directory).
