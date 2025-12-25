@@ -1,0 +1,191 @@
+(footprint "Alps Alpine SSSS211603"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "SW**"
+		(at 0.5 5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "63058d37-6b15-4977-b559-e74364067671")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "SW_SPDT"
+		(at 0 6.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "2ca257f8-bae5-4a7b-bd80-43469656b61a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7136/SSSS2-Datasheet.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d3eb1150-8784-445e-b0f8-c8695bf4a9a1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Alps Alpine SWITCH SLIDE SPDT 0.3A 6V"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "563e4e41-acac-41be-96a4-b826087298be")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC Part Number" "SSSS211603"
+		(at 0 -3 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "f369281b-6652-4ee8-bcf6-499fb539a77d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -4.5 -1.8)
+		(end 4.5 -1.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "00a20c92-6542-466f-83b7-c012c16b3325")
+	)
+	(fp_line
+		(start -4.5 2)
+		(end -4.5 -1.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "720f946b-b0d0-4184-be07-fb31e09eba1d")
+	)
+	(fp_line
+		(start -3.19009 2)
+		(end -4.5 2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "81c6825b-428e-4026-814d-adfd21391d36")
+	)
+	(fp_line
+		(start -1.827268 2)
+		(end -0.689592 2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cd20f89f-a914-4468-8978-64cc2c9c861b")
+	)
+	(fp_line
+		(start 0.687594 2)
+		(end 1.815906 2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "68473525-f8a6-41fe-9342-d2e411ea6c35")
+	)
+	(fp_line
+		(start 3.158366 2)
+		(end 4.5 2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "313a201e-19a3-4362-9164-7eebd9c8d68b")
+	)
+	(fp_line
+		(start 4.5 2)
+		(end 4.5 -1.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "72791f66-064d-4939-8d1c-a18099aa26a1")
+	)
+	(fp_circle
+		(center -3.4 0)
+		(end -2.95 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "Edge.Cuts")
+		(uuid "b433c2e5-71dc-4fdd-a28c-f448617445cb")
+	)
+	(fp_circle
+		(center 3.4 0)
+		(end 3.85 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "Edge.Cuts")
+		(uuid "2d8becf7-139d-4180-a7cc-bcd4f10e3ce5")
+	)
+	(pad "1" smd rect
+		(at -2.5 2.75)
+		(size 1.2 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ae1d02e0-3ec4-4536-ba7a-432917151a56")
+	)
+	(pad "2" smd rect
+		(at 0 2.75)
+		(size 1.2 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "58e64d38-3d11-402e-972c-1c1f197c2141")
+	)
+	(pad "3" smd rect
+		(at 2.5 2.75)
+		(size 1.2 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "952acba2-6bb9-4078-b0c7-802a761d1b7a")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Custom_Footprints.pretty/SSSS211603.STEP"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)
