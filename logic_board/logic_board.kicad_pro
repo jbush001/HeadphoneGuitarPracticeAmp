@@ -644,6 +644,14 @@
     [
       "b7b37fe1-b409-497a-9440-d94d882f6459",
       "Root"
+    ],
+    [
+      "bab78c00-64d8-4e72-b9b2-c8e2bf935ca1",
+      "MCU"
+    ],
+    [
+      "824f357b-6dd3-4dc3-a0f3-1ff6a8c5aeec",
+      "CODEC"
     ]
   ],
   "text_variables": {}
