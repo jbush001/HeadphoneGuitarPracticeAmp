@@ -369,7 +369,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Audio Codec"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part Number" "C1521513"
 			(at 0 0 0)
 			(effects
 				(font

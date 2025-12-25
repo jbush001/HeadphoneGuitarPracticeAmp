@@ -68,6 +68,9 @@ From the schematic editor:
 The contents of the fabrication folder can be zipped up and uploaded to JLCPCB's site.
 You'll also need to separately upload the placement and BOM files.
 
+Some through hole parts need to be hand soldered and are not included in the
+assembly positions or BOM.
+
 ### Software
 
 Software can be uploaded using the ST-Link v2 programmer (these are available in lots
@@ -81,7 +84,7 @@ with the following pinout:
 
 | Board Pad | Function    | ST-Link Pin |
 |-----------|-------------|-------------|
-|     1     | VCC (3.3v)  |      7      |
+|     1     | VCC (3.3v)  |     n/c     |
 |     2     | SWDIO       |      2      |
 |     3     | SWCLK       |      6      |
 |     4     | GND         |      3      |
@@ -90,11 +93,13 @@ with the following pinout:
 |     7     | nRST        |      1      |
 |     8     | GPIO        |      -      |
 
+Note: for the cheapo aluminum STLink clones, you don't want to connect VCC.
 
 For UART, a serial to USB converter like
 <https://www.deshide.com/product-details_SH-U09C2.html> can be used. It must be
-set for 3.3v output. Connect the TX pin on the converted to the RX pin on the
-board and vice versa.
+set for 3.3v output. Connect the TX pin on the converter to the RX pin on the
+board and vice versa. You'll need a Dupont Y jumper to share the ground
+between the two connectors.
 
 This uses the STM32H7 microcontroller.
 
