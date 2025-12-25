@@ -4,5 +4,14 @@
 *.sch-bak
 *.elf
 *.bin
+*.stl
 fp-info-cache
-
+\#auto_saved_files\#
+*_autosave-*
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+logic_board/fabrication/*
+*.lck
+*.csv
