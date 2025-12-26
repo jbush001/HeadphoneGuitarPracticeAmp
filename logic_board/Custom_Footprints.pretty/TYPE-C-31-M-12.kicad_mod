@@ -401,7 +401,7 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "37bad125-b05e-4ab6-adf7-4ace48763a1b")
 	)
-	(pad "Sh1" thru_hole roundrect
+	(pad "SHIELD" thru_hole roundrect
 		(at -4.32 -4.18)
 		(size 1 2.2)
 		(drill oval 0.6 1.7)
@@ -410,7 +410,7 @@
 		(roundrect_rratio 0.5)
 		(uuid "7b3e221f-2233-4036-b3c6-1d4a0e54d779")
 	)
-	(pad "Sh1" thru_hole roundrect
+	(pad "SHIELD" thru_hole roundrect
 		(at -4.32 0)
 		(size 1 2.2)
 		(drill oval 0.6 1.2)
@@ -419,7 +419,7 @@
 		(roundrect_rratio 0.5)
 		(uuid "d1a81abc-06d6-48e1-a2ad-9ee745051aa4")
 	)
-	(pad "Sh1" thru_hole roundrect
+	(pad "SHIELD" thru_hole roundrect
 		(at 4.32 -4.18)
 		(size 1 2.2)
 		(drill oval 0.6 1.7)
@@ -428,7 +428,7 @@
 		(roundrect_rratio 0.5)
 		(uuid "b3203b41-8357-4174-9b51-0b9ca6b4574f")
 	)
-	(pad "Sh1" thru_hole roundrect
+	(pad "SHIELD" thru_hole roundrect
 		(at 4.32 0)
 		(size 1 2.2)
 		(drill oval 0.6 1.2)
