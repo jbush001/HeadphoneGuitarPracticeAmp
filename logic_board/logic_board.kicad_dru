@@ -1,0 +1,5 @@
+(version 1)
+(rule "SOICBite_Tight_Clearance"
+    (condition "A.memberOfFootprint('J2')")
+    (constraint hole_clearance (min 0.127mm))
+)
