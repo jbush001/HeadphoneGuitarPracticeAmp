@@ -8102,7 +8102,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0402"
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
 			(at 218.44 23.495 90)
 			(effects
 				(font
@@ -9251,7 +9251,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "18pF"
 			(at 90.17 60.9599 0)
 			(effects
 				(font
@@ -9888,7 +9888,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0402"
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
 			(at 218.44 51.435 90)
 			(effects
 				(font
@@ -10313,7 +10313,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "18pF"
 			(at 65.024 60.96 0)
 			(effects
 				(font

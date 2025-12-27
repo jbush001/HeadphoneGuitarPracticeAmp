@@ -57,8 +57,10 @@ From the PCB Editor:
 - Open the menu File -> Fabrication Outputs -> Drill Files.
   Press the 'Generate' button. These should also go in the fabrication directory.
 - Open the menu Fabrication Outputs -> Component placement.
-  Hand modify the first line of the CSV file, replacing it with:
+  Hand modify the first line of the CSV file (logic-board-top-pos.csv), replacing it with:
   Ref,Val,Package,Mid X,Mid Y,Rotation,Layer
+
+  You can ignore logic-board-bottom-pos.csv
 
 From the schematic editor:
 - Open the menu Tools -> Generate Bill of Materials. Click the export button.

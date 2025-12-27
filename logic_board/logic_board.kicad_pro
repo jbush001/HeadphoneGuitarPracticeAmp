@@ -524,7 +524,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
-    "bom_export_filename": "${PROJECTNAME}.csv",
+    "bom_export_filename": "logic_board.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -627,6 +627,12 @@
           "group_by": false,
           "label": "PARTREV",
           "name": "PARTREV",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC part number",
+          "name": "LCSC part number",
           "show": false
         }
       ],
