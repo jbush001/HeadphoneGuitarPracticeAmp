@@ -1225,7 +1225,7 @@
 			)
 		)
 		(property "Footprint" "Custom_Footprints:QFN32_4X4_CIR"
-			(at 0 0 0)
+			(at 0.508 11.938 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1235,7 +1235,7 @@
 			)
 		)
 		(property "Datasheet" "https://statics.cirrus.com/pubs/proDatasheet/WM8904_Rev4.0.pdf"
-			(at 0 0 0)
+			(at 1.27 14.986 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1245,7 +1245,7 @@
 			)
 		)
 		(property "Description" "Audio Codec"
-			(at 0 0 0)
+			(at 6.35 9.398 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1254,7 +1254,7 @@
 			)
 		)
 		(property "LCSC Part Number" "C1521513"
-			(at 0 0 0)
+			(at -9.144 9.398 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1329,7 +1329,7 @@
 					(type none)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 0 0 0)
 				(length 7.62)
 				(name "IRQ/GPIO1"
@@ -1347,7 +1347,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 0 -2.54 0)
 				(length 7.62)
 				(name "SCLK"
@@ -1365,7 +1365,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 0 -5.08 0)
 				(length 7.62)
 				(name "SDA"
@@ -1394,24 +1394,6 @@
 					)
 				)
 				(number "4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_out line
-				(at 0 -10.16 0)
-				(length 7.62)
-				(name "DGND"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "5"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1455,7 +1437,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 0 -17.78 0)
 				(length 7.62)
 				(name "CPCA"
@@ -1473,7 +1455,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at 0 -20.32 0)
 				(length 7.62)
 				(name "CPGND"
@@ -1491,7 +1473,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 0 -22.86 0)
 				(length 7.62)
 				(name "CPCB"
@@ -1509,7 +1491,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin passive line
 				(at 0 -25.4 0)
 				(length 7.62)
 				(name "CPVOUTP"
@@ -1527,7 +1509,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin passive line
 				(at 0 -27.94 0)
 				(length 7.62)
 				(name "CPVOUTN"
@@ -1563,7 +1545,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin input line
 				(at 0 -33.02 0)
 				(length 7.62)
 				(name "HPOUTFB"
@@ -1617,25 +1599,7 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 71.12 0 180)
-				(length 7.62)
-				(name "EPAD"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "33"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin unspecified line
+			(pin input line
 				(at 71.12 -2.54 180)
 				(length 7.62)
 				(name "DACDAT"
@@ -1653,7 +1617,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin output line
 				(at 71.12 -5.08 180)
 				(length 7.62)
 				(name "ADCDAT"
@@ -1671,7 +1635,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 71.12 -7.62 180)
 				(length 7.62)
 				(name "LRCLK"
@@ -1689,7 +1653,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 71.12 -10.16 180)
 				(length 7.62)
 				(name "BCLK/GPIO4"
@@ -1707,7 +1671,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 71.12 -12.7 180)
 				(length 7.62)
 				(name "MCLK"
@@ -1815,7 +1779,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at 71.12 -27.94 180)
 				(length 7.62)
 				(name "AGND"
@@ -1833,25 +1797,7 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 71.12 -30.48 180)
-				(length 7.62)
-				(name "VMIDC"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "21"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin unspecified line
+			(pin passive line
 				(at 71.12 -33.02 180)
 				(length 7.62)
 				(name "MICBIAS"
@@ -1916,6 +1862,62 @@
 					)
 				)
 				(number "17"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "WM8904CGEFL_V_1_1"
+			(pin power_in line
+				(at 0 -10.16 0)
+				(length 7.62)
+				(name "DGND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 71.12 0 180)
+				(length 7.62)
+				(name "EPAD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "33"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 71.12 -30.48 180)
+				(length 7.62)
+				(name "VMIDC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "21"
 					(effects
 						(font
 							(size 1.27 1.27)
