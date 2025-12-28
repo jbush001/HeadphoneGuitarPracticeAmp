@@ -8,6 +8,9 @@ This is the LQFP64 package.
 |  10 | PC2  | I2S2_SDI    | AF5 | ADC Audio Data              |
 |  16 | PA2  | USART2_TX   | AF7 | Debug UART                  |
 |  17 | PA3  | USART2_RX   | AF7 | Debug UART                  |
+|  20 | PA4  | SPI1_SS     | AF5 | Codec control chip enable   |
+|  21 | PA5  | SPI1_SCK    | AF5 | Codec control clock         |
+|  23 | PA7  | SPI1_MOSI   | AF5 | Codec control data          |
 |  24 | PC4  | SW4         | GPI | Button 4 (Active Low)       |
 |  25 | PC5  | SW3         | GPI | Button 3 (Active Low)       |
 |  26 | PB0  | SW2         | GPI | Button 2 (Active low)       |
@@ -22,5 +25,3 @@ This is the LQFP64 package.
 |  45 | PA13 | SWDIO       | SYS | Serial Wire Debug           |
 |  49 | PA14 | SWCLK       | SYS | Serial Wire Debug           |
 |  50 | PA15 | DBG_GPO     | GPO | General purpose debug out   |
-|  58 | PB6  | I2C1_SCL    | AF4 | Codec Control               |
-|  59 | PB7  | I2C1_SDA    | AF4 | Codec Control               |
