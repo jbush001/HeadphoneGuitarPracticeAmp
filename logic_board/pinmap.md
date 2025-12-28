@@ -5,23 +5,23 @@ This is the LQFP64 package.
 |-----|------|-------------|-----|-----------------------------|
 |   5 | PH0  | OSC_IN      | n/a | MCU Crystal                 |
 |   6 | PH1  | OSC_OUT     | n/a | MCU Crystal                 |
-|  10 | PC2  | I2S2_SDI    | AF5 | ADC Audio Data              |
-|  16 | PA2  | USART2_TX   | AF7 | Debug UART                  |
-|  17 | PA3  | USART2_RX   | AF7 | Debug UART                  |
-|  20 | PA4  | SPI1_SS     | AF5 | Codec control chip enable   |
-|  21 | PA5  | SPI1_SCK    | AF5 | Codec control clock         |
-|  23 | PA7  | SPI1_MOSI   | AF5 | Codec control data          |
-|  24 | PC4  | SW4         | GPI | Button 4 (Active Low)       |
-|  25 | PC5  | SW3         | GPI | Button 3 (Active Low)       |
-|  26 | PB0  | SW2         | GPI | Button 2 (Active low)       |
-|  27 | PB1  | SW1         | GPI | Button 1 (Active low)       |
-|  28 | PB2  | I2S3_SDO    | AF7 | DAC Audio Data              |
-|  29 | PB10 | I2S2_CK     | AF5 | Audio Bit Clock (shared)    |
-|  33 | PB12 | I2S2_WS     | AF5 | Audio L/R Clock (shared)    |
-|  37 | PC6  | I2S2_MCK    | AF5 | Audio Master Clock          |
+|  20 | PA4  | I2S1_WS     | AF5 | Audio audio word sync/LR    |
+|  21 | PA5  | I2S1_CK     | AF5 | Audio bit clock             |
+|  22 | PA6  | I2S1_SDI    | AF5 | Audio input                 |
+|  23 | PA7  | I2S1_SDO    | AF5 | Audio output                |
+|  24 | PC4  | I2S1_MCK    | AF5 | Audio master clock          |
+|  29 | PB10 | SPI2_SCK    | AF5 | Codec control clock         |
+|  33 | PB12 | SPI2_SS     | AF5 | Codec control select        |
+|  36 | PB15 | SPI2_MOSI   | AF5 | Codec control data          |
 |  41 | PA9  | OTG_HS_VBUS | n/a | USB Bus Sense               |
 |  43 | PA11 | OTG_HS_DM   | n/a | USB Data (FullSpeed)        |
 |  44 | PA12 | OTG_HS_DP   | n/a | USB Data                    |
 |  45 | PA13 | SWDIO       | SYS | Serial Wire Debug           |
 |  49 | PA14 | SWCLK       | SYS | Serial Wire Debug           |
 |  50 | PA15 | DBG_GPO     | GPO | General purpose debug out   |
+|  51 | PC10 | UART4_TX    | AF8 | Debug UART output           |
+|  52 | PC11 | UART4_RX    | AF8 | Debug UART input            |
+|  53 | PC12 | SW4         | GPI | Button 4 (Active Low)       |
+|  54 | PD2  | SW3         | GPI | Button 3 (Active Low)       |
+|  55 | PB3  | SW2         | GPI | Button 2 (Active Low)       |
+|  56 | PB4  | SW1         | GPI | Button 1 (Active Low)       |
