@@ -438,15 +438,15 @@
 		(uuid "f4cc5c85-b91e-430f-8bb5-6b024c48e300")
 	)
 	(embedded_fonts no)
-	(model "/Users/jensa/Documents/KiCad/7.0/3dmodels/various.3dshapes/HRO_TYPE-C-31-M-12.step"
+	(model "${KIPRJMOD}/Custom_Footprints.pretty/TYPE-C-31-M-12--3DModel-STEP-56544.STEP"
 		(offset
-			(xyz -4.4 -2.7 0)
+			(xyz 0 0 0)
 		)
 		(scale
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz 0 0 0)
+			(xyz -90 -0 -0)
 		)
 	)
 )
