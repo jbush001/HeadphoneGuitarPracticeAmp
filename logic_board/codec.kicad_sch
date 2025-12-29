@@ -1739,7 +1739,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:R"
+		(symbol "Device:R_US"
 			(pin_numbers
 				(hide yes)
 			)
@@ -1750,15 +1750,15 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "R"
-				(at 2.032 0 90)
+				(at 2.54 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "R"
-				(at 0 0 90)
+			(property "Value" "R_US"
+				(at -2.54 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1766,7 +1766,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at -1.778 0 90)
+				(at 1.016 -0.254 90)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1783,7 +1783,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Resistor"
+			(property "Description" "Resistor, US symbol"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1810,12 +1810,61 @@
 					(hide yes)
 				)
 			)
-			(symbol "R_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
+			(symbol "R_US_0_1"
+				(polyline
+					(pts
+						(xy 0 2.286) (xy 0 2.54)
+					)
 					(stroke
-						(width 0.254)
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy 1.016 0.381) (xy 0 0) (xy -1.016 -0.381) (xy 0 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.286) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -1823,7 +1872,7 @@
 					)
 				)
 			)
-			(symbol "R_1_1"
+			(symbol "R_US_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 1.27)
@@ -4518,7 +4567,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 152.4 33.02 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4527,7 +4576,7 @@
 		(dnp no)
 		(uuid "3b12da41-a7ad-4d44-9ba7-10827387d1a6")
 		(property "Reference" "R4"
-			(at 152.4 33.02 90)
+			(at 148.844 31.75 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5347,7 +5396,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 162.56 140.97 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5819,17 +5868,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 162.56 148.59 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "712d1950-40df-4580-8561-68b788929855")
 		(property "Reference" "R11"
-			(at 162.56 152.4 90)
+			(at 162.56 144.272 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5837,7 +5885,7 @@
 			)
 		)
 		(property "Value" "22"
-			(at 162.56 154.94 90)
+			(at 162.56 146.558 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6027,17 +6075,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 114.3 165.1 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "7a5494e3-090e-4ad8-82e3-64ec28a0ba98")
 		(property "Reference" "R13"
-			(at 116.84 163.8299 0)
+			(at 116.332 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6046,7 +6093,7 @@
 			)
 		)
 		(property "Value" "20"
-			(at 116.84 166.3699 0)
+			(at 116.84 166.116 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6184,7 +6231,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 152.4 40.64 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6193,7 +6240,7 @@
 		(dnp no)
 		(uuid "8ec44a66-182e-4c35-9286-846e8f241a98")
 		(property "Reference" "R7"
-			(at 152.4 40.64 90)
+			(at 148.59 39.878 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6453,7 +6500,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 73.66 100.33 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6722,7 +6769,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 152.4 38.1 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6731,7 +6778,7 @@
 		(dnp no)
 		(uuid "a5477714-4014-4d36-b7ae-c293df475516")
 		(property "Reference" "R6"
-			(at 152.4 38.1 90)
+			(at 148.59 37.338 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6789,7 +6836,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 152.4 43.18 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6798,7 +6845,7 @@
 		(dnp no)
 		(uuid "af73b87a-fe15-4916-8f10-0281b5960da2")
 		(property "Reference" "R16"
-			(at 152.4 43.18 90)
+			(at 148.082 42.418 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7059,31 +7106,30 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 109.22 165.1 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "bee54f3c-9713-4681-9f31-2ba3532d7c02")
 		(property "Reference" "R15"
-			(at 106.68 163.8299 0)
+			(at 103.632 164.592 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "20"
-			(at 106.68 166.3699 0)
+			(at 104.902 166.624 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
@@ -7129,7 +7175,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 152.4 35.56 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7138,7 +7184,7 @@
 		(dnp no)
 		(uuid "bf1137de-6e8b-4cd7-8502-462d945c8d33")
 		(property "Reference" "R5"
-			(at 152.4 35.56 90)
+			(at 148.844 34.544 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7460,7 +7506,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 96.52 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
