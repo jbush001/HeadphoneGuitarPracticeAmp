@@ -8214,7 +8214,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 125.4252 165.1 0)
 			(effects
 				(font
@@ -8241,7 +8241,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C14663"
 			(at 124.46 161.29 0)
 			(effects
 				(font
@@ -8453,7 +8453,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C23630"
 			(at 101.6 110.49 0)
 			(effects
 				(font
@@ -8595,7 +8595,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C25804"
 			(at 185.42 76.2 0)
 			(effects
 				(font
@@ -8779,7 +8779,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 136.8552 165.1 0)
 			(effects
 				(font
@@ -8806,7 +8806,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C14663"
 			(at 135.89 161.29 0)
 			(effects
 				(font
@@ -8884,15 +8884,6 @@
 			)
 		)
 		(property "LCSC Part Number" "C16081"
-			(at 218.44 30.48 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC part number" ""
 			(at 218.44 30.48 90)
 			(effects
 				(font
@@ -8988,15 +8979,6 @@
 			)
 		)
 		(property "LCSC Part Number" "C115962"
-			(at 78.74 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC part number" ""
 			(at 78.74 54.61 0)
 			(effects
 				(font
@@ -9248,7 +9230,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 113.9952 165.1 0)
 			(effects
 				(font
@@ -9275,7 +9257,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C14663"
 			(at 113.03 161.29 0)
 			(effects
 				(font
@@ -9394,7 +9376,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 102.5652 165.1 0)
 			(effects
 				(font
@@ -9421,7 +9403,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C14663"
 			(at 101.6 161.29 0)
 			(effects
 				(font
@@ -9497,7 +9479,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C21190"
 			(at 152.4 74.93 90)
 			(effects
 				(font
@@ -9586,7 +9568,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "FT Rotation Offset" "-90"
 			(at 240.03 60.96 0)
 			(effects
 				(font
@@ -9689,7 +9671,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C21190"
 			(at 172.72 99.06 0)
 			(effects
 				(font
@@ -9718,7 +9700,7 @@
 		(at 207.01 137.16 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -9758,15 +9740,6 @@
 			)
 		)
 		(property "Description" "Dual LED, common cathode on pin 2"
-			(at 207.01 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC part number" ""
 			(at 207.01 137.16 0)
 			(effects
 				(font
@@ -9984,15 +9957,6 @@
 			)
 		)
 		(property "LCSC Part Number" "C730226"
-			(at 128.27 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC part number" ""
 			(at 128.27 77.47 0)
 			(effects
 				(font
@@ -10324,7 +10288,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C1648"
 			(at 86.36 59.69 0)
 			(effects
 				(font
@@ -10543,15 +10507,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
-			(at 46.99 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "c9a6e9e0-1798-4c4b-b568-40c33d9d7ca9")
 		)
@@ -10595,7 +10550,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 148.2852 165.1 0)
 			(effects
 				(font
@@ -10622,7 +10577,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C14663"
 			(at 147.32 161.29 0)
 			(effects
 				(font
@@ -10767,7 +10722,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C21190"
 			(at 175.26 99.06 0)
 			(effects
 				(font
@@ -10844,7 +10799,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C23350"
 			(at 190.5 134.62 90)
 			(effects
 				(font
@@ -10923,7 +10878,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C23630"
 			(at 95.25 110.49 0)
 			(effects
 				(font
@@ -11107,7 +11062,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 59.3852 46.99 0)
 			(effects
 				(font
@@ -11134,7 +11089,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C14663"
 			(at 58.42 43.18 0)
 			(effects
 				(font
@@ -11210,7 +11165,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C25804"
 			(at 102.87 41.91 90)
 			(effects
 				(font
@@ -11296,15 +11251,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
-			(at 46.99 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "d7be93be-da12-4485-8252-8a27648e03e6")
 		)
@@ -11374,15 +11320,6 @@
 			)
 		)
 		(property "LCSC Part Number" "C16081"
-			(at 218.44 44.45 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC part number" ""
 			(at 218.44 44.45 90)
 			(effects
 				(font
@@ -11488,7 +11425,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "FT Rotation Offset" "-90"
 			(at 240.03 100.33 0)
 			(effects
 				(font
@@ -11591,15 +11528,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
-			(at 255.27 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "8"
 			(uuid "53d06be2-9757-4df0-a47f-25f004f1ccaf")
 		)
@@ -11661,7 +11589,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 91.1352 165.1 0)
 			(effects
 				(font
@@ -11688,7 +11616,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C14663"
 			(at 90.17 161.29 0)
 			(effects
 				(font
@@ -11774,15 +11702,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
-			(at 46.99 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "a027cfaa-63a1-427e-83a2-9c43ebcdc303")
 		)
@@ -11851,7 +11770,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C23350"
 			(at 190.5 139.7 90)
 			(effects
 				(font
@@ -11929,7 +11848,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C1648"
 			(at 69.85 59.69 0)
 			(effects
 				(font
@@ -12213,15 +12132,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
-			(at 46.99 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "5c8901ad-8a03-4523-b1d0-d56768f482e2")
 		)
@@ -12331,7 +12241,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 160.9852 165.1 0)
 			(effects
 				(font
@@ -12358,7 +12268,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C15850"
 			(at 160.02 161.29 0)
 			(effects
 				(font

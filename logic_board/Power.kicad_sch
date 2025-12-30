@@ -4448,7 +4448,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C23186"
 			(at 57.15 44.45 90)
 			(effects
 				(font
@@ -4524,7 +4524,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C25803"
 			(at 143.51 104.14 90)
 			(effects
 				(font
@@ -4668,15 +4668,6 @@
 			)
 		)
 		(property "LCSC Part Number" "C23380830"
-			(at 157.48 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC part number" ""
 			(at 157.48 104.14 0)
 			(effects
 				(font
@@ -4963,7 +4954,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C23630"
 			(at 172.72 109.22 0)
 			(effects
 				(font
@@ -5308,7 +5299,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C22466350"
 			(at 130.81 111.76 90)
 			(effects
 				(font
@@ -5459,15 +5450,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
-			(at 140.97 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "3"
 			(uuid "d568986e-1382-4d1a-a03c-1314edcd0fce")
 		)
@@ -5607,7 +5589,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C25804"
 			(at 161.29 60.96 0)
 			(effects
 				(font
@@ -5686,15 +5668,6 @@
 			)
 		)
 		(property "LCSC Part Number" "C19725033"
-			(at 181.61 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC part number" ""
 			(at 181.61 45.72 0)
 			(effects
 				(font
@@ -5996,7 +5969,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C25804"
 			(at 205.74 43.18 90)
 			(effects
 				(font
@@ -6075,7 +6048,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C862232"
 			(at 156.21 60.96 0)
 			(effects
 				(font
@@ -6229,7 +6202,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C15849"
 			(at 208.28 60.96 0)
 			(effects
 				(font
@@ -6299,15 +6272,6 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 220.98 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC part number" ""
 			(at 220.98 52.07 0)
 			(effects
 				(font
@@ -6515,7 +6479,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C23186"
 			(at 57.15 41.91 90)
 			(effects
 				(font
@@ -6668,7 +6632,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C15850"
 			(at 86.36 109.22 0)
 			(effects
 				(font
@@ -6758,7 +6722,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "FT Rotation Offset" "-90"
 			(at 74.93 52.07 0)
 			(effects
 				(font
@@ -6990,7 +6954,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" ""
+		(property "LCSC Part Number" "C15849"
 			(at 106.68 45.72 0)
 			(effects
 				(font
@@ -7068,15 +7032,6 @@
 			)
 		)
 		(property "LCSC Part Number" "C165948"
-			(at 36.83 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC part number" ""
 			(at 36.83 52.07 0)
 			(effects
 				(font
@@ -7217,7 +7172,7 @@
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "f415e89b-77bb-464d-be5f-d6a018de0ba4")
@@ -7265,15 +7220,6 @@
 			)
 		)
 		(property "LCSC Part Number" "C125040"
-			(at 109.22 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC part number" ""
 			(at 109.22 127 0)
 			(effects
 				(font
@@ -7356,15 +7302,6 @@
 			)
 		)
 		(property "LCSC Part Number" "C920305"
-			(at 99.06 45.72 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC part number" ""
 			(at 99.06 45.72 90)
 			(effects
 				(font

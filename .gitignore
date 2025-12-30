@@ -12,6 +12,6 @@ fp-info-cache
 __pycache__/
 *.pyc
 .DS_Store
-logic_board/fabrication/*
+logic_board/production/*
 *.lck
 *.csv
