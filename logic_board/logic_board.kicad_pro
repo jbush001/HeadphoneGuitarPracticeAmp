@@ -239,20 +239,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      [
-        "lib_symbol_mismatch|2400300|1003300|ba8284ce-f85d-48ff-8380-55a09e09b383|00000000-0000-0000-0000-000000000000|||",
-        "Library marks pins as unspecified, needs to be passive."
-      ],
-      [
-        "lib_symbol_mismatch|2400300|609600|6cd4e87d-4287-46ae-885f-42147e1f4862|00000000-0000-0000-0000-000000000000|||",
-        "Library marks pins as unspecified, needs to be passive."
-      ],
-      [
-        "lib_symbol_mismatch|622300|1574800|37fb4097-9e26-496b-9282-750fe675e20a|00000000-0000-0000-0000-000000000000|||",
-        "Pins were marked as undefined, needed to be passive."
-      ]
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
