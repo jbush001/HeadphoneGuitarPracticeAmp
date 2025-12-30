@@ -5,7 +5,7 @@
 	(layer "F.Cu")
 	(tags "WM8904CGEFL/V ")
 	(property "Reference" "REF**"
-		(at 0 0 0)
+		(at 0.25 -3.5 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "27e4ec5d-1ca5-48bd-93c6-b1aaa1f13088")
@@ -17,7 +17,7 @@
 		)
 	)
 	(property "Value" "QFN32_4X4_CIR"
-		(at 0 0 0)
+		(at 0 3.75 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "539ab6be-72b6-4e54-93fa-7357e31562f5")
@@ -1822,7 +1822,7 @@
 		)
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 0 0)
+		(at 0.25 5 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "cc92d34d-c60b-4517-bd03-5253003648d8")
