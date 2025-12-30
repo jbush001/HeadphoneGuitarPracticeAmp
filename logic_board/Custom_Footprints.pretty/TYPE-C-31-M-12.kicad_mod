@@ -440,7 +440,7 @@
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/Custom_Footprints.pretty/TYPE-C-31-M-12--3DModel-STEP-56544.STEP"
 		(offset
-			(xyz 0 0 0)
+			(xyz 0 -2.5 0)
 		)
 		(scale
 			(xyz 1 1 1)
