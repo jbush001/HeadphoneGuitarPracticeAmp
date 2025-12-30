@@ -4448,6 +4448,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC part number" ""
+			(at 57.15 44.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "edbfc0b7-7907-430d-9fe5-d1dbdd92728b")
 		)
@@ -4508,6 +4517,15 @@
 		)
 		(property "Description" "Resistor, US symbol"
 			(at 143.51 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC part number" ""
+			(at 143.51 104.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4650,6 +4668,15 @@
 			)
 		)
 		(property "LCSC Part Number" "C23380830"
+			(at 157.48 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC part number" ""
 			(at 157.48 104.14 0)
 			(effects
 				(font
@@ -4928,6 +4955,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 172.72 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC part number" ""
 			(at 172.72 109.22 0)
 			(effects
 				(font
@@ -5272,6 +5308,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC part number" ""
+			(at 130.81 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e2463c38-ccdc-4b63-a6ba-8ba05f7c850d")
 		)
@@ -5406,6 +5451,15 @@
 			)
 		)
 		(property "Description" "50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23"
+			(at 140.97 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC part number" ""
 			(at 140.97 138.43 0)
 			(effects
 				(font
@@ -5553,6 +5607,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC part number" ""
+			(at 161.29 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0eac0576-2bdd-436f-876b-70d2c995310c")
 		)
@@ -5615,6 +5678,24 @@
 		)
 		(property "Description" "BQ25185 1-Cell, 1-A Standalone Linear Battery Charger with Power Path , Factory Mode, and Battery Tracking"
 			(at 179.07 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part Number" "C19725033"
+			(at 181.61 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC part number" ""
+			(at 181.61 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5915,6 +5996,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC part number" ""
+			(at 205.74 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7dfb1577-3e35-4b79-8e2d-35953a9a192d")
 		)
@@ -5977,6 +6067,15 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 156.21 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC part number" ""
 			(at 156.21 60.96 0)
 			(effects
 				(font
@@ -6130,6 +6229,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC part number" ""
+			(at 208.28 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d172890b-8d25-45c9-90d1-d106af3f0155")
 		)
@@ -6150,7 +6258,7 @@
 		(at 220.98 52.07 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "81e03dd9-adc2-408e-ab13-16695802222a")
@@ -6191,6 +6299,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 220.98 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC part number" ""
 			(at 220.98 52.07 0)
 			(effects
 				(font
@@ -6398,6 +6515,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC part number" ""
+			(at 57.15 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8d1e8f85-3c99-47ff-b622-c6cae8a8bcf0")
 		)
@@ -6542,6 +6668,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC part number" ""
+			(at 86.36 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8e8fa160-dd2b-48a9-945d-97d5f4daaff2")
 		)
@@ -6615,6 +6750,15 @@
 			)
 		)
 		(property "LCSC Part Number" "C7519"
+			(at 74.93 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC part number" ""
 			(at 74.93 52.07 0)
 			(effects
 				(font
@@ -6846,6 +6990,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC part number" ""
+			(at 106.68 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7d5c9da7-fd00-4496-bdad-dc3d45b1bfe6")
 		)
@@ -6915,6 +7068,15 @@
 			)
 		)
 		(property "LCSC Part Number" "C165948"
+			(at 36.83 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC part number" ""
 			(at 36.83 52.07 0)
 			(effects
 				(font
@@ -7055,7 +7217,7 @@
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "f415e89b-77bb-464d-be5f-d6a018de0ba4")
@@ -7102,7 +7264,16 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC part number" "C125040"
+		(property "LCSC Part Number" "C125040"
+			(at 109.22 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC part number" ""
 			(at 109.22 127 0)
 			(effects
 				(font
@@ -7185,6 +7356,15 @@
 			)
 		)
 		(property "LCSC Part Number" "C920305"
+			(at 99.06 45.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC part number" ""
 			(at 99.06 45.72 90)
 			(effects
 				(font
