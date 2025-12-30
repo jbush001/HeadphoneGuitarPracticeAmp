@@ -11042,7 +11042,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "af238663-189e-48eb-8fb8-76deea5e7538")
 		(property "Reference" "C30"
 			(at 62.23 41.9099 0)
