@@ -899,6 +899,102 @@
 			)
 		)
 	)
+	(footprint "Fiducial:Fiducial_1mm_Mask2mm"
+		(layer "F.Cu")
+		(uuid "0670740b-2ef8-4971-98f4-685cacec4420")
+		(at 188 82)
+		(descr "Fiducial, circular marking, 1mm bare copper, 2mm soldermask opening (Level A)")
+		(tags "fiducial")
+		(property "Reference" "F1"
+			(at 0 2.4 0)
+			(layer "F.SilkS")
+			(uuid "5f25a73f-fef3-4313-9211-8c782517342a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Fiducial_1mm_Mask2mm"
+			(at 0 1.95 0)
+			(layer "F.Fab")
+			(uuid "db0ac798-9f2b-42cc-87c8-056c59c3287c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "beb9dbbf-3137-4350-8216-cef921d25b35")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6191fa23-79cd-4d53-b1e4-cc281f398831")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr smd exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 1.25 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "12dd0bbc-53db-4185-980f-9100cd271e9b")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 1 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "a707f070-d29b-465b-ace3-0daa319fe15e")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "ac767310-c857-420b-baf2-ce4288a1996e")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.08)
+				)
+			)
+		)
+		(pad "" smd circle
+			(at 0 0)
+			(size 1 1)
+			(layers "F.Cu" "F.Mask")
+			(solder_mask_margin 0.5)
+			(clearance 0.6)
+			(uuid "07c0c385-5d83-4e35-aab5-6f2021459d44")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Custom_Footprints:1004DFN_LTF"
 		(layer "F.Cu")
 		(uuid "09090374-3241-46bd-8dd7-370e43fb518b")
@@ -3449,6 +3545,102 @@
 			)
 		)
 	)
+	(footprint "Fiducial:Fiducial_1mm_Mask2mm"
+		(layer "F.Cu")
+		(uuid "27cc596d-f4b5-47fe-be36-dcea31d3566c")
+		(at 122 82)
+		(descr "Fiducial, circular marking, 1mm bare copper, 2mm soldermask opening (Level A)")
+		(tags "fiducial")
+		(property "Reference" "F3"
+			(at 2.4 0 0)
+			(layer "F.SilkS")
+			(uuid "3616970c-7411-4e26-8286-3ff116c86370")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Fiducial_1mm_Mask2mm"
+			(at 0 1.95 0)
+			(layer "F.Fab")
+			(uuid "ff38e250-f8c8-4e84-b917-48216d48f17f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bbd90e60-0d7d-4b2c-91f1-29d3c5c79bc1")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2cd6224e-fa3e-444e-be2d-6b78916c7069")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr smd exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 1.25 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "b83c15d9-6a9e-4cf4-8d19-e6e381210a3a")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 1 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "b95cb873-aa8f-4640-858a-9589c161946d")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "3dd0adb2-ab76-42f9-9ed5-72768a7bd300")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.08)
+				)
+			)
+		)
+		(pad "" smd circle
+			(at 0 0)
+			(size 1 1)
+			(layers "F.Cu" "F.Mask")
+			(solder_mask_margin 0.5)
+			(clearance 0.6)
+			(uuid "d50e4975-8aea-44a8-b776-a58ef13ab40c")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "27e54761-4f78-44f5-ace9-b537c20b4a40")
@@ -5998,6 +6190,102 @@
 			)
 		)
 	)
+	(footprint "Fiducial:Fiducial_1mm_Mask2mm"
+		(layer "F.Cu")
+		(uuid "430e553a-e57a-4be8-9d0e-ab39da6c683c")
+		(at 142 108)
+		(descr "Fiducial, circular marking, 1mm bare copper, 2mm soldermask opening (Level A)")
+		(tags "fiducial")
+		(property "Reference" "F2"
+			(at 2.6 0 0)
+			(layer "F.SilkS")
+			(uuid "08dc912a-005c-438e-ad82-ccc775f02e70")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Fiducial_1mm_Mask2mm"
+			(at 0 1.95 0)
+			(layer "F.Fab")
+			(uuid "d6e43be6-624a-4aef-813d-ea02dd8b674d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "224e788e-7a7d-485d-afcd-55fc8310e356")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2f593286-eefb-4274-8fee-913fe8b50d9d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr smd exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 1.25 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "87260f0a-f81f-4bb5-9be8-b09c09569c79")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 1 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "90e57251-d1a6-49d5-adb8-2d39f1f8b719")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "e125fad4-0b38-4d71-b32a-41214b0055b6")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.08)
+				)
+			)
+		)
+		(pad "" smd circle
+			(at 0 0)
+			(size 1 1)
+			(layers "F.Cu" "F.Mask")
+			(solder_mask_margin 0.5)
+			(clearance 0.6)
+			(uuid "a872ddcb-e118-44f7-9bac-5bde92615c06")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "44a9508e-ba67-4108-a486-c31c594d3621")
@@ -6900,7 +7188,7 @@
 			(net 9 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "220cfe3f-0a6b-4cd9-a201-e714aca6e5f1")
+			(uuid "e10c1296-ead0-4cd1-9b75-c0c3cde882c1")
 		)
 		(pad "S1" thru_hole roundrect
 			(at 4.32 -1.706 90)
@@ -6912,7 +7200,7 @@
 			(net 9 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "220cfe3f-0a6b-4cd9-a201-e714aca6e5f1")
+			(uuid "0d0511bb-b601-4912-9f7f-5a2b7a0b6c05")
 		)
 		(pad "S1" thru_hole roundrect
 			(at 4.32 2.474 90)
@@ -6924,7 +7212,7 @@
 			(net 9 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "220cfe3f-0a6b-4cd9-a201-e714aca6e5f1")
+			(uuid "a80efe87-6549-4c2f-a79b-ca01668d29a3")
 		)
 		(embedded_fonts no)
 		(model "${KIPRJMOD}/Custom_Footprints.pretty/TYPE-C-31-M-12--3DModel-STEP-56544.STEP"
@@ -22607,7 +22895,7 @@
 			(net 9 "GND")
 			(pinfunction "1")
 			(pintype "passive")
-			(uuid "c6327d4b-8827-43e6-af6e-6022ebcc96ea")
+			(uuid "a8fac226-d6be-4532-afed-e681993c5203")
 		)
 		(pad "2" smd roundrect
 			(at -3.98 -2.25 180)
@@ -22627,7 +22915,7 @@
 			(net 32 "SW3")
 			(pinfunction "2")
 			(pintype "passive")
-			(uuid "083989ca-0add-40d4-ae18-08144793b5d3")
+			(uuid "851eb909-4226-464b-a5ea-186b84600679")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_SPST_PTS645Sx43SMTR92.step"
@@ -22919,7 +23207,7 @@
 			(net 9 "GND")
 			(pinfunction "1")
 			(pintype "passive")
-			(uuid "f3451b5d-ce24-4fdb-a61c-056c3210da27")
+			(uuid "95130b82-946f-47d5-91e1-a2dedd3b7581")
 		)
 		(pad "2" smd roundrect
 			(at -3.98 -2.25 180)
@@ -22939,7 +23227,7 @@
 			(net 30 "SW1")
 			(pinfunction "2")
 			(pintype "passive")
-			(uuid "0c3b0303-8d4c-480f-a013-83ab66d1b22a")
+			(uuid "f5f1d4d8-ef22-407d-b9c4-7bb407675a89")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_SPST_PTS645Sx43SMTR92.step"
@@ -23231,7 +23519,7 @@
 			(net 9 "GND")
 			(pinfunction "1")
 			(pintype "passive")
-			(uuid "14e26c2e-3378-4638-99b4-c1a43913faac")
+			(uuid "da929d2f-5dc6-4563-b0bf-96760b33b09e")
 		)
 		(pad "2" smd roundrect
 			(at -3.98 -2.25 180)
@@ -23251,7 +23539,7 @@
 			(net 33 "SW4")
 			(pinfunction "2")
 			(pintype "passive")
-			(uuid "78a8df94-bc71-45f9-a27b-a716b169a31a")
+			(uuid "0dd396fc-1f16-4e86-a612-3bacd8526fb8")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_SPST_PTS645Sx43SMTR92.step"
@@ -23543,7 +23831,7 @@
 			(net 9 "GND")
 			(pinfunction "1")
 			(pintype "passive")
-			(uuid "ab48c4eb-6fbc-4c9a-8d49-9feb5faf7a00")
+			(uuid "c80e36d8-17ab-4db6-b981-12525d6655fe")
 		)
 		(pad "2" smd roundrect
 			(at -3.98 -2.25 180)
@@ -23563,7 +23851,7 @@
 			(net 31 "SW2")
 			(pinfunction "2")
 			(pintype "passive")
-			(uuid "89f467ab-d397-4c2d-8846-e5489c56ac73")
+			(uuid "19389e6f-8bc8-4c7a-b1f8-b02c9f1cd84d")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_SPST_PTS645Sx43SMTR92.step"
