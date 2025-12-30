@@ -5837,6 +5837,16 @@
 	)
 	(wire
 		(pts
+			(xy 210.82 39.37) (xy 213.36 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a381e872-4a9f-4f31-b81e-c8037580b72a")
+	)
+	(wire
+		(pts
 			(xy 147.32 153.67) (xy 147.32 157.48)
 		)
 		(stroke
@@ -5924,16 +5934,6 @@
 			(type default)
 		)
 		(uuid "ad4e5932-bd7e-4df5-8701-26e7ebfa0138")
-	)
-	(wire
-		(pts
-			(xy 210.82 46.99) (xy 213.36 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "addda542-60c1-4428-86b7-6a8a93b50616")
 	)
 	(wire
 		(pts
@@ -6197,7 +6197,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 41.91) (xy 213.36 41.91)
+			(xy 209.55 44.45) (xy 213.36 44.45)
 		)
 		(stroke
 			(width 0)
@@ -6217,7 +6217,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 44.45) (xy 213.36 44.45)
+			(xy 210.82 41.91) (xy 213.36 41.91)
 		)
 		(stroke
 			(width 0)
@@ -6287,7 +6287,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 39.37) (xy 213.36 39.37)
+			(xy 209.55 46.99) (xy 213.36 46.99)
 		)
 		(stroke
 			(width 0)
@@ -6593,7 +6593,7 @@
 	)
 	(global_label "DBG_GPO"
 		(shape input)
-		(at 210.82 46.99 180)
+		(at 210.82 39.37 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6603,7 +6603,7 @@
 		)
 		(uuid "28c01473-0ca7-40b1-94cb-80307cf92335")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 199.1867 46.99 0)
+			(at 199.1867 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7055,7 +7055,7 @@
 	)
 	(global_label "UART_RX"
 		(shape input)
-		(at 210.82 41.91 180)
+		(at 209.55 44.45 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7065,7 +7065,7 @@
 		)
 		(uuid "886dd26f-89a0-46d7-a915-59ec815c0c31")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 199.731 41.91 0)
+			(at 198.461 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7099,7 +7099,7 @@
 	)
 	(global_label "nRST"
 		(shape output)
-		(at 210.82 44.45 180)
+		(at 210.82 41.91 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7109,7 +7109,7 @@
 		)
 		(uuid "abfcee6d-e78d-41a1-98a3-a8977ad8829c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 203.2387 44.45 0)
+			(at 203.2387 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7187,7 +7187,7 @@
 	)
 	(global_label "UART_TX"
 		(shape output)
-		(at 210.82 39.37 180)
+		(at 209.55 46.99 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7197,7 +7197,7 @@
 		)
 		(uuid "c792a830-488b-486a-984e-b9ddc66488d3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 200.0334 39.37 0)
+			(at 198.7634 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10419,16 +10419,16 @@
 	)
 	(symbol
 		(lib_id "Device:R_Pack04")
-		(at 218.44 44.45 90)
-		(mirror x)
+		(at 218.44 41.91 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "b6eaf105-d8d0-465a-938b-4414940aef85")
 		(property "Reference" "RN2"
-			(at 218.186 49.784 90)
+			(at 218.44 50.8 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10436,7 +10436,7 @@
 			)
 		)
 		(property "Value" "47"
-			(at 218.44 51.816 90)
+			(at 218.44 53.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10444,7 +10444,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
-			(at 218.44 51.435 90)
+			(at 218.44 34.925 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10453,7 +10453,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 218.44 44.45 0)
+			(at 218.44 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10462,7 +10462,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology"
-			(at 218.44 44.45 0)
+			(at 218.44 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10471,7 +10471,7 @@
 			)
 		)
 		(property "LCSC Part Number" "C16081"
-			(at 218.44 44.45 90)
+			(at 218.44 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10504,7 +10504,7 @@
 			(uuid "7d8d510e-b5c4-4a3e-a747-51538eab41c5")
 		)
 		(instances
-			(project ""
+			(project "logic_board"
 				(path "/b7b37fe1-b409-497a-9440-d94d882f6459/bab78c00-64d8-4e72-b9b2-c8e2bf935ca1"
 					(reference "RN2")
 					(unit 1)
