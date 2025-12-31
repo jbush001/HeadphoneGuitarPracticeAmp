@@ -4920,7 +4920,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part Number" ""
+		(property "LCSC Part Number" "C1634"
 			(at 203.2 107.95 0)
 			(effects
 				(font
@@ -5263,6 +5263,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part Number" "C135261"
+			(at 172.72 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6a672423-07b2-42e4-92c6-9785625bf17a")
 		)
@@ -5333,7 +5342,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part Number" ""
+		(property "LCSC Part Number" "C45783"
 			(at 182.88 107.95 0)
 			(effects
 				(font
@@ -5821,6 +5830,15 @@
 			)
 		)
 		(property "Description" "50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23"
+			(at 140.97 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part Number" "C7420339"
 			(at 140.97 138.43 0)
 			(effects
 				(font
@@ -7313,6 +7331,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part Number" "C25803"
+			(at 193.04 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "84f50e07-678c-4967-b6eb-c8da44e69753")
 		)
@@ -7394,7 +7421,7 @@
 				(hide yes)
 			)
 		)
-		(property "FT Rotation Offset" "-90"
+		(property "FT Rotation Offset" "90"
 			(at 74.93 52.07 0)
 			(effects
 				(font
@@ -8016,7 +8043,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-882"
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 93.98 45.72 0)
 			(effects
 				(font

@@ -5305,7 +5305,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-882"
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 74.93 153.67 0)
 			(effects
 				(font
@@ -8195,7 +8195,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-882"
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 57.15 106.68 0)
 			(effects
 				(font
@@ -8417,7 +8417,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-882"
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 71.12 153.67 0)
 			(effects
 				(font
