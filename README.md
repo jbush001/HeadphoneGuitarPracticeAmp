@@ -61,11 +61,6 @@ JLCPCB are:
   choose this file under the 'upload BOM' button.
 - positions.csv. This is uploaded under the 'upload CPL' button.
 
-If the board profile or parts are significantly updated, re-export the 3d
-model (to be used in rendering the stackup). From the board editor, select
-the menu File -> Export -> STEP/GLB/STL... Select format STEP, select the
-'logic_board' directory, press the 'Export' button.
-
 Some through hole parts need to be hand soldered and are not included in the
 assembly positions or BOM.
 
