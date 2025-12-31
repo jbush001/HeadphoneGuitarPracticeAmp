@@ -17,14 +17,15 @@ consists of a custom printed circuit board in a 3D printed enclosure.
 
 ## Setup (MacOS)
 
+### Initial bits
+
+Set up the environment (only required once)
+
+    ./setup.sh
+
 ### CAD
 
-This uses the build123d package for all CAD design. To set up first time:
-
-    python3 -m venv .venv
-    pip install -r requirements.txt
-
-When starting a new terminal/session:
+This uses the build123d package for all CAD design. When starting a new terminal/session:
 
     source ./venv/bin/activate
 
@@ -109,3 +110,9 @@ Install ARM toolchain (MacOS)
 (Linux):
 
     sudo apt-get install gcc-arm-none-eabi binutils-arm-none-eabi
+
+### Notebooks
+
+    jupyter notebook notebooks/<notebook name>
+
+(Select .venv as the kernel if asked)

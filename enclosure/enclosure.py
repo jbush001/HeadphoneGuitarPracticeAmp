@@ -42,8 +42,6 @@ with BuildPart() as top_shell_builder:
     extrude(amount=15)
     top_shell = top_shell_builder.part
 
-    # Inner lip
-
 
 with BuildPart() as pcb_builder:
     with BuildSketch():
@@ -59,13 +57,17 @@ with BuildPart() as pcb_builder:
     extrude(amount=3)
     standin_pcb = pcb_builder.part
 
+with BuildPart() as battery_builder:
+    Box(32.5, 25.5, 5.7)
+    battery = battery_builder.part
 
 
 enclosure_with_standins = Compound(
     label="assembly",
     children = [
         top_shell,
-        standin_pcb.moved(Pos(0, 0, -5))
+        standin_pcb.moved(Pos(0, 0, -10)),
+        battery.moved(Pos(0, 0, -13))
     ]
 )
 
