@@ -3657,6 +3657,12 @@
 		(uuid "1e06824f-0f2c-4941-b7fc-630eb4a96665")
 	)
 	(junction
+		(at 193.04 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "252c4178-fe2d-4d73-b9fc-819d047d4bf0")
+	)
+	(junction
 		(at 92.71 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3988,6 +3994,16 @@
 	)
 	(wire
 		(pts
+			(xy 193.04 113.03) (xy 199.39 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a5de369-4aeb-4875-ba6d-a5f99aedf1aa")
+	)
+	(wire
+		(pts
 			(xy 153.67 115.57) (xy 156.21 115.57)
 		)
 		(stroke
@@ -4295,6 +4311,16 @@
 			(type default)
 		)
 		(uuid "93c6ffd4-6290-4b85-856b-bfed46ce95c3")
+	)
+	(wire
+		(pts
+			(xy 193.04 105.41) (xy 193.04 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93d71bcf-05d0-4dcc-bdea-d4f7a940e4c5")
 	)
 	(wire
 		(pts
@@ -4698,7 +4724,7 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 113.03) (xy 199.39 113.03)
+			(xy 189.23 113.03) (xy 193.04 113.03)
 		)
 		(stroke
 			(width 0)
@@ -8217,6 +8243,72 @@
 			(project ""
 				(path "/b7b37fe1-b409-497a-9440-d94d882f6459/78b9c77c-6b0c-47f1-b5e8-ea96354c74d6"
 					(reference "C23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 193.04 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e3982639-670d-442a-af67-330fba49e37f")
+		(property "Reference" "#FLG04"
+			(at 193.04 103.505 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 193.04 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 193.04 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 193.04 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 193.04 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2e6a0bf6-0491-40fc-a8a5-479dfdc25f45")
+		)
+		(instances
+			(project ""
+				(path "/b7b37fe1-b409-497a-9440-d94d882f6459/78b9c77c-6b0c-47f1-b5e8-ea96354c74d6"
+					(reference "#FLG04")
 					(unit 1)
 				)
 			)
