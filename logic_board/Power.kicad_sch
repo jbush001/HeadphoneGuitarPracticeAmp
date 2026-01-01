@@ -7808,7 +7808,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "47k"
 			(at 201.93 140.9699 0)
 			(effects
 				(font
@@ -7844,7 +7844,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part Number" "C25803"
+		(property "LCSC Part Number" ""
 			(at 199.39 139.7 0)
 			(effects
 				(font
@@ -8531,7 +8531,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "450k"
+		(property "Value" "215k"
 			(at 201.93 124.4599 0)
 			(effects
 				(font
