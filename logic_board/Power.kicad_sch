@@ -3626,6 +3626,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Max charge current/\ninput current: 400mA"
+		(exclude_from_sim no)
+		(at 150.876 67.056 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3dc3a715-6289-423d-a49d-2e9b43452157")
+	)
 	(text "Power Switch"
 		(exclude_from_sim no)
 		(at 107.442 153.416 0)
@@ -6408,7 +6418,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "18k"
 			(at 170.18 73.6599 0)
 			(effects
 				(font
@@ -6444,7 +6454,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part Number" "C25804"
+		(property "LCSC Part Number" ""
 			(at 167.64 72.39 0)
 			(effects
 				(font
@@ -6933,7 +6943,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5k"
+		(property "Value" "600"
 			(at 160.02 73.6599 0)
 			(effects
 				(font
@@ -6969,7 +6979,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part Number" "C862232"
+		(property "LCSC Part Number" ""
 			(at 162.56 72.39 0)
 			(effects
 				(font
