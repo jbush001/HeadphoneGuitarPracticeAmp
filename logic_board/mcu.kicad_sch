@@ -4958,7 +4958,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 44.45) (xy 165.1 44.45)
+			(xy 154.94 44.45) (xy 161.29 44.45)
 		)
 		(stroke
 			(width 0)
@@ -5008,7 +5008,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 72.39) (xy 140.97 72.39)
+			(xy 138.43 72.39) (xy 147.32 72.39)
 		)
 		(stroke
 			(width 0)
@@ -5048,7 +5048,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 52.07) (xy 165.1 52.07)
+			(xy 154.94 52.07) (xy 161.29 52.07)
 		)
 		(stroke
 			(width 0)
@@ -5708,7 +5708,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 49.53) (xy 165.1 49.53)
+			(xy 154.94 49.53) (xy 161.29 49.53)
 		)
 		(stroke
 			(width 0)
@@ -6068,7 +6068,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 49.53) (xy 147.32 49.53)
+			(xy 138.43 49.53) (xy 144.78 49.53)
 		)
 		(stroke
 			(width 0)
@@ -6278,16 +6278,6 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 72.39) (xy 156.21 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b95ecef5-bedb-4bbb-98ee-396cf527faa7")
-	)
-	(wire
-		(pts
 			(xy 113.03 166.37) (xy 113.03 170.18)
 		)
 		(stroke
@@ -6368,7 +6358,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 44.45) (xy 147.32 44.45)
+			(xy 138.43 44.45) (xy 144.78 44.45)
 		)
 		(stroke
 			(width 0)
@@ -6518,7 +6508,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 46.99) (xy 165.1 46.99)
+			(xy 154.94 46.99) (xy 161.29 46.99)
 		)
 		(stroke
 			(width 0)
@@ -6668,7 +6658,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 52.07) (xy 147.32 52.07)
+			(xy 138.43 52.07) (xy 144.78 52.07)
 		)
 		(stroke
 			(width 0)
@@ -6768,7 +6758,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 46.99) (xy 147.32 46.99)
+			(xy 138.43 46.99) (xy 144.78 46.99)
 		)
 		(stroke
 			(width 0)
@@ -6795,28 +6785,6 @@
 			(type default)
 		)
 		(uuid "feeddf40-f2de-4cf6-a7b0-a749bf2f7970")
-	)
-	(global_label "DACDAT"
-		(shape output)
-		(at 165.1 52.07 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "096a7011-4b46-4dc6-9e60-c21752bd3dcd")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 175.04 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
 	)
 	(global_label "SW4"
 		(shape input)
@@ -6908,7 +6876,7 @@
 	)
 	(global_label "DBG_GPO"
 		(shape input)
-		(at 156.21 72.39 0)
+		(at 147.32 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6918,7 +6886,7 @@
 		)
 		(uuid "2955c4c3-8479-4fec-8b64-1fa459b1b76d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 167.8433 72.39 0)
+			(at 158.9533 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7170,6 +7138,50 @@
 			)
 		)
 	)
+	(global_label "AUDIO_BCLK"
+		(shape output)
+		(at 161.29 44.45 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "69c26aff-97b2-4af1-9797-c4a31259672d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 175.7053 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "ADCDAT"
+		(shape input)
+		(at 161.29 52.07 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "77ee3cc4-30e8-4aef-a23e-281ce75cd818")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 171.23 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "LED_R"
 		(shape output)
 		(at 96.52 72.39 180)
@@ -7214,28 +7226,6 @@
 			)
 		)
 	)
-	(global_label "AUDIO_BCLK"
-		(shape output)
-		(at 165.1 46.99 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "801a2579-5a2a-4790-934d-0b9b58d36ba8")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 179.5153 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SPI_CE"
 		(shape output)
 		(at 154.94 105.41 0)
@@ -7271,6 +7261,28 @@
 		(uuid "825e50b0-d43d-4873-90b1-1b7f425e0821")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 154.1756 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "AUDIO_WCLK"
+		(shape output)
+		(at 161.29 49.53 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "82b3ea72-f24d-48ca-8f3a-2cf5922310d5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 175.8867 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7412,28 +7424,6 @@
 			)
 		)
 	)
-	(global_label "AUDIO_WCLK"
-		(shape output)
-		(at 165.1 44.45 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b9d41b9f-a85c-4a25-98aa-0021160d83a3")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 179.6967 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SW3"
 		(shape output)
 		(at 49.53 142.24 0)
@@ -7478,6 +7468,28 @@
 			)
 		)
 	)
+	(global_label "DACDAT"
+		(shape output)
+		(at 161.29 46.99 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d059f4ce-0426-4508-abb9-3148c7d47210")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 171.23 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "nRST"
 		(shape input)
 		(at 46.99 34.29 180)
@@ -7496,28 +7508,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ADCDAT"
-		(shape input)
-		(at 165.1 49.53 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d8c8e290-4cf6-4669-9491-ef76a585d02f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 175.04 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -8255,82 +8245,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 151.13 44.45 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3b12da41-a7ad-4d44-9ba7-10827387d1a6")
-		(property "Reference" "R4"
-			(at 147.574 43.18 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "33"
-			(at 154.94 43.18 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 151.13 46.228 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 151.13 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 151.13 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part Number" "C23140"
-			(at 151.13 44.45 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7908f741-fe66-49d3-bd27-ccd9466b8b49")
-		)
-		(pin "2"
-			(uuid "b74c918b-0ce5-473a-ba78-7eb47f01115a")
-		)
-		(instances
-			(project "logic_board"
-				(path "/b7b37fe1-b409-497a-9440-d94d882f6459/bab78c00-64d8-4e72-b9b2-c8e2bf935ca1"
-					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Pack04")
 		(at 220.98 30.48 90)
 		(unit 1)
@@ -8703,6 +8617,101 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Pack04")
+		(at 149.86 49.53 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "58622db9-beb0-4244-821e-4c01875041e7")
+		(property "Reference" "RN1"
+			(at 149.86 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "47"
+			(at 149.86 40.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 149.86 56.515 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 149.86 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4 resistor network, parallel topology"
+			(at 149.86 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part Number" "C16081"
+			(at 149.86 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "fd04c685-28eb-4901-bd72-19add7c8f840")
+		)
+		(pin "4"
+			(uuid "f20d22a4-c794-45eb-bc64-b50f89f60806")
+		)
+		(pin "6"
+			(uuid "3106ced2-831d-4b65-9191-574873a7611c")
+		)
+		(pin "1"
+			(uuid "2457559f-b911-41a3-a56c-cac2ce6d71cd")
+		)
+		(pin "7"
+			(uuid "04925147-0d4a-4a57-9da9-a1de5ca22fd8")
+		)
+		(pin "2"
+			(uuid "d1fea017-8065-4622-8158-8826c90d4821")
+		)
+		(pin "3"
+			(uuid "95a51deb-ee90-402f-9ea3-e8eed8b067a3")
+		)
+		(pin "8"
+			(uuid "098f1cb7-2520-4ec4-ab2d-a19a918f72c5")
+		)
+		(instances
+			(project "logic_board"
+				(path "/b7b37fe1-b409-497a-9440-d94d882f6459/bab78c00-64d8-4e72-b9b2-c8e2bf935ca1"
+					(reference "RN1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 101.6 162.56 0)
 		(unit 1)
@@ -9056,82 +9065,6 @@
 			(project "logic_board"
 				(path "/b7b37fe1-b409-497a-9440-d94d882f6459/bab78c00-64d8-4e72-b9b2-c8e2bf935ca1"
 					(reference "C18")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 144.78 72.39 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6967ac91-d7e6-4241-968c-13ff2ab42890")
-		(property "Reference" "R3"
-			(at 145.288 74.422 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1k"
-			(at 145.034 76.2 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 144.78 74.168 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 144.78 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 144.78 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part Number" "C21190"
-			(at 144.78 72.39 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f37dbe69-f3fc-47fe-852d-93d9c10af22d")
-		)
-		(pin "2"
-			(uuid "469c2759-5369-4920-9b74-590cc34697fc")
-		)
-		(instances
-			(project ""
-				(path "/b7b37fe1-b409-497a-9440-d94d882f6459/bab78c00-64d8-4e72-b9b2-c8e2bf935ca1"
-					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -10013,82 +9946,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 151.13 52.07 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8ec44a66-182e-4c35-9286-846e8f241a98")
-		(property "Reference" "R7"
-			(at 147.32 51.308 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "33"
-			(at 154.94 50.8 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 151.13 53.848 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 151.13 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 151.13 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part Number" "C23140"
-			(at 151.13 52.07 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "520055f5-5a7a-42ee-b6b0-1bc9829cec02")
-		)
-		(pin "2"
-			(uuid "022086ed-cea1-45fa-baab-a72021185a08")
-		)
-		(instances
-			(project "logic_board"
-				(path "/b7b37fe1-b409-497a-9440-d94d882f6459/bab78c00-64d8-4e72-b9b2-c8e2bf935ca1"
-					(reference "R7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 78.74 153.67 0)
 		(unit 1)
@@ -10600,82 +10457,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 151.13 49.53 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a5477714-4014-4d36-b7ae-c293df475516")
-		(property "Reference" "R6"
-			(at 147.32 48.768 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "33"
-			(at 154.94 48.26 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 151.13 51.308 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 151.13 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 151.13 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part Number" "C23140"
-			(at 151.13 49.53 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3b258e18-b511-4760-9bc1-0bc093dededa")
-		)
-		(pin "2"
-			(uuid "2e004277-630c-46d5-97f0-2901b07cd3a3")
-		)
-		(instances
-			(project "logic_board"
-				(path "/b7b37fe1-b409-497a-9440-d94d882f6459/bab78c00-64d8-4e72-b9b2-c8e2bf935ca1"
-					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 87.63 107.95 0)
 		(unit 1)
@@ -10981,7 +10762,7 @@
 				)
 			)
 		)
-		(property "Value" "33"
+		(property "Value" "47"
 			(at 92.71 64.516 90)
 			(effects
 				(font
@@ -11016,7 +10797,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part Number" "C23140"
+		(property "LCSC Part Number" ""
 			(at 92.71 67.31 90)
 			(effects
 				(font
@@ -11483,82 +11264,6 @@
 			(project ""
 				(path "/b7b37fe1-b409-497a-9440-d94d882f6459/bab78c00-64d8-4e72-b9b2-c8e2bf935ca1"
 					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 151.13 46.99 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bf1137de-6e8b-4cd7-8502-462d945c8d33")
-		(property "Reference" "R5"
-			(at 147.574 45.974 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "33"
-			(at 154.94 45.72 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 151.13 48.768 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 151.13 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 151.13 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part Number" "C23140"
-			(at 151.13 46.99 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e1078be8-03bb-4dfc-9127-35aa31d3c893")
-		)
-		(pin "2"
-			(uuid "b3eb2722-327d-4225-b2c9-150934816e4b")
-		)
-		(instances
-			(project "logic_board"
-				(path "/b7b37fe1-b409-497a-9440-d94d882f6459/bab78c00-64d8-4e72-b9b2-c8e2bf935ca1"
-					(reference "R5")
 					(unit 1)
 				)
 			)
