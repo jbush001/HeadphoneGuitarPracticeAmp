@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "c5a04efc-1b6f-4e3f-8631-5b48af724181")
 	(paper "A4")
+	(title_block
+		(title "Power, Regulators, Charging")
+		(date "2026-01-02")
+		(rev "2.0")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
 			(pin_numbers

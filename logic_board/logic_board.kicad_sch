@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "b7b37fe1-b409-497a-9440-d94d882f6459")
 	(paper "A4")
+	(title_block
+		(title "Headphone Guitar Practice Amp")
+		(date "2026-01-02")
+		(rev "2.0")
+	)
 	(lib_symbols
 		(symbol "Mechanical:Fiducial"
 			(exclude_from_sim no)
@@ -280,7 +285,7 @@
 	)
 	(sheet
 		(at 127 31.75)
-		(size 33.02 39.37)
+		(size 33.02 38.1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -304,7 +309,7 @@
 			)
 		)
 		(property "Sheetfile" "Power.kicad_sch"
-			(at 127 71.7046 0)
+			(at 127 70.4346 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -321,7 +326,7 @@
 		)
 	)
 	(sheet
-		(at 83.82 31.75)
+		(at 82.55 31.75)
 		(size 33.02 38.1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -336,8 +341,8 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "824f357b-6dd3-4dc3-a0f3-1ff6a8c5aeec")
-		(property "Sheetname" "CODEC"
-			(at 83.82 31.0384 0)
+		(property "Sheetname" "Audio"
+			(at 82.55 31.0384 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -346,7 +351,7 @@
 			)
 		)
 		(property "Sheetfile" "codec.kicad_sch"
-			(at 83.82 70.4346 0)
+			(at 82.55 70.4346 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -364,7 +369,7 @@
 	)
 	(sheet
 		(at 36.83 31.75)
-		(size 33.02 38.1)
+		(size 33.02 39.37)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -388,7 +393,7 @@
 			)
 		)
 		(property "Sheetfile" "mcu.kicad_sch"
-			(at 36.83 70.4346 0)
+			(at 36.83 71.7046 0)
 			(effects
 				(font
 					(size 1.27 1.27)

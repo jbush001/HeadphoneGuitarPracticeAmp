@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "db8091aa-1fbc-44bb-9fd0-409e85cf3e0f")
 	(paper "A4")
+	(title_block
+		(title "Audio Codec/Amplifiers")
+		(date "2026-01-02")
+		(rev "2.0")
+	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:TLV9061xDBV"
 			(pin_names

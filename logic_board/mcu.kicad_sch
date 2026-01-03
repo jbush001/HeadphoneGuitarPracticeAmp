@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "98eb1ad8-b27f-409f-94cc-c1a8476e11b4")
 	(paper "A4")
+	(title_block
+		(title "Microcontroller and User Interface")
+		(date "2026-01-02")
+		(rev "2.0")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
 			(pin_numbers
