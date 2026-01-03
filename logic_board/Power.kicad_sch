@@ -3685,22 +3685,10 @@
 		(uuid "3b9271b8-1035-4e8d-8a0b-2e5ac5e5bdd2")
 	)
 	(junction
-		(at 96.52 48.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4a236926-9695-4d14-8ddd-7dced8c877f0")
-	)
-	(junction
 		(at 123.19 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4c4bfa3d-c4a8-46f7-b64f-5e6398d86251")
-	)
-	(junction
-		(at 214.63 48.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "595636d2-b5b4-49f6-9709-62d0cead8511")
 	)
 	(junction
 		(at 199.39 113.03)
@@ -3994,16 +3982,6 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 41.91) (xy 96.52 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3406b0db-58d0-4dbc-b6f2-e94fcf56d691")
-	)
-	(wire
-		(pts
 			(xy 193.04 113.03) (xy 199.39 113.03)
 		)
 		(stroke
@@ -4044,7 +4022,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 48.26) (xy 105.41 48.26)
+			(xy 81.28 48.26) (xy 105.41 48.26)
 		)
 		(stroke
 			(width 0)
@@ -4504,7 +4482,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 48.26) (xy 214.63 48.26)
+			(xy 205.74 48.26) (xy 224.79 48.26)
 		)
 		(stroke
 			(width 0)
@@ -4541,16 +4519,6 @@
 			(type default)
 		)
 		(uuid "bb79da6e-7668-466a-ac52-228e839bbe4f")
-	)
-	(wire
-		(pts
-			(xy 214.63 48.26) (xy 224.79 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bc570734-888c-4464-8105-5936b20b4cb7")
 	)
 	(wire
 		(pts
@@ -4654,16 +4622,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 39.37) (xy 214.63 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d633e9c1-c3b0-4fd1-82ef-5de60cb6eb2a")
-	)
-	(wire
-		(pts
 			(xy 163.83 123.19) (xy 163.83 127)
 		)
 		(stroke
@@ -4671,16 +4629,6 @@
 			(type default)
 		)
 		(uuid "d7f986a8-e1b6-4a8a-8ab6-cee0e1b7f50f")
-	)
-	(wire
-		(pts
-			(xy 81.28 48.26) (xy 96.52 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d8a3fa7f-0755-4faf-ace2-d47f8bfa71e3")
 	)
 	(wire
 		(pts
@@ -5027,74 +4975,6 @@
 			(project "logic_board"
 				(path "/b7b37fe1-b409-497a-9440-d94d882f6459/78b9c77c-6b0c-47f1-b5e8-ea96354c74d6"
 					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 96.52 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "148205bb-6b6f-496d-bd29-4323f23aa752")
-		(property "Reference" "TP4"
-			(at 99.06 37.3379 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 99.06 39.8779 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 101.6 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 101.6 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 96.52 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "de56db8f-be6d-46b6-84ee-40a98c0e91fc")
-		)
-		(instances
-			(project ""
-				(path "/b7b37fe1-b409-497a-9440-d94d882f6459/78b9c77c-6b0c-47f1-b5e8-ea96354c74d6"
-					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -7495,74 +7375,6 @@
 			(project ""
 				(path "/b7b37fe1-b409-497a-9440-d94d882f6459/78b9c77c-6b0c-47f1-b5e8-ea96354c74d6"
 					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 214.63 39.37 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b71006f0-3741-4c76-b53c-5e5ce754ec88")
-		(property "Reference" "TP5"
-			(at 217.17 34.7979 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 217.17 37.3379 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 219.71 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 219.71 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 214.63 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2281c730-7177-4b0b-80d0-514b9fa56c71")
-		)
-		(instances
-			(project "logic_board"
-				(path "/b7b37fe1-b409-497a-9440-d94d882f6459/78b9c77c-6b0c-47f1-b5e8-ea96354c74d6"
-					(reference "TP5")
 					(unit 1)
 				)
 			)
